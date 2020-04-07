@@ -1,0 +1,2 @@
+rootProject.name='IQ_Game'
+include ':app'
