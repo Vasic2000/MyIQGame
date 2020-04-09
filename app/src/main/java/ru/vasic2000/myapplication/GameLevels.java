@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,11 +17,31 @@ public class GameLevels extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_levels);
 
+        FullScreen();
+        BtnBack();
+        btnTv1();
+    }
+
+    private void btnTv1() {
+        TextView tv1 = findViewById(R.id.tv1);
+        tv1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(GameLevels.this, Level1.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception e) {
+                }
+            }
+        });
+    }
+
+    private void FullScreen() {
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        BtnBack();
     }
 
     @Override

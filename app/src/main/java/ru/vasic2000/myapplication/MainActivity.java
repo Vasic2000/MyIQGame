@@ -20,11 +20,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FullScreen();
+        BtnStart();
+    }
+
+    private void FullScreen() {
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        BtnStart();
     }
 
     private void BtnStart() {
@@ -37,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, GameLevels.class);
                     startActivity(intent);
                     finish();
-                } catch(Exception e) {
+                } catch (Exception e) {
                 }
             }
         });

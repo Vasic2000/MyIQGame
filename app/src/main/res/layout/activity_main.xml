@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/main_background" />
+        app:srcCompat="@drawable/main_background" />
 
     <ImageView
         android:id="@+id/main_img_boy"
