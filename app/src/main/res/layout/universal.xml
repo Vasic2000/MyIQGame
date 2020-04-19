@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/level_background" />
+        app:srcCompat="@drawable/level_background"/>
 
     <LinearLayout
         android:id="@+id/container1"

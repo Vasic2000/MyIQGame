@@ -2,6 +2,6 @@
 <resources>
     <string name="levelone">
         Choose which number is greater?\n
-        Questions might repeat while you rich 20 pt.
+        Questions might repeat until you rich 20 pt.
     </string>
 </resources>
