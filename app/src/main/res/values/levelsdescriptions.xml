@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="levelone">
+        Choose which number is greater?\n
+        Questions might repeat while you rich 20 pt.
+    </string>
+</resources>
