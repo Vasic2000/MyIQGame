@@ -254,7 +254,7 @@
                     android:textSize="30sp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:layout_gravity="center"
+                    android:gravity="center"
                     />
                 <TextView
                     android:id="@+id/textRight"
@@ -265,7 +265,7 @@
                     android:textSize="30sp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:layout_gravity="center"
+                    android:gravity="center"
                     />
             </LinearLayout>
         </LinearLayout>

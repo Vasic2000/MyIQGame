@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lv1text0">Zero</string>
+    <string name="lv1text1">One</string>
+    <string name="lv1text2">Two</string>
+    <string name="lv1text3">Three</string>
+    <string name="lv1text4">Four</string>
+    <string name="lv1text5">Five</string>
+    <string name="lv1text6">Six</string>
+    <string name="lv1text7">Seven</string>
+    <string name="lv1text8">Eight</string>
+    <string name="lv1text9">Nine</string>
+</resources>

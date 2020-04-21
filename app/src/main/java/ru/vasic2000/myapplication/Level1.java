@@ -15,24 +15,74 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class Level1 extends AppCompatActivity {
 
     Dialog dialog;
+
+    public int numLeft;
+    public int numRight;
+    ImageView imgLeft;
+    ImageView imgRight;
+    TextView textLevels;
+    TextView left_text;
+    TextView right_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
 
+        initComponents();
         imgRoundCorners();
-
         FullScreen();
-
         previewDialog();
-
         backFromPreview();
-
         backFromLevel();
+        makeRndImages();
+
+    }
+
+    private void initComponents() {
+        textLevels = findViewById(R.id.text_levels);
+        textLevels.setText(R.string.level_1);
+        imgLeft = findViewById(R.id.imgLeft);
+        imgRight = findViewById(R.id.imgRight);
+        left_text = findViewById(R.id.textLeft);
+        right_text = findViewById(R.id.textRight);
+    }
+
+    private void imgRoundCorners() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            imgLeft.setClipToOutline(true);
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            imgRight.setClipToOutline(true);
+        }
+    }
+
+    private void FullScreen() {
+        Window window = getWindow();
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+
+    private void makeRndImages() {
+        Array array = new Array();
+        Random rnd = new Random();
+
+        numLeft = rnd.nextInt(10);
+        imgLeft.setImageResource(array.images1[numLeft]);
+        left_text.setText(array.text1[numLeft]);
+
+        numRight = rnd.nextInt(10);
+        while(numRight == numLeft) {
+            numRight = rnd.nextInt(10);
+        }
+        ;
+        imgRight.setImageResource(array.images1[numRight]);
+        right_text.setText(array.text1[numRight]);
     }
 
     private void backFromLevel() {
@@ -47,7 +97,6 @@ public class Level1 extends AppCompatActivity {
                     } catch (Exception exc) {
 //                Здесь кода нет
                     }
-                    dialog.dismiss();
                 }
         });
     }
@@ -104,20 +153,14 @@ public class Level1 extends AppCompatActivity {
         });
     }
 
-    private void imgRoundCorners() {
-        final ImageView imgLeft = findViewById(R.id.imgLeft);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            imgLeft.setClipToOutline(true);
+    @Override
+    public void onBackPressed() {
+        try {
+            Intent intent = new Intent(Level1.this, GameLevels.class);
+            startActivity(intent);
+            finish();
+        } catch (Exception exc) {
+//                Здесь кода нет
         }
-        final ImageView imgRight = findViewById(R.id.imgRight);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            imgRight.setClipToOutline(true);
-        }
-    }
-
-    private void FullScreen() {
-        Window window = getWindow();
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 }
