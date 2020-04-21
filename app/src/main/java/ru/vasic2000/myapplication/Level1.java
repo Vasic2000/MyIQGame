@@ -8,26 +8,30 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.Random;
 
 public class Level1 extends AppCompatActivity {
 
     Dialog dialog;
 
-    public int numLeft;
-    public int numRight;
+    public int numLeft;  //Номер левой картинки
+    public int numRight; //Номер правой картинки
     ImageView imgLeft;
     ImageView imgRight;
     TextView textLevels;
     TextView left_text;
     TextView right_text;
+
+    public int count = 0;  //Счётчик правильных ответов
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,55 @@ public class Level1 extends AppCompatActivity {
         imgRight = findViewById(R.id.imgRight);
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
+
+        //Анимация
+        final Animation an = AnimationUtils.loadAnimation(Level1.this, R.anim.alpha);
+
+        //Массив прогресса игры
+        final int[] progress = {
+                R.id.point1, R.id.point2, R.id.point3, R.id.point4, R.id.point5,
+                R.id.point6, R.id.point7, R.id.point8, R.id.point9, R.id.point10,
+                R.id.point11, R.id.point12, R.id.point13, R.id.point14, R.id.point15,
+                R.id.point16, R.id.point17, R.id.point18, R.id.point19, R.id.point20
+        };
+
+        // Обработка нажатий
+        imgLeft.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //  Касание картинки
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    imgRight.setEnabled(false); // Блокирую правую картинку
+                    if(numLeft > numRight) {
+                        imgLeft.setImageResource(R.drawable.img_true);
+                    } else {
+                        imgLeft.setImageResource(R.drawable.img_false);
+                    }
+                }
+                else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    imgRight.setEnabled(false); // Блокирую правую картинку
+                    if((numLeft > numRight) && (count < 20)) {
+                        count++;
+
+                        // Закрашиваю прогресс
+                        for(int i=0; i<20; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+
+                        // Закрашиваю выполненный прогресс
+                        for(int i=0; i<count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+
+                    } else {
+                        imgLeft.setImageResource(R.drawable.img_false);
+                    }
+                }
+                return true;
+            }
+        });
     }
 
     private void imgRoundCorners() {
