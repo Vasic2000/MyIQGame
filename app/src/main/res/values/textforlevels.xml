@@ -10,4 +10,18 @@
     <string name="lv1text7">Seven</string>
     <string name="lv1text8">Eight</string>
     <string name="lv1text9">Nine</string>
+
+    <string name="lv2text1">I</string>
+    <string name="lv2text2">II</string>
+    <string name="lv2text3">III</string>
+    <string name="lv2text4">IV</string>
+    <string name="lv2text5">V</string>
+    <string name="lv2text6">VI</string>
+    <string name="lv2text7">VII</string>
+    <string name="lv2text8">VIII</string>
+    <string name="lv2text9">IX</string>
+    <string name="lv2text10">X</string>
+    <string name="lv2text11">XI</string>
+    <string name="lv2text12">XII</string>
+
 </resources>

@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="levelone">
-        Choose which number is greater?\n
+        Choose which numberal is greater?\n
         Questions might repeat until you rich 20 pt.
     </string>
+    <string name="leveloneEnd">
+        "Congratulations, the level is completed!\n
+        Do you know that the number 7 is the happiest number?
+There are 7 days in a week, 7 continents, 7 musical notes,
+        7 colors of the rainbow, 7 days of Creation and much more ...\n
+        Also, the number 7 is often the favorite number of people all around the world."
+    </string>
+    <string name="leveltwo">
+        Choose which Roman numberal is greater?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
 </resources>

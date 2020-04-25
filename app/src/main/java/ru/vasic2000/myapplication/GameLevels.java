@@ -20,6 +20,7 @@ public class GameLevels extends AppCompatActivity {
         FullScreen();
         BtnBack();
         btnTv1();
+        btnTv2();
     }
 
     private void btnTv1() {
@@ -30,6 +31,22 @@ public class GameLevels extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Intent intent = new Intent(GameLevels.this, Level1.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception e) {
+                }
+            }
+        });
+    }
+
+    private void btnTv2() {
+        TextView tv2 = findViewById(R.id.tv2);
+        tv2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(GameLevels.this, Level2.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception e) {
