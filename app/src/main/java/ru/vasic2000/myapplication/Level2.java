@@ -23,6 +23,7 @@ import java.util.Random;
 public class Level2 extends AppCompatActivity {
 
     Dialog dialog;
+    Dialog dialogEnd;
 
     public int numLeft;  //Номер левой картинки
     public int numRight; //Номер правой картинки
@@ -43,6 +44,7 @@ public class Level2 extends AppCompatActivity {
         imgRoundCorners();
         FullScreen();
         previewDialog();
+        dialogEnd();
         backFromPreview();
         backFromLevel();
         makeRndImages();
@@ -118,6 +120,7 @@ public class Level2 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        dialogEnd.show();
                     } else {
                         makeRndImages();
                         // Разблокирую правую картинку
@@ -179,6 +182,7 @@ public class Level2 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        dialogEnd.show();
                     } else {
                         makeRndImages();
                         // Разблокирую левую картинку
@@ -303,6 +307,58 @@ public class Level2 extends AppCompatActivity {
         });
     }
 
+    private void dialogEnd() {
+        dialogEnd = new Dialog(this);
+        dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE);  //Скрытие заголовка
+        dialogEnd.setContentView(R.layout.dialogend);
+        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //прозрачный фон диалогового окна
+        dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT);
+        dialogEnd.setCancelable(false);  //окно нельзя закрыыть кнопкой назад
+
+        //Замена текста
+        TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
+        tvDescription.setText(R.string.levelTwoEnd);
+
+        textBtnBack2();
+        buttonContinue2();
+    }
+
+    private void buttonContinue2() {
+        Button btnContinue = dialogEnd.findViewById(R.id.btnContinue);
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Level2.this, Level2.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception exc) {
+                    //  Здесь кода нет
+                }
+                dialogEnd.dismiss();
+            }
+        });
+    }
+
+    private void textBtnBack2() {
+        TextView btnClose = dialogEnd.findViewById(R.id.btnClose2);
+        btnClose.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception exc) {
+                    //  Здесь кода нет
+                }
+                dialogEnd.dismiss();
+            }
+        });
+    }
+
     @Override
     public void onBackPressed() {
         try {
@@ -313,4 +369,6 @@ public class Level2 extends AppCompatActivity {
 //                Здесь кода нет
         }
     }
+
+
 }

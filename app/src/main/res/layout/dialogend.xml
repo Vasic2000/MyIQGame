@@ -26,12 +26,10 @@
             android:text="X"
             android:textStyle="bold" />
 
-
         <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="90">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/textDescriptionEnd"
@@ -45,10 +43,9 @@
         <Button
             android:id="@+id/btnContinue"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_weight="10"
             android:background="@drawable/style_btn_stroke_pressed_white"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"

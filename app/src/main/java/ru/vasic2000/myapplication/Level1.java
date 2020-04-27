@@ -312,8 +312,6 @@ public class Level1 extends AppCompatActivity {
 
         textBtnBack2();
         buttonContinue2();
-
-        dialog.show();
     }
 
     private void buttonContinue2() {
@@ -328,7 +326,7 @@ public class Level1 extends AppCompatActivity {
                 } catch (Exception exc) {
                     //  Здесь кода нет
                 }
-                dialog.dismiss();
+                dialogEnd.dismiss();
             }
         });
     }
