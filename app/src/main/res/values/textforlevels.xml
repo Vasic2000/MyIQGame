@@ -24,4 +24,20 @@
     <string name="lv2text11">XI</string>
     <string name="lv2text12">XII</string>
 
+    <string name="lv3text1">Ant</string>
+    <string name="lv3text2">Snail</string>
+    <string name="lv3text3">Mouse</string>
+    <string name="lv3text4">Heatgeon</string>
+    <string name="lv3text5">Cat</string>
+    <string name="lv3text6">Here</string>
+    <string name="lv3text7">Fox</string>
+    <string name="lv3text8">Sheep</string>
+    <string name="lv3text9">Voolf</string>
+    <string name="lv3text10">Horse</string>
+    <string name="lv3text11">Beer</string>
+    <string name="lv3text12">Tiger</string>
+    <string name="lv3text13">Lion</string>
+    <string name="lv3text14">Elefant</string>
+    <string name="lv3text15">Dinosaur</string>
+
 </resources>

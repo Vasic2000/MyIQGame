@@ -57,4 +57,41 @@ public class Array {
             R.string.lv2text11,
             R.string.lv2text12
     };
+
+    //Урвень 3
+    final int[] images3 = {
+            R.drawable.l3_ant,
+            R.drawable.l3_snail,
+            R.drawable.l3_mouse,
+            R.drawable.l3_headgehon,
+            R.drawable.l3_cat,
+            R.drawable.l3_here,
+            R.drawable.l3_fox,
+            R.drawable.l3_sheep,
+            R.drawable.l3_voolf,
+            R.drawable.l3_horse,
+            R.drawable.l3_beer,
+            R.drawable.l3_tiger,
+            R.drawable.l3_lion,
+            R.drawable.l3_elefant,
+            R.drawable.l3_dino
+    };
+
+    final int[] text3 = {
+            R.string.lv3text1,
+            R.string.lv3text2,
+            R.string.lv3text3,
+            R.string.lv3text4,
+            R.string.lv3text5,
+            R.string.lv3text6,
+            R.string.lv3text7,
+            R.string.lv3text8,
+            R.string.lv3text9,
+            R.string.lv3text10,
+            R.string.lv3text11,
+            R.string.lv3text12,
+            R.string.lv3text13,
+            R.string.lv3text14,
+            R.string.lv3text15
+    };
 }

@@ -22,4 +22,9 @@ There are 7 days in a week, 7 continents, 7 musical notes,
         "Congratulations, the level 2 is completed!\n
         Do you know that in Roman numerals there is no digit zero?"
     </string>
+
+    <string name="level3">
+        Which animal is bigger?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
 </resources>
