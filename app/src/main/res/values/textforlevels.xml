@@ -40,4 +40,25 @@
     <string name="lv3text14">Elefant</string>
     <string name="lv3text15">Dinosaur</string>
 
+    <string name="lv4text1">Sausage</string>
+    <string name="lv4text2">Pear</string>
+    <string name="lv4text3">Pizza</string>
+    <string name="lv4text4">IceCream</string>
+    <string name="lv4text5">Apple</string>
+    <string name="lv4text6">Strawberry</string>
+    <string name="lv4text7">Cucumber</string>
+    <string name="lv4text8">Orange</string>
+    <string name="lv4text9">Raspberry</string>
+    <string name="lv4text10">Yogurt</string>
+    <string name="lv4text11">Soccer ball</string>
+    <string name="lv4text12">Fork</string>
+    <string name="lv4text13">Tennis ball</string>
+    <string name="lv4text14">Screw &amp; nut</string>
+    <string name="lv4text15">Car key</string>
+    <string name="lv4text16">Phone</string>
+    <string name="lv4text17">Watch</string>
+    <string name="lv4text18">Lamp</string>
+    <string name="lv4text19">Pen</string>
+    <string name="lv4text20">Eraser</string>
+
 </resources>

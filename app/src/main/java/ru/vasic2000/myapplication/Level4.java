@@ -21,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level3 extends AppCompatActivity {
+public class Level4 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
@@ -29,7 +29,11 @@ public class Level3 extends AppCompatActivity {
     ImageView backGround;
 
     public int numLeft;  //Номер левой картинки
-    public int numRight; //Номер правой картинки
+    public int numRight;  //Номер левой картинки
+
+    public int numLeftStrong;  //Съедобность левой картинки
+    public int numRightStrong; //Съедобность правой картинки
+
     ImageView imgLeft;
     ImageView imgRight;
     TextView textLevels;
@@ -65,7 +69,7 @@ public class Level3 extends AppCompatActivity {
         backGround.setImageResource(R.drawable.level3);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
-        textLevels.setText(R.string.level_3);
+        textLevels.setText(R.string.level_4);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
@@ -81,6 +85,7 @@ public class Level3 extends AppCompatActivity {
         // Обработка нажатий
         // Левая кнопка
         imgLeft.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 //  Касание картинки
@@ -88,14 +93,14 @@ public class Level3 extends AppCompatActivity {
                     imgRight.setEnabled(false); // Блокирую правую картинку
 
                     //  Если левая больше
-                    if(numLeft > numRight) {
+                    if(numLeftStrong > numRightStrong) {
                         imgLeft.setImageResource(R.drawable.img_true);
                     } else {
                         imgLeft.setImageResource(R.drawable.img_false);
                     }
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeft > numRight) && (count < 20)) {
+                    if((numLeftStrong > numRightStrong) && (count < 20)) {
                         count++;
 
                         // Закрашиваю прогресс
@@ -151,14 +156,14 @@ public class Level3 extends AppCompatActivity {
                     imgLeft.setEnabled(false); // Блокирую левую картинку
 
                     //  Если левая меньше
-                    if(numLeft < numRight) {
+                    if(numLeftStrong < numRightStrong) {
                         imgRight.setImageResource(R.drawable.img_true);
                     } else {
                         imgRight.setImageResource(R.drawable.img_false);
                     }
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeft < numRight) && (count < 20)) {
+                    if((numLeftStrong < numRightStrong) && (count < 20)) {
                         count++;
 
                         // Закрашиваю прогресс
@@ -226,20 +231,23 @@ public class Level3 extends AppCompatActivity {
         Random rnd = new Random();
 
         //Анимация
-        final Animation an = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
+        final Animation an = AnimationUtils.loadAnimation(Level4.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(15);
-        imgLeft.setImageResource(array.images3[numLeft]);
+        numLeft = rnd.nextInt(20);
+        imgLeft.setImageResource(array.images4[numLeft]);
         imgLeft.setAnimation(an);
-        left_text.setText(array.text3[numLeft]);
+        left_text.setText(array.text4[numLeft]);
 
-        numRight = rnd.nextInt(15);
-        while(numRight == numLeft) {
-            numRight = rnd.nextInt(15);
+        numRight = rnd.nextInt(20);
+        while(array.strong4[numLeft] == array.strong4[numRight]) {
+            numRight = rnd.nextInt(20);
         }
-        imgRight.setImageResource(array.images3[numRight]);
+        numLeftStrong = array.strong4[numLeft];
+        numRightStrong = array.strong4[numRight];
+
+        imgRight.setImageResource(array.images4[numRight]);
         imgRight.setAnimation(an);
-        right_text.setText(array.text3[numRight]);
+        right_text.setText(array.text4[numRight]);
     }
 
     private void backFromLevel() {
@@ -250,7 +258,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -279,14 +287,14 @@ public class Level3 extends AppCompatActivity {
 
         //Замена картинки
         ImageView preview = dialog.findViewById(R.id.previewImg);
-        preview.setImageResource(R.drawable.previewimage3);
+        preview.setImageResource(R.drawable.previewimage4);
         //Фон
         LinearLayout dialogFone = dialog.findViewById(R.id.dialogfon);
-        dialogFone.setBackgroundResource(R.drawable.previewbackground3);
+        dialogFone.setBackgroundResource(R.drawable.prewievbacground4);
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.level3);
+        tvDescription.setText(R.string.level4);
 
         textBtnBack();
 
@@ -312,7 +320,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -350,7 +358,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, Level4.class);
+                    Intent intent = new Intent(Level4.this, Level4.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -368,7 +376,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -382,7 +390,7 @@ public class Level3 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level3.this, GameLevels.class);
+            Intent intent = new Intent(Level4.this, GameLevels.class);
             startActivity(intent);
             finish();
         } catch (Exception exc) {

@@ -94,4 +94,54 @@ public class Array {
             R.string.lv3text14,
             R.string.lv3text15
     };
+
+    //Урвень 4
+    final int[] images4 = {
+            R.drawable.l4_e1,
+            R.drawable.l4_ne1,
+            R.drawable.l4_e2,
+            R.drawable.l4_ne2,
+            R.drawable.l4_e3,
+            R.drawable.l4_ne3,
+            R.drawable.l4_e4,
+            R.drawable.l4_ne4,
+            R.drawable.l4_e5,
+            R.drawable.l4_ne5,
+            R.drawable.l4_e6,
+            R.drawable.l4_ne6,
+            R.drawable.l4_e7,
+            R.drawable.l4_ne7,
+            R.drawable.l4_e8,
+            R.drawable.l4_ne8,
+            R.drawable.l4_e9,
+            R.drawable.l4_ne9,
+            R.drawable.l4_e10,
+            R.drawable.l4_ne10
+    };
+
+    final int[] text4 = {
+            R.string.lv4text1,  //Сосиска
+            R.string.lv4text11, //Мячик футболл
+            R.string.lv4text2,  //Груша
+            R.string.lv4text12, //Вилка
+            R.string.lv4text3,  //Пицца
+            R.string.lv4text13, //Мячик тенисный
+            R.string.lv4text4,  //Мороженное
+            R.string.lv4text14, //Гайка с болтом
+            R.string.lv4text5,  //Яблоко
+            R.string.lv4text15, //Ключ
+            R.string.lv4text6,  //Клубника
+            R.string.lv4text16, //Телефон
+            R.string.lv4text7,  //Огурец
+            R.string.lv4text17, //Часы
+            R.string.lv4text8,  //Апельсин
+            R.string.lv4text18, //Лампа
+            R.string.lv4text9,  //Малина
+            R.string.lv4text19, //Карандаш
+            R.string.lv4text10, //Йогурт
+            R.string.lv4text20  //Ластик
+    };
+
+    final int[] strong4 = {1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0};
+
 }
