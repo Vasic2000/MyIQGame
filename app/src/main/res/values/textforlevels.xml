@@ -61,4 +61,18 @@
     <string name="lv4text19">Pen</string>
     <string name="lv4text20">Eraser</string>
 
+    <string name="lv5text2">Deuce</string>
+    <string name="lv5text3">Three</string>
+    <string name="lv5text4">Four</string>
+    <string name="lv5text5">Five</string>
+    <string name="lv5text6">Six</string>
+    <string name="lv5text7">Seven</string>
+    <string name="lv5text8">Eight</string>
+    <string name="lv5text9">Nine</string>
+    <string name="lv5text10">Ten</string>
+    <string name="lv5text11">Jack</string>
+    <string name="lv5text12">Queen</string>
+    <string name="lv5text13">King</string>
+    <string name="lv5text14">Ace</string>
+
 </resources>

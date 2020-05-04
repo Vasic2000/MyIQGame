@@ -60,4 +60,18 @@
     <string name="lv4text18">Лампа</string>
     <string name="lv4text19">Карандаш</string>
     <string name="lv4text20">Ластик</string>
+
+    <string name="lv5text2">Двойка</string>
+    <string name="lv5text3">Тройка</string>
+    <string name="lv5text4">Четвёрка</string>
+    <string name="lv5text5">Пятёрка</string>
+    <string name="lv5text6">Шестёрка</string>
+    <string name="lv5text7">Семёрка</string>
+    <string name="lv5text8">Вочьмёрка</string>
+    <string name="lv5text9">Девятка</string>
+    <string name="lv5text10">Десятка</string>
+    <string name="lv5text11">Валет</string>
+    <string name="lv5text12">Дама</string>
+    <string name="lv5text13">Король</string>
+    <string name="lv5text14">Туз</string>
 </resources>

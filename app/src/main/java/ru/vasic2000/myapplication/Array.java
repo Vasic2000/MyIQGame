@@ -144,4 +144,36 @@ public class Array {
 
     final int[] strong4 = {1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0};
 
+    //Урвень 5
+    final int[] images5 = {
+            R.drawable.l5_2,
+            R.drawable.l5_3,
+            R.drawable.l5_4,
+            R.drawable.l5_5,
+            R.drawable.l5_6,
+            R.drawable.l5_7,
+            R.drawable.l5_8,
+            R.drawable.l5_9,
+            R.drawable.l5_10,
+            R.drawable.l5_11,
+            R.drawable.l5_12,
+            R.drawable.l5_13,
+            R.drawable.l5_14
+    };
+
+    final int[] text5 = {
+            R.string.lv5text2,
+            R.string.lv5text3,
+            R.string.lv5text4,
+            R.string.lv5text5,
+            R.string.lv5text6,
+            R.string.lv5text7,
+            R.string.lv5text8,
+            R.string.lv5text9,
+            R.string.lv5text10,
+            R.string.lv5text11,
+            R.string.lv5text12,
+            R.string.lv5text13,
+            R.string.lv5text14
+    };
 }

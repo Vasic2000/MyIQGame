@@ -42,4 +42,14 @@ There are 7 days in a week, 7 continents, 7 musical notes,
         "Congratulations, the level 4 is completed!\n
         It is known that many crocodiles swallow stones. But isn't because they are edible for them, stones help crocodails to sink into the water quickly and help stay at the bottom.
     </string>
+
+    <string name="level5">
+        Which card is stronger?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level5End">
+        "Congratulations, the level 5 is completed!\n
+        Do you know in some card games the strength of the cards is looped and the deuce hits the ace?
+    </string>
 </resources>
