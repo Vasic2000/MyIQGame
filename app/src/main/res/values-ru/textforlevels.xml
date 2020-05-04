@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lv1text0">Ноль</string>
+    <string name="lv1text1">Один</string>
+    <string name="lv1text2">Два</string>
+    <string name="lv1text3">Три</string>
+    <string name="lv1text4">Четыре</string>
+    <string name="lv1text5">Пять</string>
+    <string name="lv1text6">Шесть</string>
+    <string name="lv1text7">Семь</string>
+    <string name="lv1text8">Восемь</string>
+    <string name="lv1text9">Девять</string>
+
+    <string name="lv2text1">I</string>
+    <string name="lv2text2">II</string>
+    <string name="lv2text3">III</string>
+    <string name="lv2text4">IV</string>
+    <string name="lv2text5">V</string>
+    <string name="lv2text6">VI</string>
+    <string name="lv2text7">VII</string>
+    <string name="lv2text8">VIII</string>
+    <string name="lv2text9">IX</string>
+    <string name="lv2text10">X</string>
+    <string name="lv2text11">XI</string>
+    <string name="lv2text12">XII</string>
+
+    <string name="lv3text1">Муравей</string>
+    <string name="lv3text2">Улитка</string>
+    <string name="lv3text3">Мышь</string>
+    <string name="lv3text4">Ёж</string>
+    <string name="lv3text5">Кот</string>
+    <string name="lv3text6">Заяц</string>
+    <string name="lv3text7">Лиса</string>
+    <string name="lv3text8">Овца</string>
+    <string name="lv3text9">Волк</string>
+    <string name="lv3text10">Лошадь</string>
+    <string name="lv3text11">Медведь</string>
+    <string name="lv3text12">Тигр</string>
+    <string name="lv3text13">Лев</string>
+    <string name="lv3text14">Слон</string>
+    <string name="lv3text15">Динозавр</string>
+
+    <string name="lv4text1">Колбаса</string>
+    <string name="lv4text2">Груша</string>
+    <string name="lv4text3">Пицца</string>
+    <string name="lv4text4">Мороженное</string>
+    <string name="lv4text5">Яблоко</string>
+    <string name="lv4text6">Клубника</string>
+    <string name="lv4text7">Огурец</string>
+    <string name="lv4text8">Апельсин</string>
+    <string name="lv4text9">Малина</string>
+    <string name="lv4text10">Йогурт</string>
+    <string name="lv4text11">Футбольный мяч</string>
+    <string name="lv4text12">Вилка</string>
+    <string name="lv4text13">Тенисный мяч</string>
+    <string name="lv4text14">Болт и гайка</string>
+    <string name="lv4text15">Ключ</string>
+    <string name="lv4text16">Телефон</string>
+    <string name="lv4text17">Часы</string>
+    <string name="lv4text18">Лампа</string>
+    <string name="lv4text19">Карандаш</string>
+    <string name="lv4text20">Ластик</string>
+</resources>

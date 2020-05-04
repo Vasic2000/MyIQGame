@@ -66,7 +66,8 @@ public class Level4 extends AppCompatActivity {
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
 
-        backGround.setImageResource(R.drawable.level3);
+//        Фон
+        backGround.setImageResource(R.drawable.level4);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
         textLevels.setText(R.string.level_4);
@@ -290,7 +291,7 @@ public class Level4 extends AppCompatActivity {
         preview.setImageResource(R.drawable.previewimage4);
         //Фон
         LinearLayout dialogFone = dialog.findViewById(R.id.dialogfon);
-        dialogFone.setBackgroundResource(R.drawable.prewievbacground4);
+        dialogFone.setBackgroundResource(R.drawable.previewbacground4);
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
@@ -342,11 +343,11 @@ public class Level4 extends AppCompatActivity {
 
         //Фон
         LinearLayout dialogFone = dialogEnd.findViewById(R.id.dialogfon);
-        dialogFone.setBackgroundResource(R.drawable.previewbackground3);
+        dialogFone.setBackgroundResource(R.drawable.previewbacground4);
 
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
-        tvDescription.setText(R.string.level3End);
+        tvDescription.setText(R.string.level4End);
 
         textBtnBack3();
         buttonContinue3();
@@ -358,7 +359,7 @@ public class Level4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level4.this, Level4.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
