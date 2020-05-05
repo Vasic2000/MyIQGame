@@ -176,4 +176,55 @@ public class Array {
             R.string.lv5text13,
             R.string.lv5text14
     };
+
+    //Урвень 6
+    final int[] images6 = {
+
+            R.drawable.l6_skate,
+            R.drawable.l6_bicycle,
+            R.drawable.l6_bus,
+            R.drawable.l6_vehicle,
+            R.drawable.l6_motocycle,
+            R.drawable.l6_train,
+            R.drawable.l6_sportcar,
+            R.drawable.l6_aircraft,
+            R.drawable.l6_supersonic,
+            R.drawable.l6_rocket
+    };
+
+    final int[] text6 = {
+            R.string.lv6text1,
+            R.string.lv6text2,
+            R.string.lv6text3,
+            R.string.lv6text4,
+            R.string.lv6text5,
+            R.string.lv6text6,
+            R.string.lv6text7,
+            R.string.lv6text8,
+            R.string.lv6text9,
+            R.string.lv6text10
+    };
+
+    //Урвень 7
+    final int[] images7 = {
+            R.drawable.l7_mercury,
+            R.drawable.l7_venus,
+            R.drawable.l7_earth,
+            R.drawable.l7_marth,
+            R.drawable.l7_jupiter,
+            R.drawable.l7_saturn,
+            R.drawable.l7_uran,
+            R.drawable.l7_neptune
+    };
+
+    final int[] text7 = {
+            R.string.lv7text1,
+            R.string.lv7text2,
+            R.string.lv7text3,
+            R.string.lv7text4,
+            R.string.lv7text5,
+            R.string.lv7text6,
+            R.string.lv7text7,
+            R.string.lv7text8
+    };
 }

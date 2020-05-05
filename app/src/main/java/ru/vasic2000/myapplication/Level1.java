@@ -62,6 +62,9 @@ public class Level1 extends AppCompatActivity {
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
 
+        left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+        right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+
         //Массив прогресса игры
         final int[] progress = {
                 R.id.point1, R.id.point2, R.id.point3, R.id.point4, R.id.point5,

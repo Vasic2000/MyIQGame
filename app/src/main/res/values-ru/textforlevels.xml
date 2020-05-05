@@ -74,4 +74,24 @@
     <string name="lv5text12">Дама</string>
     <string name="lv5text13">Король</string>
     <string name="lv5text14">Туз</string>
+
+    <string name="lv6text1">Скейт</string>
+    <string name="lv6text2">Велосипед</string>
+    <string name="lv6text3">Автобус</string>
+    <string name="lv6text4">Машина</string>
+    <string name="lv6text5">Мотоцикл</string>
+    <string name="lv6text6">Поезд</string>
+    <string name="lv6text7">Болид Ф1</string>
+    <string name="lv6text8">Самолёт</string>
+    <string name="lv6text9">Конкорд</string>
+    <string name="lv6text10">Ракета</string>
+
+    <string name="lv7text1">Меркурий</string>
+    <string name="lv7text2">Венера</string>
+    <string name="lv7text3">Земля</string>
+    <string name="lv7text4">Марс</string>
+    <string name="lv7text5">Юпитер</string>
+    <string name="lv7text6">Сатурн</string>
+    <string name="lv7text7">Уран</string>
+    <string name="lv7text8">Нептун</string>
 </resources>

@@ -75,4 +75,24 @@
     <string name="lv5text13">King</string>
     <string name="lv5text14">Ace</string>
 
+    <string name="lv6text1">Skate</string>
+    <string name="lv6text2">Bicycle</string>
+    <string name="lv6text3">Bus</string>
+    <string name="lv6text4">Vehicle</string>
+    <string name="lv6text5">Motocycle</string>
+    <string name="lv6text6">Train</string>
+    <string name="lv6text7">Sportcar</string>
+    <string name="lv6text8">Aircraft</string>
+    <string name="lv6text9">Concorde</string>
+    <string name="lv6text10">Rocket</string>
+
+    <string name="lv7text1">Mercury</string>
+    <string name="lv7text2">Venus</string>
+    <string name="lv7text3">Earth</string>
+    <string name="lv7text4">Marth</string>
+    <string name="lv7text5">Jupiter</string>
+    <string name="lv7text6">Saturn</string>
+    <string name="lv7text7">Uran</string>
+    <string name="lv7text8">Neptune</string>
+
 </resources>

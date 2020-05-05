@@ -52,4 +52,24 @@ There are 7 days in a week, 7 continents, 7 musical notes,
         "Congratulations, the level 5 is completed!\n
         Do you know in some card games the strength of the cards is looped and the deuce hits the ace?
     </string>
+
+    <string name="level6">
+        Which transport is faster?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level6End">
+        "Congratulations, the level 6 is completed!\n
+        You need learn to drive all of these vehicles and only bycicle and skate you don't need special driven license?
+    </string>
+
+    <string name="level7">
+        Which planet of Solar system is farther from the Sun?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level7End">
+        "Congratulations, the level 7 is completed!\n
+        Do you the nines planet Pluto has been demoted into the category of planetoids, like Vesta, Cerera, Sedna etc.?
+    </string>
 </resources>

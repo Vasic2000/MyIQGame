@@ -67,8 +67,8 @@ public class Level5 extends AppCompatActivity {
         textLevels.setTextColor(getResources().getColor(R.color.colorWhite));
         textLevels.setText(R.string.level_5);
 
-        left_text.setTextColor(getResources().getColor(R.color.colorWhite));
-        right_text.setTextColor(getResources().getColor(R.color.colorWhite));
+        left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+        right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
 
         //Массив прогресса игры
         final int[] progress = {
@@ -244,7 +244,7 @@ public class Level5 extends AppCompatActivity {
 
     private void backFromLevel() {
         Button btn_Back = findViewById(R.id.btnBack);
-        btn_Back.setBackgroundResource(R.drawable.style_btn_stroke_pressed_white);
+        btn_Back.setBackgroundResource(R.drawable.style_btn_whitex_blue_press);
         btn_Back.setTextColor(getResources().getColor(R.color.colorWhite));
         btn_Back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -312,7 +312,7 @@ public class Level5 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level5.this, GameLevels.class);
+                    Intent intent = new Intent(Level5.this, Level6.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -350,7 +350,7 @@ public class Level5 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level5.this, Level5.class);
+                    Intent intent = new Intent(Level5.this, Level6.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {

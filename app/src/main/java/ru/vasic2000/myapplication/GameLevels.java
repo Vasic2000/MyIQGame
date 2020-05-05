@@ -24,6 +24,8 @@ public class GameLevels extends AppCompatActivity {
         btnTv3();
         btnTv4();
         btnTv5();
+        btnTv6();
+        btnTv7();
     }
 
     private void btnTv1() {
@@ -91,13 +93,45 @@ public class GameLevels extends AppCompatActivity {
     }
 
     private void btnTv5() {
-        TextView tv3 = findViewById(R.id.tv5);
-        tv3.setOnClickListener(new View.OnClickListener() {
+        TextView tv5 = findViewById(R.id.tv5);
+        tv5.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 try {
                     Intent intent = new Intent(GameLevels.this, Level5.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception e) {
+                }
+            }
+        });
+    }
+
+    private void btnTv6() {
+        TextView tv6 = findViewById(R.id.tv6);
+        tv6.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(GameLevels.this, Level6.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception e) {
+                }
+            }
+        });
+    }
+
+    private void btnTv7() {
+        TextView tv7 = findViewById(R.id.tv7);
+        tv7.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(GameLevels.this, Level7.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception e) {
