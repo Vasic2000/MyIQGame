@@ -95,4 +95,19 @@
     <string name="lv7text7">Uran</string>
     <string name="lv7text8">Neptune</string>
 
+    <string name="lv8text1">Feather</string>
+    <string name="lv8text2">Button</string>
+    <string name="lv8text3">Lego brick 2</string>
+    <string name="lv8text4">Lego brick 2</string>
+    <string name="lv8text5">Apple</string>
+    <string name="lv8text6">Buttle</string>
+    <string name="lv8text7">Brick</string>
+    <string name="lv8text8">Dumbbell</string>
+    <string name="lv8text9">Radiator</string>
+    <string name="lv8text10">Bath</string>
+    <string name="lv8text11">Car</string>
+    <string name="lv8text12">Track</string>
+    <string name="lv8text13">Train</string>
+    <string name="lv8text14">Aircraft carrier</string>
+
 </resources>

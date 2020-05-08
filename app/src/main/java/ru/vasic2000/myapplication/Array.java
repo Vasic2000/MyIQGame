@@ -227,4 +227,39 @@ public class Array {
             R.string.lv7text7,
             R.string.lv7text8
     };
+
+    //Урвень 8
+    final int[] images8 = {
+            R.drawable.l8_1,
+            R.drawable.l8_2,
+            R.drawable.l8_3,
+            R.drawable.l8_4,
+            R.drawable.l8_5,
+            R.drawable.l8_6,
+            R.drawable.l8_7,
+            R.drawable.l8_8,
+            R.drawable.l8_9,
+            R.drawable.l8_10,
+            R.drawable.l8_11,
+            R.drawable.l8_12,
+            R.drawable.l8_13,
+            R.drawable.l8_14
+    };
+
+    final int[] text8 = {
+            R.string.lv8text1,
+            R.string.lv8text2,
+            R.string.lv8text3,
+            R.string.lv8text4,
+            R.string.lv8text5,
+            R.string.lv8text6,
+            R.string.lv8text7,
+            R.string.lv8text8,
+            R.string.lv8text9,
+            R.string.lv8text10,
+            R.string.lv8text11,
+            R.string.lv8text12,
+            R.string.lv8text13,
+            R.string.lv8text14
+    };
 }

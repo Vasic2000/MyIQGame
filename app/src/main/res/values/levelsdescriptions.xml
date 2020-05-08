@@ -72,4 +72,14 @@ There are 7 days in a week, 7 continents, 7 musical notes,
         "Congratulations, the level 7 is completed!\n
         Do you the nines planet Pluto has been demoted into the category of planetoids, like Vesta, Cerera, Sedna etc.?
     </string>
+
+    <string name="level8">
+        Which thing is havier?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level8End">
+        "Congratulations, the level 8 is completed!\n
+        Do you know that in vacuum weights and brick will fall with the same acceleration?
+    </string>
 </resources>

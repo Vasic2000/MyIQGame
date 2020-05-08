@@ -21,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level7 extends AppCompatActivity {
+public class Level8 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
@@ -62,10 +62,10 @@ public class Level7 extends AppCompatActivity {
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
 
-        backGround.setImageResource(R.drawable.space);
+        backGround.setImageResource(R.drawable.level_background);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorWhite));
-        textLevels.setText(R.string.level_7);
+        textLevels.setText(R.string.level_8);
 
         left_text.setTextColor(getResources().getColor(R.color.colorWhite));
         right_text.setTextColor(getResources().getColor(R.color.colorWhite));
@@ -226,20 +226,20 @@ public class Level7 extends AppCompatActivity {
         Random rnd = new Random();
 
         //Анимация
-        final Animation an = AnimationUtils.loadAnimation(Level7.this, R.anim.alpha);
+        final Animation an = AnimationUtils.loadAnimation(Level8.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(8);
-        imgLeft.setImageResource(array.images7[numLeft]);
+        numLeft = rnd.nextInt(14);
+        imgLeft.setImageResource(array.images8[numLeft]);
         imgLeft.setAnimation(an);
-        left_text.setText(array.text7[numLeft]);
+        left_text.setText(array.text8[numLeft]);
 
-        numRight = rnd.nextInt(8);
+        numRight = rnd.nextInt(14);
         while(numRight == numLeft) {
-            numRight = rnd.nextInt(8);
+            numRight = rnd.nextInt(14);
         }
-        imgRight.setImageResource(array.images7[numRight]);
+        imgRight.setImageResource(array.images8[numRight]);
         imgRight.setAnimation(an);
-        right_text.setText(array.text7[numRight]);
+        right_text.setText(array.text8[numRight]);
     }
 
     private void backFromLevel() {
@@ -250,7 +250,7 @@ public class Level7 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level7.this, GameLevels.class);
+                    Intent intent = new Intent(Level8.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -279,14 +279,14 @@ public class Level7 extends AppCompatActivity {
 
         //Замена картинки
         ImageView preview = dialog.findViewById(R.id.previewImg);
-        preview.setImageResource(R.drawable.previewimage7);
+        preview.setImageResource(R.drawable.previewimage8);
         //Фон
         LinearLayout dialogFone = dialog.findViewById(R.id.dialogfon);
         dialogFone.setBackgroundResource(R.drawable.previewspace);
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.level7);
+        tvDescription.setText(R.string.level8);
 
         textBtnBack();
 
@@ -312,7 +312,7 @@ public class Level7 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level7.this, GameLevels.class);
+                    Intent intent = new Intent(Level8.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -338,7 +338,7 @@ public class Level7 extends AppCompatActivity {
 
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
-        tvDescription.setText(R.string.level7End);
+        tvDescription.setText(R.string.level8End);
 
         textBtnBack3();
         buttonContinue3();
@@ -350,7 +350,7 @@ public class Level7 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level7.this, Level8.class);
+                    Intent intent = new Intent(Level8.this, Level8.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -368,7 +368,7 @@ public class Level7 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level7.this, GameLevels.class);
+                    Intent intent = new Intent(Level8.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -382,7 +382,7 @@ public class Level7 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level7.this, GameLevels.class);
+            Intent intent = new Intent(Level8.this, GameLevels.class);
             startActivity(intent);
             finish();
         } catch (Exception exc) {

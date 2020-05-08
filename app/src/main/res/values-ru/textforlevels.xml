@@ -94,4 +94,19 @@
     <string name="lv7text6">Сатурн</string>
     <string name="lv7text7">Уран</string>
     <string name="lv7text8">Нептун</string>
+
+    <string name="lv8text1">Перо</string>
+    <string name="lv8text2">Пуговица</string>
+    <string name="lv8text3">Лего кубик 2</string>
+    <string name="lv8text4">Лего кубик 2</string>
+    <string name="lv8text5">Яблоко</string>
+    <string name="lv8text6">Бутылка</string>
+    <string name="lv8text7">Кирпич</string>
+    <string name="lv8text8">Гиря</string>
+    <string name="lv8text9">Батарея</string>
+    <string name="lv8text10">Ванна</string>
+    <string name="lv8text11">Машина</string>
+    <string name="lv8text12">Грузовик</string>
+    <string name="lv8text13">Поезд</string>
+    <string name="lv8text14">Авианосец</string>
 </resources>
