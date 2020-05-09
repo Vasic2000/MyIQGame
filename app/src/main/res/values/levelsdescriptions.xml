@@ -14,7 +14,7 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="leveltwo">
-        Choose which Roman numberal is greater?\n
+        Choose which Roman digit is greater?\n
         Questions might repeat until you rich 20 pt.
     </string>
 
@@ -81,5 +81,15 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     <string name="level8End">
         "Congratulations, the level 8 is completed!\n
         Do you know that in vacuum weights and brick will fall with the same acceleration?
+    </string>
+
+    <string name="level11">
+        Choose which digit is greater?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level11End">
+        "Congratulations, the level 11 is completed!\n
+        Do you know that Roman numerals isn't in common use? It uses only in the dials of watches and for the designation of centuries.
     </string>
 </resources>

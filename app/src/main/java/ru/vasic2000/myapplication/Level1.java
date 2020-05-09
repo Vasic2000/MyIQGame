@@ -24,6 +24,8 @@ public class Level1 extends AppCompatActivity {
     Dialog dialog;
     Dialog dialogEnd;
 
+    ImageView backGround;
+
     public int numLeft;  //Номер левой картинки
     public int numRight; //Номер правой картинки
     ImageView imgLeft;
@@ -56,11 +58,16 @@ public class Level1 extends AppCompatActivity {
 
     private void initComponents() {
         textLevels = findViewById(R.id.text_levels);
-        textLevels.setText(R.string.level_1);
+        backGround = findViewById(R.id.main_background);
         imgLeft = findViewById(R.id.imgLeft);
         imgRight = findViewById(R.id.imgRight);
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
+
+        backGround.setImageResource(R.drawable.level_background);
+
+        textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
+        textLevels.setText(R.string.level_1);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));

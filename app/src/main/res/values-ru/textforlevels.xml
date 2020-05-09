@@ -109,4 +109,23 @@
     <string name="lv8text12">Грузовик</string>
     <string name="lv8text13">Поезд</string>
     <string name="lv8text14">Авианосец</string>
+
+    <string name="lv11text1a">1</string>
+    <string name="lv11text2a">2</string>
+    <string name="lv11text3a">3</string>
+    <string name="lv11text4a">4</string>
+    <string name="lv11text5a">5</string>
+    <string name="lv11text6a">6</string>
+    <string name="lv11text7a">7</string>
+    <string name="lv11text8a">8</string>
+    <string name="lv11text9a">9</string>
+    <string name="lv11text1r">I</string>
+    <string name="lv11text2r">II</string>
+    <string name="lv11text3r">III</string>
+    <string name="lv11text4r">IV</string>
+    <string name="lv11text5r">V</string>
+    <string name="lv11text6r">VI</string>
+    <string name="lv11text7r">VII</string>
+    <string name="lv11text8r">VIII</string>
+    <string name="lv11text9r">IX</string>
 </resources>

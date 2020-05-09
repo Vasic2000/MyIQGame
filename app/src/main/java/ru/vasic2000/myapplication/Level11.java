@@ -14,13 +14,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level2 extends AppCompatActivity {
+public class Level11 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
@@ -47,6 +48,10 @@ public class Level2 extends AppCompatActivity {
         FullScreen();
         previewDialog();
         dialogEnd();
+        textBtnBack();
+        buttonContinue();
+        dialog.show();
+
         backFromPreview();
         backFromLevel();
         makeRndImages();
@@ -55,6 +60,7 @@ public class Level2 extends AppCompatActivity {
 
     private void initComponents() {
         textLevels = findViewById(R.id.text_levels);
+        textLevels.setText(R.string.level_11);
         backGround = findViewById(R.id.main_background);
         imgLeft = findViewById(R.id.imgLeft);
         imgRight = findViewById(R.id.imgRight);
@@ -225,20 +231,20 @@ public class Level2 extends AppCompatActivity {
         Random rnd = new Random();
 
         //Анимация
-        final Animation an = AnimationUtils.loadAnimation(Level2.this, R.anim.alpha);
+        final Animation an = AnimationUtils.loadAnimation(Level11.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(12);
-        imgLeft.setImageResource(array.images2[numLeft]);
+        numLeft = rnd.nextInt(9);
+        imgLeft.setImageResource(array.images11a[numLeft]);
         imgLeft.setAnimation(an);
-        left_text.setText(array.text2[numLeft]);
+        left_text.setText(array.text11a[numLeft]);
 
-        numRight = rnd.nextInt(12);
+        numRight = rnd.nextInt(9);
         while(numRight == numLeft) {
-            numRight = rnd.nextInt(12);
+            numRight = rnd.nextInt(9);
         }
-        imgRight.setImageResource(array.images2[numRight]);
+        imgRight.setImageResource(array.images11r[numRight]);
         imgRight.setAnimation(an);
-        right_text.setText(array.text2[numRight]);
+        right_text.setText(array.text11r[numRight]);
     }
 
     private void backFromLevel() {
@@ -247,7 +253,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    Intent intent = new Intent(Level11.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -276,27 +282,19 @@ public class Level2 extends AppCompatActivity {
 
         //Замена картинки
         ImageView preview = dialog.findViewById(R.id.previewImg);
-        preview.setImageResource(R.drawable.previewimagetwo);
+        preview.setImageResource(R.drawable.previewimage11);
+        //Фон
+        LinearLayout dialogFone = dialog.findViewById(R.id.dialogfon);
+        dialogFone.setBackgroundResource(R.drawable.previewspace);
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.leveltwo);
+        tvDescription.setText(R.string.level11);
 
         textBtnBack();
-
         buttonContinue();
 
         dialog.show();
-    }
-
-    private void buttonContinue() {
-        Button btnContinue = dialog.findViewById(R.id.btnContinue);
-        btnContinue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
     }
 
     private void textBtnBack() {
@@ -306,12 +304,22 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    Intent intent = new Intent(Level11.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
-//                Здесь кода нет
+                    //  Здесь кода нет
                 }
+                dialog.dismiss();
+            }
+        });
+    }
+
+    private void buttonContinue() {
+        Button btnContinue = dialog.findViewById(R.id.btnContinue);
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 dialog.dismiss();
             }
         });
@@ -326,9 +334,13 @@ public class Level2 extends AppCompatActivity {
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false);  //окно нельзя закрыыть кнопкой назад
 
+        //Фон
+        LinearLayout dialogFone = dialogEnd.findViewById(R.id.dialogfon);
+        dialogFone.setBackgroundResource(R.drawable.previewspace);
+
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
-        tvDescription.setText(R.string.levelTwoEnd);
+        tvDescription.setText(R.string.level11End);
 
         textBtnBack2();
         buttonContinue2();
@@ -340,7 +352,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level2.this, Level3.class);
+                    Intent intent = new Intent(Level11.this, Level11.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -358,7 +370,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    Intent intent = new Intent(Level11.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -372,13 +384,11 @@ public class Level2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level2.this, GameLevels.class);
+            Intent intent = new Intent(Level11.this, GameLevels.class);
             startActivity(intent);
             finish();
         } catch (Exception exc) {
 //                Здесь кода нет
         }
     }
-
-
 }

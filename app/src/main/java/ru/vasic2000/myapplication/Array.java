@@ -262,4 +262,53 @@ public class Array {
             R.string.lv8text13,
             R.string.lv8text14
     };
+
+    //Урвень 2
+    final int[] images11a = {
+            R.drawable.l1_one,
+            R.drawable.l1_two,
+            R.drawable.l1_three,
+            R.drawable.l1_four,
+            R.drawable.l1_five,
+            R.drawable.l1_six,
+            R.drawable.l1_seven,
+            R.drawable.l1_eight,
+            R.drawable.l1_nine
+    };
+
+    final int[] images11r = {
+            R.drawable.l2_one,
+            R.drawable.l2_two,
+            R.drawable.l2_three,
+            R.drawable.l2_four,
+            R.drawable.l2_five,
+            R.drawable.l2_six,
+            R.drawable.l2_seven,
+            R.drawable.l2_eight,
+            R.drawable.l2_nine
+    };
+
+    final int[] text11a = {
+            R.string.lv11text1a,
+            R.string.lv11text2a,
+            R.string.lv11text3a,
+            R.string.lv11text4a,
+            R.string.lv11text5a,
+            R.string.lv11text6a,
+            R.string.lv11text7a,
+            R.string.lv11text8a,
+            R.string.lv11text9a
+    };
+
+    final int[] text11r = {
+            R.string.lv11text1r,
+            R.string.lv11text2r,
+            R.string.lv11text3r,
+            R.string.lv11text4r,
+            R.string.lv11text5r,
+            R.string.lv11text6r,
+            R.string.lv11text7r,
+            R.string.lv11text8r,
+            R.string.lv11text9r
+    };
 }
