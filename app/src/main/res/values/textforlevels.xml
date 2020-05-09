@@ -110,6 +110,23 @@
     <string name="lv8text13">Train</string>
     <string name="lv8text14">Aircraft carrier</string>
 
+    <string name="lv9text0">Ten past twelve</string>
+    <string name="lv9text1">One o\'clock</string>
+    <string name="lv9text2">Half past two</string>
+    <string name="lv9text3">Quarter to three</string>
+    <string name="lv9text4">Half past three</string>
+    <string name="lv9text5">Four o\'clock</string>
+    <string name="lv9text6">Half past five</string>
+    <string name="lv9text7">Quarter before six</string>
+    <string name="lv9text8">Quarter past six</string>
+    <string name="lv9text9">Seven o\'clock</string>
+    <string name="lv9text10">Quarter to nine</string>
+    <string name="lv9text11">Nine o\'clock</string>
+    <string name="lv9text12">Half past nine</string>
+    <string name="lv9text13">Ten o\'clock</string>
+    <string name="lv9text14">Quarter to eleven</string>
+    <string name="lv9text15">Quarter to twelve</string>
+
     <string name="lv11text1a">1</string>
     <string name="lv11text2a">2</string>
     <string name="lv11text3a">3</string>

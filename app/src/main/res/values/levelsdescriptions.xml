@@ -83,6 +83,17 @@ There are 7 days in a week, 7 continents, 7 musical notes,
         Do you know that in vacuum weights and brick will fall with the same acceleration?
     </string>
 
+    <string name="level9">
+        Which clock has more time?\n
+        Consider period 0:00 - 12:00.\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level9End">
+        "Congratulations, the level 9 is completed!\n
+        Do you know that even a broken clock twice a day shows the exact time? :)
+    </string>
+
     <string name="level11">
         Choose which digit is greater?\n
         Questions might repeat until you rich 20 pt.

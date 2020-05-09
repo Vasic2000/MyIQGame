@@ -263,7 +263,46 @@ public class Array {
             R.string.lv8text14
     };
 
-    //Урвень 2
+    //Урвень 9
+    final int[] images9 = {
+            R.drawable.l9_0,
+            R.drawable.l9_1,
+            R.drawable.l9_2,
+            R.drawable.l9_3,
+            R.drawable.l9_4,
+            R.drawable.l9_5,
+            R.drawable.l9_6,
+            R.drawable.l9_7,
+            R.drawable.l9_8,
+            R.drawable.l9_9,
+            R.drawable.l9_10,
+            R.drawable.l9_11,
+            R.drawable.l9_12,
+            R.drawable.l9_13,
+            R.drawable.l9_14,
+            R.drawable.l9_15
+    };
+
+    final int[] text9 = {
+            R.string.lv9text1,
+            R.string.lv9text1,
+            R.string.lv9text2,
+            R.string.lv9text3,
+            R.string.lv9text4,
+            R.string.lv9text5,
+            R.string.lv9text6,
+            R.string.lv9text7,
+            R.string.lv9text8,
+            R.string.lv9text9,
+            R.string.lv9text10,
+            R.string.lv9text11,
+            R.string.lv9text12,
+            R.string.lv9text13,
+            R.string.lv9text14,
+            R.string.lv9text15
+    };
+
+    //Урвень 11
     final int[] images11a = {
             R.drawable.l1_one,
             R.drawable.l1_two,

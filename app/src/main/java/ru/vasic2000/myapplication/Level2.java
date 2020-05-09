@@ -276,7 +276,7 @@ public class Level2 extends AppCompatActivity {
 
         //Замена картинки
         ImageView preview = dialog.findViewById(R.id.previewImg);
-        preview.setImageResource(R.drawable.previewimagetwo);
+        preview.setImageResource(R.drawable.previewimage2);
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);

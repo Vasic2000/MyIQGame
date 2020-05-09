@@ -110,6 +110,24 @@
     <string name="lv8text13">Поезд</string>
     <string name="lv8text14">Авианосец</string>
 
+    <string name="lv9text0">Десять минут первого</string>
+    <string name="lv9text1">Час</string>
+    <string name="lv9text2">Пол третьего</string>
+    <string name="lv9text3">Без пятнадцати три</string>
+    <string name="lv9text4">Пол четвёртого</string>
+    <string name="lv9text5">Четыре часа</string>
+    <string name="lv9text6">Пол шестого</string>
+    <string name="lv9text7">Без пятнадцати шесть</string>
+    <string name="lv9text8">Пятнадцать минут седьмого</string>
+    <string name="lv9text9">Семь часов</string>
+    <string name="lv9text10">Пол девятого</string>
+    <string name="lv9text11">Девять часов</string>
+    <string name="lv9text12">Пол десятого</string>
+    <string name="lv9text13">Десять часов</string>
+    <string name="lv9text14">Без пятнадцати одиннадцать</string>
+    <string name="lv9text15">Без пятнадцати двенадцать</string>
+
+
     <string name="lv11text1a">1</string>
     <string name="lv11text2a">2</string>
     <string name="lv11text3a">3</string>
