@@ -4,6 +4,8 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -27,6 +29,11 @@ public class Level11 extends AppCompatActivity {
     Dialog dialogEnd;
 
     ImageView backGround;
+
+    SoundPool sounds;
+    int levelWin, start;
+    int goodAnswer1, goodAnswer2, goodAnswer3, goodAnswer4, goodAnswer5, goodAnswer6, goodAnswer7, goodAnswer8;
+    int badAnswer1, badAnswer2, badAnswer3, badAnswer4, badAnswer5, badAnswer6, badAnswer7, badAnswer8;
 
     public int numLeft;  //Номер левой картинки
     public int numRight; //Номер правой картинки
@@ -67,6 +74,26 @@ public class Level11 extends AppCompatActivity {
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
 
+        sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+        levelWin = sounds.load(this, R.raw.level_win, 0);
+        goodAnswer1 = sounds.load(this, R.raw.good1, 0);
+        goodAnswer2 = sounds.load(this, R.raw.good2, 0);
+        goodAnswer3 = sounds.load(this, R.raw.good3, 0);
+        goodAnswer4 = sounds.load(this, R.raw.good4, 0);
+        goodAnswer5 = sounds.load(this, R.raw.good5, 0);
+        goodAnswer6 = sounds.load(this, R.raw.good6, 0);
+        goodAnswer7 = sounds.load(this, R.raw.good7, 0);
+        goodAnswer8 = sounds.load(this, R.raw.good8, 0);
+
+        badAnswer1 = sounds.load(this, R.raw.bad1, 0);
+        badAnswer2 = sounds.load(this, R.raw.bad2, 0);
+        badAnswer3 = sounds.load(this, R.raw.bad3, 0);
+        badAnswer4 = sounds.load(this, R.raw.bad4, 0);
+        badAnswer5 = sounds.load(this, R.raw.bad5, 0);
+        badAnswer6 = sounds.load(this, R.raw.bad6, 0);
+        badAnswer7 = sounds.load(this, R.raw.bad7, 0);
+        badAnswer8 = sounds.load(this, R.raw.bad8, 0);
+
         backGround.setImageResource(R.drawable.level_background);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
@@ -101,6 +128,9 @@ public class Level11 extends AppCompatActivity {
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
                     if((numLeft > numRight) && (count < 20)) {
+                        if(count < 19) {
+                            playGoodAnswer();
+                        }
                         count++;
 
                         // Закрашиваю прогресс
@@ -115,6 +145,7 @@ public class Level11 extends AppCompatActivity {
                         }
 
                     } else {
+                        playBadAnswer();
                         if(count>0) {
                             if (count == 1) {
                                 count = 0;
@@ -136,6 +167,7 @@ public class Level11 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        playSoundWin();
                         dialogEnd.show();
                     } else {
                         makeRndImages();
@@ -164,6 +196,9 @@ public class Level11 extends AppCompatActivity {
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
                     if((numLeft < numRight) && (count < 20)) {
+                        if(count < 19) {
+                            playGoodAnswer();
+                        }
                         count++;
 
                         // Закрашиваю прогресс
@@ -177,6 +212,7 @@ public class Level11 extends AppCompatActivity {
                             tv.setBackgroundResource(R.drawable.style_points_green);
                         }
                     } else {
+                        playBadAnswer();
                         if(count>0) {
                             if (count == 1) {
                                 count = 0;
@@ -198,6 +234,7 @@ public class Level11 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        playSoundWin();
                         dialogEnd.show();
                     } else {
                         makeRndImages();
@@ -379,6 +416,70 @@ public class Level11 extends AppCompatActivity {
                 dialogEnd.dismiss();
             }
         });
+    }
+
+    private void playSoundWin() {
+        sounds.play(levelWin,1,1,0,0,0);
+    }
+
+    private void playGoodAnswer() {
+        Random rnd = new Random();
+        int soundNum = rnd.nextInt(10);
+        switch (soundNum) {
+            case 0:
+                sounds.play(goodAnswer1,1,1,0,0,0);
+                break;
+            case 1:
+                sounds.play(goodAnswer2,1,1,0,0,0);
+                break;
+            case 2:
+                sounds.play(goodAnswer3,1,1,0,0,0);
+                break;
+            case 3:
+                sounds.play(goodAnswer4,1,1,0,0,0);
+                break;
+            case 4:
+                sounds.play(goodAnswer5,1,1,0,0,0);
+                break;
+            case 5:
+                sounds.play(goodAnswer6,1,1,0,0,0);
+                break;
+            case 6:
+                sounds.play(goodAnswer7,1,1,0,0,0);
+                break;
+            default:
+                sounds.play(goodAnswer8,1,1,0,0,0);
+        }
+    }
+
+    private void playBadAnswer() {
+        Random rnd = new Random();
+        int soundNum = rnd.nextInt(10);
+        switch (soundNum) {
+            case 0:
+                sounds.play(badAnswer1,1,1,0,0,0);
+                break;
+            case 1:
+                sounds.play(badAnswer2,1,1,0,0,0);
+                break;
+            case 2:
+                sounds.play(badAnswer3,1,1,0,0,0);
+                break;
+            case 3:
+                sounds.play(badAnswer4,1,1,0,0,0);
+                break;
+            case 4:
+                sounds.play(badAnswer5,1,1,0,0,0);
+                break;
+            case 5:
+                sounds.play(badAnswer6,1,1,0,0,0);
+                break;
+            case 6:
+                sounds.play(badAnswer7,1,1,0,0,0);
+                break;
+            default:
+                sounds.play(badAnswer8,1,1,0,0,0);
+        }
     }
 
     @Override

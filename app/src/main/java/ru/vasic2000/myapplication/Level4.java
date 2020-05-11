@@ -196,10 +196,10 @@ public class Level4 extends AppCompatActivity {
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
                     if((numLeftStrong < numRightStrong) && (count < 20)) {
-                        count++;
                         if(count < 19) {
                             playGoodAnswer();
                         }
+                        count++;
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
