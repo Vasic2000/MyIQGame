@@ -350,4 +350,58 @@ public class Array {
             R.string.lv11text8r,
             R.string.lv11text9r
     };
+
+    //Урвень 13
+    final int[] images13 = {
+            R.drawable.l13_1f,
+            R.drawable.l13_2f,
+            R.drawable.l13_3f,
+            R.drawable.l13_4f,
+            R.drawable.l13_5f,
+            R.drawable.l13_6f,
+            R.drawable.l13_7f,
+            R.drawable.l13_8f,
+            R.drawable.l13_9f,
+            R.drawable.l13_10f,
+            R.drawable.l13_11f,
+            R.drawable.l13_1t,
+            R.drawable.l13_2t,
+            R.drawable.l13_3t,
+            R.drawable.l13_4t,
+            R.drawable.l13_5t,
+            R.drawable.l13_6t,
+            R.drawable.l13_7t,
+            R.drawable.l13_8t,
+            R.drawable.l13_9t,
+            R.drawable.l13_10t,
+            R.drawable.l13_11t
+    };
+
+
+    final int[] text13 = {
+            R.string.lv13text1f,  //Трилобит
+            R.string.lv13text2f, //Аномалокарис
+            R.string.lv13text3f,  //Меганерва
+            R.string.lv13text4f, //Ихтианозавр
+            R.string.lv13text5f,  //Скутозавр
+            R.string.lv13text6f, //Тиранозавр
+            R.string.lv13text7f,  //Мамонт
+            R.string.lv13text8f, //Архиоптерикс
+            R.string.lv13text9f,  //Симолдон
+            R.string.lv13text10f, //Горганопс
+            R.string.lv13text11f,  //Лабиринтодонт
+            R.string.lv13text1t, //Тихоходка
+            R.string.lv13text2t,  //Черепаха
+            R.string.lv13text3t, //Акула
+            R.string.lv13text4t,  //Страус
+            R.string.lv13text5t, //Меин-кун
+            R.string.lv13text6t,  //Комодо
+            R.string.lv13text7t, //Ящер
+            R.string.lv13text8t, //Воробей
+            R.string.lv13text9t,  //Летучая мышь
+            R.string.lv13text10t,  //Иглобрюх
+            R.string.lv13text11t  //Пудель
+    };
+
+    final int[] strong13 = {0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1};
 }

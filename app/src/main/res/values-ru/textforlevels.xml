@@ -127,7 +127,6 @@
     <string name="lv9text14">Без пятнадцати одиннадцать</string>
     <string name="lv9text15">Без пятнадцати двенадцать</string>
 
-
     <string name="lv11text1a">1</string>
     <string name="lv11text2a">2</string>
     <string name="lv11text3a">3</string>
@@ -146,4 +145,27 @@
     <string name="lv11text7r">VII</string>
     <string name="lv11text8r">VIII</string>
     <string name="lv11text9r">IX</string>
+
+    <string name="lv13text1f">Трилобит</string>
+    <string name="lv13text2f">Аномалокарис</string>
+    <string name="lv13text3f">Меганерва</string>
+    <string name="lv13text4f">Ихтианозавр</string>
+    <string name="lv13text5f">Скутозавр</string>
+    <string name="lv13text6f">Тиранозавр</string>
+    <string name="lv13text7f">Мамонт</string>
+    <string name="lv13text8f">Архиоптерикс</string>
+    <string name="lv13text9f">Симолдон</string>
+    <string name="lv13text10f">Горганопс</string>
+    <string name="lv13text11f">Лабиринтодонт</string>
+    <string name="lv13text1t">Тихоходка</string>
+    <string name="lv13text2t">Черепаха</string>
+    <string name="lv13text3t">Акула</string>
+    <string name="lv13text4t">Страус</string>
+    <string name="lv13text5t">Меин-кун</string>
+    <string name="lv13text6t">Комодо</string>
+    <string name="lv13text7t">Ящер</string>
+    <string name="lv13text8t">Воробей</string>
+    <string name="lv13text9t">Летучая мышь</string>
+    <string name="lv13text10t">Иглобрюх</string>
+    <string name="lv13text11t">Пудель</string>
 </resources>

@@ -103,4 +103,14 @@ There are 7 days in a week, 7 continents, 7 musical notes,
         "Congratulations, the level 11 is completed!\n
         Do you know that Roman numerals isn't in common use? It uses only in the dials of watches and for the designation of centuries.
     </string>
+
+    <string name="level13">
+        Choose a creature that currently exists?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level13End">
+        "Congratulations, the level 13 is completed!\n
+        Water bear or tardigrades. A microscopic creature that can survive in the temperature range from +150 degrees Celsius to absolute zero, and is also able to live for more than 10 years without water.
+    </string>
 </resources>

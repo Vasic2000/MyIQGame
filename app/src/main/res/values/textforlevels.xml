@@ -146,4 +146,27 @@
     <string name="lv11text8r">VIII</string>
     <string name="lv11text9r">IX</string>
 
+    <string name="lv13text1f">Trilobite</string>
+    <string name="lv13text2f">Anomalocaris</string>
+    <string name="lv13text3f">Meganevre</string>
+    <string name="lv13text4f">Ichthyosaur</string>
+    <string name="lv13text5f">Scutosaurus</string>
+    <string name="lv13text6f">Tyrannosaur</string>
+    <string name="lv13text7f">Mammoth</string>
+    <string name="lv13text8f">Archiopteryx</string>
+    <string name="lv13text9f">Simoldon</string>
+    <string name="lv13text10f">Gorgonops</string>
+    <string name="lv13text11f">Labyrinthodontia</string>
+    <string name="lv13text1t">Tardigrades</string>
+    <string name="lv13text2t">Turtle</string>
+    <string name="lv13text3t">Shark</string>
+    <string name="lv13text4t">Ostrich</string>
+    <string name="lv13text5t">Maine Coon</string>
+    <string name="lv13text6t">Komodo</string>
+    <string name="lv13text7t">Pangolin</string>
+    <string name="lv13text8t">Sparrow</string>
+    <string name="lv13text9t">Bat</string>
+    <string name="lv13text10t">Pufferfish</string>
+    <string name="lv13text11t">Poodle</string>
+
 </resources>
