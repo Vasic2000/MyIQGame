@@ -269,14 +269,14 @@ public class Level4 extends AppCompatActivity {
         //Анимация
         final Animation an = AnimationUtils.loadAnimation(Level4.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(20);
+        numLeft = rnd.nextInt(22);
         imgLeft.setImageResource(array.images4[numLeft]);
         imgLeft.setAnimation(an);
         left_text.setText(array.text4[numLeft]);
 
-        numRight = rnd.nextInt(20);
+        numRight = rnd.nextInt(22);
         while(array.strong4[numLeft] == array.strong4[numRight]) {
-            numRight = rnd.nextInt(20);
+            numRight = rnd.nextInt(22);
         }
         numLeftStrong = array.strong4[numLeft];
         numRightStrong = array.strong4[numRight];
@@ -394,7 +394,7 @@ public class Level4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level4.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, Level5.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {

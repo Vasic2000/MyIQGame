@@ -28,6 +28,7 @@ public class GameLevels extends AppCompatActivity {
         btnTv7();
         btnTv8();
         btnTv9();
+        btnTv10();
         btnTv11();
         btnTv13();
 
@@ -176,6 +177,23 @@ public class GameLevels extends AppCompatActivity {
             }
         });
     }
+
+    private void btnTv10() {
+        TextView tv10 = findViewById(R.id.tv10);
+        tv10.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(GameLevels.this, Level10.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception e) {
+                }
+            }
+        });
+    }
+
 
     private void btnTv11() {
         TextView tv11 = findViewById(R.id.tv11);

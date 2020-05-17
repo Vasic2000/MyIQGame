@@ -94,6 +94,16 @@ There are 7 days in a week, 7 continents, 7 musical notes,
         Do you know that even a broken clock twice a day shows the exact time? :)
     </string>
 
+    <string name="level10">
+        Choose which think will float?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level10End">
+        "Congratulations, the level 10 is completed!\n
+        Do you know that if an egg sinks - it is fresh, if it floats - not?.
+    </string>
+
     <string name="level11">
         Choose which digit is greater?\n
         Questions might repeat until you rich 20 pt.

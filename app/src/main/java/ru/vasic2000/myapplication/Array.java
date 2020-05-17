@@ -116,7 +116,9 @@ public class Array {
             R.drawable.l4_e9,
             R.drawable.l4_ne9,
             R.drawable.l4_e10,
-            R.drawable.l4_ne10
+            R.drawable.l4_ne10,
+            R.drawable.l4_e11,
+            R.drawable.l4_ne11
     };
 
     final int[] text4 = {
@@ -139,10 +141,12 @@ public class Array {
             R.string.lv4text9,  //Малина
             R.string.lv4text19, //Карандаш
             R.string.lv4text10, //Йогурт
-            R.string.lv4text20  //Ластик
+            R.string.lv4text20, //Ластик
+            R.string.lv4text21, //Лимон
+            R.string.lv4text22, //Зубная паста
     };
 
-    final int[] strong4 = {1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0};
+    final int[] strong4 = {1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0};
 
     //Урвень 5
     final int[] images5 = {
@@ -301,6 +305,63 @@ public class Array {
             R.string.lv9text14,
             R.string.lv9text15
     };
+
+    //Урвень 10
+    final int[] images10 = {
+            R.drawable.l10_1f,
+            R.drawable.l10_2f,
+            R.drawable.l10_3f,
+            R.drawable.l10_4f,
+            R.drawable.l10_5f,
+            R.drawable.l10_6f,
+            R.drawable.l10_7f,
+            R.drawable.l10_8f,
+            R.drawable.l10_9f,
+            R.drawable.l10_10f,
+            R.drawable.l10_11f,
+            R.drawable.l10_12f,
+            R.drawable.l10_1s,
+            R.drawable.l10_2s,
+            R.drawable.l10_3s,
+            R.drawable.l10_4s,
+            R.drawable.l10_5s,
+            R.drawable.l10_6s,
+            R.drawable.l10_7s,
+            R.drawable.l10_8s,
+            R.drawable.l10_9s,
+            R.drawable.l10_10s,
+            R.drawable.l10_11s,
+            R.drawable.l10_12s
+    };
+
+    final int[] text10 = {
+            R.string.lv10text1f,
+            R.string.lv10text2f,
+            R.string.lv10text3f,
+            R.string.lv10text4f,
+            R.string.lv10text5f,
+            R.string.lv10text6f,
+            R.string.lv10text7f,
+            R.string.lv10text8f,
+            R.string.lv10text9f,
+            R.string.lv10text10f,
+            R.string.lv10text11f,
+            R.string.lv10text12f,
+            R.string.lv10text1s,
+            R.string.lv10text2s,
+            R.string.lv10text3s,
+            R.string.lv10text4s,
+            R.string.lv10text5s,
+            R.string.lv10text6s,
+            R.string.lv10text7s,
+            R.string.lv10text8s,
+            R.string.lv10text9s,
+            R.string.lv10text10s,
+            R.string.lv10text11s,
+            R.string.lv10text12s
+    };
+
+    final int[] strong10 = {1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0};
 
     //Урвень 11
     final int[] images11a = {

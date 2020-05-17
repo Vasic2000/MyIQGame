@@ -60,6 +60,8 @@
     <string name="lv4text18">Лампа</string>
     <string name="lv4text19">Карандаш</string>
     <string name="lv4text20">Ластик</string>
+    <string name="lv4text21">Лимон</string>
+    <string name="lv4text22">Зубная паста</string>
 
     <string name="lv5text2">Двойка</string>
     <string name="lv5text3">Тройка</string>
@@ -126,6 +128,31 @@
     <string name="lv9text13">Десять часов</string>
     <string name="lv9text14">Без пятнадцати одиннадцать</string>
     <string name="lv9text15">Без пятнадцати двенадцать</string>
+
+    <string name="lv10text1f">Резиновый утёнок</string>
+    <string name="lv10text2f">Воздушный шарик</string>
+    <string name="lv10text3f">Круг</string>
+    <string name="lv10text4f">Лёд</string>
+    <string name="lv10text5f">Бревно</string>
+    <string name="lv10text6f">Мяч</string>
+    <string name="lv10text7f">Огурец</string>
+    <string name="lv10text8f">Пенопласт</string>
+    <string name="lv10text9f">Лист</string>
+    <string name="lv10text10f">Шишка</string>
+    <string name="lv10text11f">Спичка</string>
+    <string name="lv10text12f">Орех</string>
+    <string name="lv10text1s">Топор</string>
+    <string name="lv10text2s">Кирпич</string>
+    <string name="lv10text3s">Зубная паста</string>
+    <string name="lv10text4s">Вилка</string>
+    <string name="lv10text5s">Болт</string>
+    <string name="lv10text6s">Ластик</string>
+    <string name="lv10text7s">Мыло</string>
+    <string name="lv10text8s">Гвоздь</string>
+    <string name="lv10text9s">Ракетка</string>
+    <string name="lv10text10s">Монета</string>
+    <string name="lv10text11s">Ключ</string>
+    <string name="lv10text12s">Мышь</string>
 
     <string name="lv11text1a">1</string>
     <string name="lv11text2a">2</string>
