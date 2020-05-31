@@ -173,6 +173,27 @@
     <string name="lv11text8r">VIII</string>
     <string name="lv11text9r">IX</string>
 
+    <string name="lv12text1f">Ананас</string>
+    <string name="lv12text2f">Лимон</string>
+    <string name="lv12text3f">Киви</string>
+    <string name="lv12text4f">Банан</string>
+    <string name="lv12text5f">Яблоко</string>
+    <string name="lv12text6f">Груша</string>
+    <string name="lv12text7f">Персик</string>
+    <string name="lv12text8f">Апельсин</string>
+    <string name="lv12text9f">Гранат</string>
+    <string name="lv12text10f">Маракуя</string>
+    <string name="lv12text1v">Морковь</string>
+    <string name="lv12text2v">Редис</string>
+    <string name="lv12text3v">Имбирь</string>
+    <string name="lv12text4v">Капуста</string>
+    <string name="lv12text5v">Огурец</string>
+    <string name="lv12text6v">Картофель</string>
+    <string name="lv12text7v">Помидор</string>
+    <string name="lv12text8v">Свекла</string>
+    <string name="lv12text9v">Чеснок</string>
+    <string name="lv12text10v">Лук</string>
+
     <string name="lv13text1f">Трилобит</string>
     <string name="lv13text2f">Аномалокарис</string>
     <string name="lv13text3f">Меганерва</string>

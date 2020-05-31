@@ -131,6 +131,15 @@
         </activity>
 
         <activity
+            android:name=".Level12"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".Level13"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">

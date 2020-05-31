@@ -173,6 +173,27 @@
     <string name="lv11text8r">VIII</string>
     <string name="lv11text9r">IX</string>
 
+    <string name="lv12text1f">Pinapple</string>
+    <string name="lv12text2f">Limon</string>
+    <string name="lv12text3f">Kiwi</string>
+    <string name="lv12text4f">Banana</string>
+    <string name="lv12text5f">Apple</string>
+    <string name="lv12text6f">Pear</string>
+    <string name="lv12text7f">Peach</string>
+    <string name="lv12text8f">Orange</string>
+    <string name="lv12text9f">Garnet</string>
+    <string name="lv12text10f">Passion fruit</string>
+    <string name="lv12text1v">Carrot</string>
+    <string name="lv12text2v">Radish</string>
+    <string name="lv12text3v">Ginger</string>
+    <string name="lv12text4v">Cabbage</string>
+    <string name="lv12text5v">Сucumber</string>
+    <string name="lv12text6v">Potato</string>
+    <string name="lv12text7v">Tomato</string>
+    <string name="lv12text8v">Beet</string>
+    <string name="lv12text9v">Garlic</string>
+    <string name="lv12text10v">Onion</string>
+
     <string name="lv13text1f">Trilobite</string>
     <string name="lv13text2f">Anomalocaris</string>
     <string name="lv13text3f">Meganevre</string>

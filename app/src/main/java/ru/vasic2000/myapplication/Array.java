@@ -412,6 +412,55 @@ public class Array {
             R.string.lv11text9r
     };
 
+    //Урвень 12
+    final int[] images12 = {
+            R.drawable.l12_1v,
+            R.drawable.l12_2v,
+            R.drawable.l12_3v,
+            R.drawable.l12_4v,
+            R.drawable.l12_5v,
+            R.drawable.l12_6v,
+            R.drawable.l12_7v,
+            R.drawable.l12_8v,
+            R.drawable.l12_9v,
+            R.drawable.l12_10v,
+            R.drawable.l12_1f,
+            R.drawable.l12_2f,
+            R.drawable.l12_3f,
+            R.drawable.l12_4f,
+            R.drawable.l12_5f,
+            R.drawable.l12_6f,
+            R.drawable.l12_7f,
+            R.drawable.l12_8f,
+            R.drawable.l12_9f,
+            R.drawable.l12_10f
+     };
+
+    final int[] text12 = {
+            R.string.lv12text1v,
+            R.string.lv12text2v,
+            R.string.lv12text3v,
+            R.string.lv12text4v,
+            R.string.lv12text5v,
+            R.string.lv12text6v,
+            R.string.lv12text7v,
+            R.string.lv12text8v,
+            R.string.lv12text9v,
+            R.string.lv12text10v,
+            R.string.lv12text1f,
+            R.string.lv12text2f,
+            R.string.lv12text3f,
+            R.string.lv12text4f,
+            R.string.lv12text5f,
+            R.string.lv12text6f,
+            R.string.lv12text7f,
+            R.string.lv12text8f,
+            R.string.lv12text9f,
+            R.string.lv12text10f
+    };
+
+    final int[] strong12 = {0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1};
+
     //Урвень 13
     final int[] images13 = {
             R.drawable.l13_1f,

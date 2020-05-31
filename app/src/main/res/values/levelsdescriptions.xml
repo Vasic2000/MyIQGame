@@ -114,6 +114,16 @@ There are 7 days in a week, 7 continents, 7 musical notes,
         Do you know that Roman numerals isn't in common use? It uses only in the dials of watches and for the designation of centuries.
     </string>
 
+    <string name="level12">
+        Choose fruit?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level12End">
+        "Congratulations, the level 12 is completed!\n
+        Do you know that in spite of banana is called a fruit in supermarkets, it is actually a berry.
+    </string>
+
     <string name="level13">
         Choose a creature that currently exists?\n
         Questions might repeat until you rich 20 pt.
