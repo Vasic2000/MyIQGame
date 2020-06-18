@@ -133,4 +133,15 @@ There are 7 days in a week, 7 continents, 7 musical notes,
         "Congratulations, the level 13 is completed!\n
         Water bear or tardigrades. A microscopic creature that can survive in the temperature range from +150 degrees Celsius to absolute zero, and is also able to live for more than 10 years without water.
     </string>
+
+    <string name="level14">
+        Choose, what is louder?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level14End">
+        "Congratulations, the level 14 is completed!\n
+        If you go away from the noise source two times further, the noise level fall 4 times.
+        L ~ 1/R2
+    </string>
 </resources>

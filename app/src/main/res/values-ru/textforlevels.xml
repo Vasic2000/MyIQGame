@@ -216,4 +216,16 @@
     <string name="lv13text9t">Летучая мышь</string>
     <string name="lv13text10t">Иглобрюх</string>
     <string name="lv13text11t">Пудель</string>
+
+    <string name="lv14text1">Голос рыбы</string>
+    <string name="lv14text2">Тиканье часов</string>
+    <string name="lv14text3">Мышиный писк</string>
+    <string name="lv14text4">Воронье карканье</string>
+    <string name="lv14text5">Собачий лай</string>
+    <string name="lv14text6">Громкая музыка</string>
+    <string name="lv14text7">Отбойный молоток</string>
+    <string name="lv14text8">Гром</string>
+    <string name="lv14text9">Реактивный самолёт</string>
+    <string name="lv14text10">Выстрел гаубицы</string>
+
 </resources>

@@ -513,5 +513,31 @@ public class Array {
             R.string.lv13text11t  //Пудель
     };
 
+    //Уровень 14
+    final int[] images14 = {
+            R.drawable.l14_1,
+            R.drawable.l14_2,
+            R.drawable.l14_3,
+            R.drawable.l14_4,
+            R.drawable.l14_5,
+            R.drawable.l14_6,
+            R.drawable.l14_7,
+            R.drawable.l14_8,
+            R.drawable.l14_9,
+            R.drawable.l14_10
+    };
+    final int[] text14 = {
+            R.string.lv14text1,
+            R.string.lv14text2,
+            R.string.lv14text3,
+            R.string.lv14text4,
+            R.string.lv14text5,
+            R.string.lv14text6,
+            R.string.lv14text7,
+            R.string.lv14text8,
+            R.string.lv14text9,
+            R.string.lv14text10
+    };
+
     final int[] strong13 = {0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1};
 }

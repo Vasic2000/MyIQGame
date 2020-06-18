@@ -424,7 +424,7 @@ public class Level11 extends AppCompatActivity {
 
     private void playGoodAnswer() {
         Random rnd = new Random();
-        int soundNum = rnd.nextInt(10);
+        int soundNum = rnd.nextInt(8);
         switch (soundNum) {
             case 0:
                 sounds.play(goodAnswer1,1,1,0,0,0);
@@ -454,7 +454,7 @@ public class Level11 extends AppCompatActivity {
 
     private void playBadAnswer() {
         Random rnd = new Random();
-        int soundNum = rnd.nextInt(10);
+        int soundNum = rnd.nextInt(8);
         switch (soundNum) {
             case 0:
                 sounds.play(badAnswer1,1,1,0,0,0);

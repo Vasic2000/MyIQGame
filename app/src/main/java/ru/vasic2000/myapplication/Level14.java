@@ -23,7 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level4 extends AppCompatActivity {
+public class Level14 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
@@ -36,11 +36,7 @@ public class Level4 extends AppCompatActivity {
     int badAnswer1, badAnswer2, badAnswer3, badAnswer4, badAnswer5, badAnswer6, badAnswer7, badAnswer8;
 
     public int numLeft;  //Номер левой картинки
-    public int numRight;  //Номер левой картинки
-
-    public int numLeftStrong;  //Съедобность левой картинки
-    public int numRightStrong; //Съедобность правой картинки
-
+    public int numRight; //Номер правой картинки
     ImageView imgLeft;
     ImageView imgRight;
     TextView textLevels;
@@ -59,10 +55,12 @@ public class Level4 extends AppCompatActivity {
         FullScreen();
         previewDialog();
         dialogEnd();
+        textBtnBack();
+        buttonContinue();
+        dialog.show();
         backFromPreview();
         backFromLevel();
         makeRndImages();
-
     }
 
     private void initComponents() {
@@ -93,11 +91,10 @@ public class Level4 extends AppCompatActivity {
         badAnswer7 = sounds.load(this, R.raw.bad7, 0);
         badAnswer8 = sounds.load(this, R.raw.bad8, 0);
 
-//        Фон
-        backGround.setImageResource(R.drawable.level4);
+        backGround.setImageResource(R.drawable.level_background);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
-        textLevels.setText(R.string.level_4);
+        textLevels.setText(R.string.level_14);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
@@ -113,7 +110,6 @@ public class Level4 extends AppCompatActivity {
         // Обработка нажатий
         // Левая кнопка
         imgLeft.setOnTouchListener(new View.OnTouchListener() {
-
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 //  Касание картинки
@@ -121,14 +117,14 @@ public class Level4 extends AppCompatActivity {
                     imgRight.setEnabled(false); // Блокирую правую картинку
 
                     //  Если левая больше
-                    if(numLeftStrong > numRightStrong) {
+                    if(numLeft > numRight) {
                         imgLeft.setImageResource(R.drawable.img_true);
                     } else {
                         imgLeft.setImageResource(R.drawable.img_false);
                     }
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeftStrong > numRightStrong) && (count < 20)) {
+                    if((numLeft > numRight) && (count < 20)) {
                         if(count < 19) {
                             playGoodAnswer();
                         }
@@ -188,14 +184,14 @@ public class Level4 extends AppCompatActivity {
                     imgLeft.setEnabled(false); // Блокирую левую картинку
 
                     //  Если левая меньше
-                    if(numLeftStrong < numRightStrong) {
+                    if(numLeft < numRight) {
                         imgRight.setImageResource(R.drawable.img_true);
                     } else {
                         imgRight.setImageResource(R.drawable.img_false);
                     }
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeftStrong < numRightStrong) && (count < 20)) {
+                    if((numLeft < numRight) && (count < 20)) {
                         if(count < 19) {
                             playGoodAnswer();
                         }
@@ -267,34 +263,29 @@ public class Level4 extends AppCompatActivity {
         Random rnd = new Random();
 
         //Анимация
-        final Animation an = AnimationUtils.loadAnimation(Level4.this, R.anim.alpha);
+        final Animation an = AnimationUtils.loadAnimation(Level14.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(22);
-        imgLeft.setImageResource(array.images4[numLeft]);
+        numLeft = rnd.nextInt(10);
+        imgLeft.setImageResource(array.images14[numLeft]);
         imgLeft.setAnimation(an);
-        left_text.setText(array.text4[numLeft]);
+        left_text.setText(array.text14[numLeft]);
 
-        numRight = rnd.nextInt(22);
-        while(array.strong4[numLeft] == array.strong4[numRight]) {
-            numRight = rnd.nextInt(22);
+        numRight = rnd.nextInt(10);
+        while(numRight == numLeft) {
+            numRight = rnd.nextInt(10);
         }
-        numLeftStrong = array.strong4[numLeft];
-        numRightStrong = array.strong4[numRight];
-
-        imgRight.setImageResource(array.images4[numRight]);
+        imgRight.setImageResource(array.images14[numRight]);
         imgRight.setAnimation(an);
-        right_text.setText(array.text4[numRight]);
+        right_text.setText(array.text14[numRight]);
     }
 
     private void backFromLevel() {
         Button btn_Back = findViewById(R.id.btnBack);
-        btn_Back.setBackgroundResource(R.drawable.btn_stroke_black95_pressed_white);
-        btn_Back.setTextColor(getResources().getColor(R.color.colorBlack95));
         btn_Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level4.this, GameLevels.class);
+                    Intent intent = new Intent(Level14.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -323,30 +314,19 @@ public class Level4 extends AppCompatActivity {
 
         //Замена картинки
         ImageView preview = dialog.findViewById(R.id.previewImg);
-        preview.setImageResource(R.drawable.previewimage4);
+        preview.setImageResource(R.drawable.previewimage14);
         //Фон
         LinearLayout dialogFone = dialog.findViewById(R.id.dialogfon);
         dialogFone.setBackgroundResource(R.drawable.previewbacground4);
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.level4);
+        tvDescription.setText(R.string.level14);
 
         textBtnBack();
-
         buttonContinue();
 
         dialog.show();
-    }
-
-    private void buttonContinue() {
-        Button btnContinue = dialog.findViewById(R.id.btnContinue);
-        btnContinue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
     }
 
     private void textBtnBack() {
@@ -356,12 +336,22 @@ public class Level4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level4.this, GameLevels.class);
+                    Intent intent = new Intent(Level14.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
-//                Здесь кода нет
+                    //  Здесь кода нет
                 }
+                dialog.dismiss();
+            }
+        });
+    }
+
+    private void buttonContinue() {
+        Button btnContinue = dialog.findViewById(R.id.btnContinue);
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 dialog.dismiss();
             }
         });
@@ -382,19 +372,19 @@ public class Level4 extends AppCompatActivity {
 
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
-        tvDescription.setText(R.string.level4End);
+        tvDescription.setText(R.string.level14End);
 
-        textBtnBack3();
-        buttonContinue3();
+        textBtnBack2();
+        buttonContinue2();
     }
 
-    private void buttonContinue3() {
+    private void buttonContinue2() {
         Button btnContinue = dialogEnd.findViewById(R.id.btnContinue);
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level4.this, Level5.class);
+                    Intent intent = new Intent(Level14.this, Level14.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -405,14 +395,14 @@ public class Level4 extends AppCompatActivity {
         });
     }
 
-    private void textBtnBack3() {
+    private void textBtnBack2() {
         TextView btnClose = dialogEnd.findViewById(R.id.btnClose2);
         btnClose.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level4.this, GameLevels.class);
+                    Intent intent = new Intent(Level14.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -422,7 +412,6 @@ public class Level4 extends AppCompatActivity {
             }
         });
     }
-
 
     private void playSoundWin() {
         sounds.play(levelWin,1,1,0,0,0);
@@ -491,7 +480,7 @@ public class Level4 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level4.this, GameLevels.class);
+            Intent intent = new Intent(Level14.this, GameLevels.class);
             startActivity(intent);
             finish();
         } catch (Exception exc) {

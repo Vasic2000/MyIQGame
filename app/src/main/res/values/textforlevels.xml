@@ -217,4 +217,14 @@
     <string name="lv13text10t">Pufferfish</string>
     <string name="lv13text11t">Poodle</string>
 
+    <string name="lv14text1">Fish voice</string>
+    <string name="lv14text2">Clock ticking</string>
+    <string name="lv14text3">Mouse squeak</string>
+    <string name="lv14text4">Crow crows</string>
+    <string name="lv14text5">Dog\'s bark</string>
+    <string name="lv14text6">Loud music</string>
+    <string name="lv14text7">Jackhammer</string>
+    <string name="lv14text8">Thunder</string>
+    <string name="lv14text9">Jet aircraft</string>
+    <string name="lv14text10">Howitzer shot</string>
 </resources>

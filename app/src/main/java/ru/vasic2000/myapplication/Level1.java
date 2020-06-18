@@ -18,6 +18,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.Random;
 
@@ -310,6 +311,17 @@ public class Level1 extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //прозрачный фон диалогового окна
         dialog.setCancelable(false);  //окно нельзя закрыыть кнопкой назад
 
+        //Замена картинки
+        ImageView preview = dialog.findViewById(R.id.previewImg);
+        preview.setImageResource(R.drawable.previewimage1);
+        //Фон
+        LinearLayout dialogFone = dialog.findViewById(R.id.dialogfon);
+        dialogFone.setBackgroundResource(R.drawable.previewbackgroundone);
+
+        //Замена текста
+        TextView tvDescription = dialog.findViewById(R.id.textDescription);
+        tvDescription.setText(R.string.level14);
+
         textBtnBack();
         buttonContinue();
 
@@ -352,6 +364,14 @@ public class Level1 extends AppCompatActivity {
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false);  //окно нельзя закрыыть кнопкой назад
+
+        //Фон
+        LinearLayout dialogFone = dialogEnd.findViewById(R.id.dialogfon);
+        dialogFone.setBackgroundResource(R.drawable.previewbackgroundone);
+
+        //Замена текста
+        TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
+        tvDescription.setText(R.string.leveloneEnd);
 
         textBtnBack2();
         buttonContinue2();
@@ -398,7 +418,7 @@ public class Level1 extends AppCompatActivity {
 
     private void playGoodAnswer() {
         Random rnd = new Random();
-        int soundNum = rnd.nextInt(10);
+        int soundNum = rnd.nextInt(8);
         switch (soundNum) {
             case 0:
                 sounds.play(goodAnswer1,1,1,0,0,0);
@@ -428,7 +448,7 @@ public class Level1 extends AppCompatActivity {
 
     private void playBadAnswer() {
         Random rnd = new Random();
-        int soundNum = rnd.nextInt(10);
+        int soundNum = rnd.nextInt(8);
         switch (soundNum) {
             case 0:
                 sounds.play(badAnswer1,1,1,0,0,0);
