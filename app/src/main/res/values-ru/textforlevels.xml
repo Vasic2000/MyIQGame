@@ -43,17 +43,17 @@
     <string name="lv4text1">Колбаса</string>
     <string name="lv4text2">Груша</string>
     <string name="lv4text3">Пицца</string>
-    <string name="lv4text4">Мороженное</string>
+    <string name="lv4text4">Морожен-\nное</string>
     <string name="lv4text5">Яблоко</string>
     <string name="lv4text6">Клубника</string>
     <string name="lv4text7">Огурец</string>
     <string name="lv4text8">Апельсин</string>
     <string name="lv4text9">Малина</string>
     <string name="lv4text10">Йогурт</string>
-    <string name="lv4text11">Футбольный мяч</string>
+    <string name="lv4text11">Футболь-\nный мяч</string>
     <string name="lv4text12">Вилка</string>
-    <string name="lv4text13">Тенисный мяч</string>
-    <string name="lv4text14">Болт и гайка</string>
+    <string name="lv4text13">Тенисный\nмяч</string>
+    <string name="lv4text14">Болт и\n гайка</string>
     <string name="lv4text15">Ключ</string>
     <string name="lv4text16">Телефон</string>
     <string name="lv4text17">Часы</string>
@@ -61,7 +61,7 @@
     <string name="lv4text19">Карандаш</string>
     <string name="lv4text20">Ластик</string>
     <string name="lv4text21">Лимон</string>
-    <string name="lv4text22">Зубная паста</string>
+    <string name="lv4text22">Зубная\nпаста</string>
 
     <string name="lv5text2">Двойка</string>
     <string name="lv5text3">Тройка</string>
@@ -69,7 +69,7 @@
     <string name="lv5text5">Пятёрка</string>
     <string name="lv5text6">Шестёрка</string>
     <string name="lv5text7">Семёрка</string>
-    <string name="lv5text8">Вочьмёрка</string>
+    <string name="lv5text8">Воcьмёрка</string>
     <string name="lv5text9">Девятка</string>
     <string name="lv5text10">Десятка</string>
     <string name="lv5text11">Валет</string>
@@ -99,8 +99,8 @@
 
     <string name="lv8text1">Перо</string>
     <string name="lv8text2">Пуговица</string>
-    <string name="lv8text3">Лего кубик 2</string>
-    <string name="lv8text4">Лего кубик 2</string>
+    <string name="lv8text3">Лего\nкубик 2</string>
+    <string name="lv8text4">Лего\nкубик 4</string>
     <string name="lv8text5">Яблоко</string>
     <string name="lv8text6">Бутылка</string>
     <string name="lv8text7">Кирпич</string>
@@ -112,25 +112,25 @@
     <string name="lv8text13">Поезд</string>
     <string name="lv8text14">Авианосец</string>
 
-    <string name="lv9text0">Десять минут первого</string>
+    <string name="lv9text0">Десять мин\nпервого</string>
     <string name="lv9text1">Час</string>
-    <string name="lv9text2">Пол третьего</string>
-    <string name="lv9text3">Без пятнадцати три</string>
-    <string name="lv9text4">Пол четвёртого</string>
+    <string name="lv9text2">Пол\nтретьего</string>
+    <string name="lv9text3">Без пятнад-\nцати три</string>
+    <string name="lv9text4">Пол\nчетвёртого</string>
     <string name="lv9text5">Четыре часа</string>
-    <string name="lv9text6">Пол шестого</string>
-    <string name="lv9text7">Без пятнадцати шесть</string>
-    <string name="lv9text8">Пятнадцать минут седьмого</string>
+    <string name="lv9text6">Пол\nшестого</string>
+    <string name="lv9text7">Без пятнад-\nцати шесть</string>
+    <string name="lv9text8">Пятнадцать ми-\nнут седьмого</string>
     <string name="lv9text9">Семь часов</string>
     <string name="lv9text10">Пол девятого</string>
     <string name="lv9text11">Девять часов</string>
     <string name="lv9text12">Пол десятого</string>
     <string name="lv9text13">Десять часов</string>
-    <string name="lv9text14">Без пятнадцати одиннадцать</string>
-    <string name="lv9text15">Без пятнадцати двенадцать</string>
+    <string name="lv9text14">Без пятнадца-\nти одиннадцать</string>
+    <string name="lv9text15">Без пятнадца-\nти двенадцать</string>
 
-    <string name="lv10text1f">Резиновый утёнок</string>
-    <string name="lv10text2f">Воздушный шарик</string>
+    <string name="lv10text1f">Резиновый\nутёнок</string>
+    <string name="lv10text2f">Воздушный\nшарик</string>
     <string name="lv10text3f">Круг</string>
     <string name="lv10text4f">Лёд</string>
     <string name="lv10text5f">Бревно</string>
@@ -143,7 +143,7 @@
     <string name="lv10text12f">Орех</string>
     <string name="lv10text1s">Топор</string>
     <string name="lv10text2s">Кирпич</string>
-    <string name="lv10text3s">Зубная паста</string>
+    <string name="lv10text3s">Зубная\nпаста</string>
     <string name="lv10text4s">Вилка</string>
     <string name="lv10text5s">Болт</string>
     <string name="lv10text6s">Ластик</string>
@@ -201,10 +201,10 @@
     <string name="lv13text5f">Скутозавр</string>
     <string name="lv13text6f">Тиранозавр</string>
     <string name="lv13text7f">Мамонт</string>
-    <string name="lv13text8f">Архиоптерикс</string>
+    <string name="lv13text8f">Архиопте-\nрикс</string>
     <string name="lv13text9f">Симолдон</string>
     <string name="lv13text10f">Горганопс</string>
-    <string name="lv13text11f">Лабиринтодонт</string>
+    <string name="lv13text11f">Лабирин-\nтодонт</string>
     <string name="lv13text1t">Тихоходка</string>
     <string name="lv13text2t">Черепаха</string>
     <string name="lv13text3t">Акула</string>
@@ -213,19 +213,34 @@
     <string name="lv13text6t">Комодо</string>
     <string name="lv13text7t">Ящер</string>
     <string name="lv13text8t">Воробей</string>
-    <string name="lv13text9t">Летучая мышь</string>
+    <string name="lv13text9t">Летучая\nмышь</string>
     <string name="lv13text10t">Иглобрюх</string>
     <string name="lv13text11t">Пудель</string>
 
-    <string name="lv14text1">Голос рыбы</string>
-    <string name="lv14text2">Тиканье часов</string>
-    <string name="lv14text3">Мышиный писк</string>
-    <string name="lv14text4">Воронье карканье</string>
-    <string name="lv14text5">Собачий лай</string>
-    <string name="lv14text6">Громкая музыка</string>
-    <string name="lv14text7">Отбойный молоток</string>
+    <string name="lv14text1">Голос\nрыбы</string>
+    <string name="lv14text2">Тиканье\nчасов</string>
+    <string name="lv14text3">Мышиный\nписк</string>
+    <string name="lv14text4">Воронье\nкарканье</string>
+    <string name="lv14text5">Собачий\nлай</string>
+    <string name="lv14text6">Громкая\nмузыка</string>
+    <string name="lv14text7">Отбойный\nмолоток</string>
     <string name="lv14text8">Гром</string>
-    <string name="lv14text9">Реактивный самолёт</string>
-    <string name="lv14text10">Выстрел гаубицы</string>
+    <string name="lv14text9">Реактивный\nсамолёт</string>
+    <string name="lv14text10">Выстрел\nгаубицы</string>
+
+    <string name="lv15text1">Комар</string>
+    <string name="lv15text2">Муха</string>
+    <string name="lv15text3">Божья\nкоровка</string>
+    <string name="lv15text4">Кролик</string>
+    <string name="lv15text5">Голубь</string>
+    <string name="lv15text6">Попугай</string>
+    <string name="lv15text7">Тигр</string>
+    <string name="lv15text8">Кошка</string>
+    <string name="lv15text9">Сокол</string>
+    <string name="lv15text10">Панда</string>
+    <string name="lv15text11">Белый\nмедведь</string>
+    <string name="lv15text12">Носорог</string>
+    <string name="lv15text13">Слон</string>
+    <string name="lv15text14">Кашалот</string>
 
 </resources>

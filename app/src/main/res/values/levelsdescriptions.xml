@@ -144,4 +144,15 @@ There are 7 days in a week, 7 continents, 7 musical notes,
         If you go away from the noise source two times further, the noise level fall 4 times.
         L ~ 1/R2
     </string>
+
+    <string name="level15">
+        Choose, who lives longer?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level15End">
+        "Congratulations, the level 14 is completed!\n
+        Jellyfish Turritopsis dohrnii presumably immortal creatures. Their secret is that when they are threatened with death, they return to their initial stage - polyps - and take off their clones. This process can last an infinite number of times.
+    </string>
+
 </resources>

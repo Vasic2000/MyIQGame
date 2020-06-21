@@ -31,20 +31,25 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:id="@+id/previewImg"
-            android:src="@drawable/previewimage1"
-            android:layout_weight="60"
-            android:layout_marginTop="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:id="@+id/textDescription"
-            android:text="@string/levelone"
-            android:layout_weight="30"
-            android:textColor="@color/colorBlack60"
-            android:textSize="24sp"
             android:layout_marginTop="10dp"
-            />
+            android:layout_weight="60"
+            android:src="@drawable/previewimage1" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="30"
+                android:text="@string/levelone"
+                android:textColor="@color/colorBlack60"
+                android:textSize="24sp" />
+        </ScrollView>
 
         <Button
             android:layout_width="wrap_content"

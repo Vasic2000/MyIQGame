@@ -288,7 +288,7 @@ public class Array {
     };
 
     final int[] text9 = {
-            R.string.lv9text1,
+            R.string.lv9text0,
             R.string.lv9text1,
             R.string.lv9text2,
             R.string.lv9text3,
@@ -487,7 +487,6 @@ public class Array {
             R.drawable.l13_11t
     };
 
-
     final int[] text13 = {
             R.string.lv13text1f,  //Трилобит
             R.string.lv13text2f, //Аномалокарис
@@ -512,6 +511,8 @@ public class Array {
             R.string.lv13text10t,  //Иглобрюх
             R.string.lv13text11t  //Пудель
     };
+
+    final int[] strong13 = {0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1};
 
     //Уровень 14
     final int[] images14 = {
@@ -539,5 +540,38 @@ public class Array {
             R.string.lv14text10
     };
 
-    final int[] strong13 = {0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1};
+    //Уровень 15
+    final int[] images15 = {
+            R.drawable.l15_1,
+            R.drawable.l15_2,
+            R.drawable.l15_3,
+            R.drawable.l15_4,
+            R.drawable.l15_5,
+            R.drawable.l15_6,
+            R.drawable.l15_7,
+            R.drawable.l15_8,
+            R.drawable.l15_9,
+            R.drawable.l15_10,
+            R.drawable.l15_11,
+            R.drawable.l15_12,
+            R.drawable.l15_13,
+            R.drawable.l15_14
+    };
+    final int[] text15 = {
+            R.string.lv15text1,
+            R.string.lv15text2,
+            R.string.lv15text3,
+            R.string.lv15text4,
+            R.string.lv15text5,
+            R.string.lv15text6,
+            R.string.lv15text7,
+            R.string.lv15text8,
+            R.string.lv15text9,
+            R.string.lv15text10,
+            R.string.lv15text11,
+            R.string.lv15text12,
+            R.string.lv15text13,
+            R.string.lv15text14,
+    };
+
 }

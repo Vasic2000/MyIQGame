@@ -42,6 +42,7 @@ public class Level1 extends AppCompatActivity {
     TextView left_text;
     TextView right_text;
 
+
     public int count = 0;  //Счётчик правильных ответов
 
     @Override
@@ -240,7 +241,143 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
+
+        // Обработка нажатий на слова
+        // Левая кнопка
+        left_text.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //  Касание картинки
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    imgRight.setEnabled(false); // Блокирую правую картинку
+
+                    //  Если левая больше
+                    if(numLeft > numRight) {
+                        imgLeft.setImageResource(R.drawable.img_true);
+                    } else {
+                        imgLeft.setImageResource(R.drawable.img_false);
+                    }
+                }
+                else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    if((numLeft > numRight) && (count < 20)) {
+                        if(count < 19) {
+                            playGoodAnswer();
+                        }
+                        count++;
+                        // Закрашиваю прогресс
+                        for(int i=0; i<20; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+                        // Закрашиваю выполненный прогресс
+                        for(int i=0; i<count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+
+                    } else {
+                        playBadAnswer();
+                        if(count>0) {
+                            if (count == 1) {
+                                count = 0;
+                            } else {
+                                count -=2;
+                            }
+                        }
+
+                        // Закрашиваю прогресс
+                        for(int i=0; i<20; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+                        // Закрашиваю выполненный прогресс
+                        for(int i=0; i<count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+                    }
+                    if(count == 20) {
+                        // ВЫХОД ИЗ УРОВНЯ
+                        playSoundWin();
+                        dialogEnd.show();
+                    } else {
+                        makeRndImages();
+                        // Разблокирую правую картинку
+                        imgRight.setEnabled(true);
+                    }
+                }
+                return true;
+            }
+        });
+
+        // Правая кнопка
+        right_text.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //  Касание картинки
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    imgLeft.setEnabled(false); // Блокирую левую картинку
+
+                    //  Если левая меньше
+                    if(numLeft < numRight) {
+                        imgRight.setImageResource(R.drawable.img_true);
+                    } else {
+                        imgRight.setImageResource(R.drawable.img_false);
+                    }
+                }
+                else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    if((numLeft < numRight) && (count < 20)) {
+                        if(count < 19) {
+                            playGoodAnswer();
+                        }
+                        count++;
+                        // Закрашиваю прогресс
+                        for(int i=0; i<20; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+                        // Закрашиваю выполненный прогресс
+                        for(int i=0; i<count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+                    } else {
+                        playBadAnswer();
+                        if(count>0) {
+                            if (count == 1) {
+                                count = 0;
+                            } else {
+                                count -=2;
+                            }
+                        }
+
+                        // Закрашиваю прогресс
+                        for(int i=0; i<20; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+                        // Закрашиваю выполненный прогресс
+                        for(int i=0; i<count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+                    }
+                    if(count == 20) {
+                        // ВЫХОД ИЗ УРОВНЯ
+                        playSoundWin();
+                        dialogEnd.show();
+                    } else {
+                        makeRndImages();
+                        // Разблокирую левую картинку
+                        imgLeft.setEnabled(true);
+                    }
+                }
+                return true;
+            }
+        });
+
     }
+
 
     private void imgRoundCorners() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

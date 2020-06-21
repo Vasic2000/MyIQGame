@@ -50,10 +50,10 @@
     <string name="lv4text8">Orange</string>
     <string name="lv4text9">Raspberry</string>
     <string name="lv4text10">Yogurt</string>
-    <string name="lv4text11">Soccer ball</string>
+    <string name="lv4text11">Soccer\nball</string>
     <string name="lv4text12">Fork</string>
-    <string name="lv4text13">Tennis ball</string>
-    <string name="lv4text14">Screw &amp; nut</string>
+    <string name="lv4text13">Tennis\nball</string>
+    <string name="lv4text14">Screw &amp;\n nut</string>
     <string name="lv4text15">Car key</string>
     <string name="lv4text16">Phone</string>
     <string name="lv4text17">Watch</string>
@@ -99,8 +99,8 @@
 
     <string name="lv8text1">Feather</string>
     <string name="lv8text2">Button</string>
-    <string name="lv8text3">Lego brick 2</string>
-    <string name="lv8text4">Lego brick 2</string>
+    <string name="lv8text3">Lego\nbrick 2</string>
+    <string name="lv8text4">Lego\nbrick 4</string>
     <string name="lv8text5">Apple</string>
     <string name="lv8text6">Buttle</string>
     <string name="lv8text7">Brick</string>
@@ -110,26 +110,26 @@
     <string name="lv8text11">Car</string>
     <string name="lv8text12">Track</string>
     <string name="lv8text13">Train</string>
-    <string name="lv8text14">Aircraft carrier</string>
+    <string name="lv8text14">Aircraft\ncarrier</string>
 
-    <string name="lv9text0">Ten past twelve</string>
+    <string name="lv9text0">Ten past\ntwelve</string>
     <string name="lv9text1">One o\'clock</string>
-    <string name="lv9text2">Half past two</string>
-    <string name="lv9text3">Quarter to three</string>
-    <string name="lv9text4">Half past three</string>
+    <string name="lv9text2">Half past\ntwo</string>
+    <string name="lv9text3">Quarter\nto three</string>
+    <string name="lv9text4">Half past\nthree</string>
     <string name="lv9text5">Four o\'clock</string>
-    <string name="lv9text6">Half past five</string>
-    <string name="lv9text7">Quarter before six</string>
-    <string name="lv9text8">Quarter past six</string>
+    <string name="lv9text6">Half past\nfive</string>
+    <string name="lv9text7">Quarter\nbefore six</string>
+    <string name="lv9text8">Quarter\npast six</string>
     <string name="lv9text9">Seven o\'clock</string>
-    <string name="lv9text10">Quarter to nine</string>
+    <string name="lv9text10">Quarter\nto nine</string>
     <string name="lv9text11">Nine o\'clock</string>
-    <string name="lv9text12">Half past nine</string>
+    <string name="lv9text12">Half past\nnine</string>
     <string name="lv9text13">Ten o\'clock</string>
-    <string name="lv9text14">Quarter to eleven</string>
-    <string name="lv9text15">Quarter to twelve</string>
+    <string name="lv9text14">Quarter\nto eleven</string>
+    <string name="lv9text15">Quarter\nto twelve</string>
 
-    <string name="lv10text1f">Rubber duckling</string>
+    <string name="lv10text1f">Rubber\nduckling</string>
     <string name="lv10text2f">Balloon</string>
     <string name="lv10text3f">Lifebuoy</string>
     <string name="lv10text4f">Ice</string>
@@ -182,7 +182,7 @@
     <string name="lv12text7f">Peach</string>
     <string name="lv12text8f">Orange</string>
     <string name="lv12text9f">Garnet</string>
-    <string name="lv12text10f">Passion fruit</string>
+    <string name="lv12text10f">Passion\nfruit</string>
     <string name="lv12text1v">Carrot</string>
     <string name="lv12text2v">Radish</string>
     <string name="lv12text3v">Ginger</string>
@@ -204,7 +204,7 @@
     <string name="lv13text8f">Archiopteryx</string>
     <string name="lv13text9f">Simoldon</string>
     <string name="lv13text10f">Gorgonops</string>
-    <string name="lv13text11f">Labyrinthodontia</string>
+    <string name="lv13text11f">Labyrint-\nhodontia</string>
     <string name="lv13text1t">Tardigrades</string>
     <string name="lv13text2t">Turtle</string>
     <string name="lv13text3t">Shark</string>
@@ -217,14 +217,31 @@
     <string name="lv13text10t">Pufferfish</string>
     <string name="lv13text11t">Poodle</string>
 
-    <string name="lv14text1">Fish voice</string>
-    <string name="lv14text2">Clock ticking</string>
-    <string name="lv14text3">Mouse squeak</string>
-    <string name="lv14text4">Crow crows</string>
+    <string name="lv14text1">Fish\nvoice</string>
+    <string name="lv14text2">Clock\nticking</string>
+    <string name="lv14text3">Mouse\nsqueak</string>
+    <string name="lv14text4">Crow\ncrows</string>
     <string name="lv14text5">Dog\'s bark</string>
     <string name="lv14text6">Loud music</string>
     <string name="lv14text7">Jackhammer</string>
     <string name="lv14text8">Thunder</string>
-    <string name="lv14text9">Jet aircraft</string>
-    <string name="lv14text10">Howitzer shot</string>
+    <string name="lv14text9">Jet\naircraft</string>
+    <string name="lv14text10">Howi
+        tzer\nshot</string>
+
+    <string name="lv15text1">Mosquito</string>
+    <string name="lv15text2">Fly</string>
+    <string name="lv15text3">God\'s\nladybug</string>
+    <string name="lv15text4">Rabbit</string>
+    <string name="lv15text5">Pigeon</string>
+    <string name="lv15text6">Parrot</string>
+    <string name="lv15text7">Tiger</string>
+    <string name="lv15text8">Cat</string>
+    <string name="lv15text9">Falcon</string>
+    <string name="lv15text10">Panda</string>
+    <string name="lv15text11">Polar\nbear</string>
+    <string name="lv15text12">Rhino</string>
+    <string name="lv15text13">Elephant</string>
+    <string name="lv15text14">Sperm\nwhale</string>
+
 </resources>
