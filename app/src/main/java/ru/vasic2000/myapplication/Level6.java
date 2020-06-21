@@ -2,6 +2,7 @@ package ru.vasic2000.myapplication;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
@@ -162,6 +163,7 @@ public class Level6 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult6();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -229,6 +231,7 @@ public class Level6 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult6();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -240,7 +243,6 @@ public class Level6 extends AppCompatActivity {
                 return true;
             }
         });
-
 
         // Обработка нажатий на слова
         // Левая кнопка
@@ -298,6 +300,7 @@ public class Level6 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult6();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -364,6 +367,7 @@ public class Level6 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult6();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -375,7 +379,18 @@ public class Level6 extends AppCompatActivity {
                 return true;
             }
         });
+    }
 
+    private void SaveResult6() {
+        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+        final int level = save.getInt("Level", 1);
+        if (level > 6) {
+
+        } else {
+            SharedPreferences.Editor editor = save.edit();
+            editor.putInt("Level", 7);
+            editor.apply();
+        }
     }
 
     private void imgRoundCorners() {

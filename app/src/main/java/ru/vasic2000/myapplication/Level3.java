@@ -2,6 +2,7 @@ package ru.vasic2000.myapplication;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
@@ -162,6 +163,7 @@ public class Level3 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult3();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -214,7 +216,6 @@ public class Level3 extends AppCompatActivity {
                                 count -=2;
                             }
                         }
-
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -228,6 +229,7 @@ public class Level3 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult3();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -239,7 +241,6 @@ public class Level3 extends AppCompatActivity {
                 return true;
             }
         });
-
 
         // Обработка нажатий на слова
         // Левая кнопка
@@ -297,6 +298,7 @@ public class Level3 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult3();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -363,6 +365,7 @@ public class Level3 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult3();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -374,7 +377,18 @@ public class Level3 extends AppCompatActivity {
                 return true;
             }
         });
+    }
 
+    private void SaveResult3() {
+        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+        final int level = save.getInt("Level", 1);
+        if (level > 3) {
+
+        } else {
+            SharedPreferences.Editor editor = save.edit();
+            editor.putInt("Level", 4);
+            editor.apply();
+        }
     }
 
     private void imgRoundCorners() {

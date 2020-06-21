@@ -2,6 +2,7 @@ package ru.vasic2000.myapplication;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
@@ -161,6 +162,7 @@ public class Level2 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult2();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -228,6 +230,7 @@ public class Level2 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult2();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -296,6 +299,7 @@ public class Level2 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult2();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -362,6 +366,7 @@ public class Level2 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult2();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -373,7 +378,18 @@ public class Level2 extends AppCompatActivity {
                 return true;
             }
         });
+    }
 
+    private void SaveResult2() {
+        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+        final int level = save.getInt("Level", 2);
+        if (level > 2) {
+
+        } else {
+            SharedPreferences.Editor editor = save.edit();
+            editor.putInt("Level", 3);
+            editor.apply();
+        }
     }
 
     private void imgRoundCorners() {

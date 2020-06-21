@@ -2,6 +2,7 @@ package ru.vasic2000.myapplication;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
@@ -167,6 +168,7 @@ public class Level4 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult4();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -233,6 +235,7 @@ public class Level4 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult4();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -244,7 +247,6 @@ public class Level4 extends AppCompatActivity {
                 return true;
             }
         });
-
 
         // Обработка нажатий на слова
         // Левая кнопка
@@ -278,7 +280,6 @@ public class Level4 extends AppCompatActivity {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_points_green);
                         }
-
                     } else {
                         playBadAnswer();
                         if(count>0) {
@@ -288,7 +289,6 @@ public class Level4 extends AppCompatActivity {
                                 count -=2;
                             }
                         }
-
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -302,6 +302,7 @@ public class Level4 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult4();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -354,7 +355,6 @@ public class Level4 extends AppCompatActivity {
                                 count -=2;
                             }
                         }
-
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -368,6 +368,7 @@ public class Level4 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult4();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -380,6 +381,18 @@ public class Level4 extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void SaveResult4() {
+        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+        final int level = save.getInt("Level", 1);
+        if (level > 4) {
+
+        } else {
+            SharedPreferences.Editor editor = save.edit();
+            editor.putInt("Level", 5);
+            editor.apply();
+        }
     }
 
     private void imgRoundCorners() {

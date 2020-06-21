@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
@@ -163,6 +164,7 @@ public class Level1 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult1();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -229,6 +231,7 @@ public class Level1 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult1();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -240,7 +243,6 @@ public class Level1 extends AppCompatActivity {
                 return true;
             }
         });
-
 
         // Обработка нажатий на слова
         // Левая кнопка
@@ -298,6 +300,7 @@ public class Level1 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult1();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -310,6 +313,7 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
+        // Обработка нажатий на слова
         // Правая кнопка
         right_text.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -364,6 +368,7 @@ public class Level1 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult1();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -375,9 +380,19 @@ public class Level1 extends AppCompatActivity {
                 return true;
             }
         });
-
     }
 
+    private void SaveResult1() {
+        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+        final int level = save.getInt("Level", 1);
+        if (level > 1) {
+
+        } else {
+            SharedPreferences.Editor editor = save.edit();
+            editor.putInt("Level", 2);
+            editor.apply();
+        }
+    }
 
     private void imgRoundCorners() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

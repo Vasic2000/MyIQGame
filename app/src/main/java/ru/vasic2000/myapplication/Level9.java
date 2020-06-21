@@ -2,6 +2,7 @@ package ru.vasic2000.myapplication;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
@@ -127,7 +128,6 @@ public class Level9 extends AppCompatActivity {
                             playGoodAnswer();
                         }
                         count++;
-
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -138,7 +138,6 @@ public class Level9 extends AppCompatActivity {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_points_green);
                         }
-
                     } else {
                         playBadAnswer();
                         if(count>0) {
@@ -148,7 +147,6 @@ public class Level9 extends AppCompatActivity {
                                 count -=2;
                             }
                         }
-
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -162,6 +160,7 @@ public class Level9 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult9();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -195,7 +194,6 @@ public class Level9 extends AppCompatActivity {
                             playGoodAnswer();
                         }
                         count++;
-
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -215,7 +213,6 @@ public class Level9 extends AppCompatActivity {
                                 count -=2;
                             }
                         }
-
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -229,6 +226,7 @@ public class Level9 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult9();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -250,7 +248,6 @@ public class Level9 extends AppCompatActivity {
                 //  Касание картинки
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     imgRight.setEnabled(false); // Блокирую правую картинку
-
                     //  Если левая больше
                     if(numLeft > numRight) {
                         imgLeft.setImageResource(R.drawable.img_true);
@@ -284,7 +281,6 @@ public class Level9 extends AppCompatActivity {
                                 count -=2;
                             }
                         }
-
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -298,6 +294,7 @@ public class Level9 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult9();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -317,7 +314,6 @@ public class Level9 extends AppCompatActivity {
                 //  Касание картинки
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     imgLeft.setEnabled(false); // Блокирую левую картинку
-
                     //  Если левая меньше
                     if(numLeft < numRight) {
                         imgRight.setImageResource(R.drawable.img_true);
@@ -350,7 +346,6 @@ public class Level9 extends AppCompatActivity {
                                 count -=2;
                             }
                         }
-
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -364,6 +359,7 @@ public class Level9 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult9();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -375,7 +371,18 @@ public class Level9 extends AppCompatActivity {
                 return true;
             }
         });
+    }
 
+    private void SaveResult9() {
+        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+        final int level = save.getInt("Level", 1);
+        if (level > 9) {
+
+        } else {
+            SharedPreferences.Editor editor = save.edit();
+            editor.putInt("Level", 10);
+            editor.apply();
+        }
     }
 
     private void imgRoundCorners() {
