@@ -55,6 +55,8 @@ public class Level12 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
 
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
         initComponents();
         imgRoundCorners();
         FullScreen();

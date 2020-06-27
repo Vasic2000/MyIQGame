@@ -2,6 +2,7 @@ package ru.vasic2000.myapplication;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -18,6 +19,8 @@ public class GameLevels extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_levels);
+
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
         level = save.getInt("Level", 1);
