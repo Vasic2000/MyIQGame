@@ -415,14 +415,14 @@ public class Level3 extends AppCompatActivity {
         //Анимация
         final Animation an = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(15);
+        numLeft = rnd.nextInt(16);
         imgLeft.setImageResource(array.images3[numLeft]);
         imgLeft.setAnimation(an);
         left_text.setText(array.text3[numLeft]);
 
-        numRight = rnd.nextInt(15);
+        numRight = rnd.nextInt(16);
         while(numRight == numLeft) {
-            numRight = rnd.nextInt(15);
+            numRight = rnd.nextInt(16);
         }
         imgRight.setImageResource(array.images3[numRight]);
         imgRight.setAnimation(an);

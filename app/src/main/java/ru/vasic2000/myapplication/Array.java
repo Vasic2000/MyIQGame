@@ -67,12 +67,13 @@ public class Array {
             R.drawable.l3_cat,
             R.drawable.l3_here,
             R.drawable.l3_fox,
-            R.drawable.l3_sheep,
+            R.drawable.l3_chimpanzee,
             R.drawable.l3_voolf,
-            R.drawable.l3_horse,
-            R.drawable.l3_beer,
-            R.drawable.l3_tiger,
+            R.drawable.l3_sheep,
             R.drawable.l3_lion,
+            R.drawable.l3_tiger,
+            R.drawable.l3_beer,
+            R.drawable.l3_horse,
             R.drawable.l3_elefant,
             R.drawable.l3_dino
     };
@@ -92,7 +93,8 @@ public class Array {
             R.string.lv3text12,
             R.string.lv3text13,
             R.string.lv3text14,
-            R.string.lv3text15
+            R.string.lv3text15,
+            R.string.lv3text16
     };
 
     //Урвень 4

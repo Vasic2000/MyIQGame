@@ -31,14 +31,15 @@
     <string name="lv3text5">Кот</string>
     <string name="lv3text6">Заяц</string>
     <string name="lv3text7">Лиса</string>
-    <string name="lv3text8">Овца</string>
+    <string name="lv3text8">Шимпанзе</string>
     <string name="lv3text9">Волк</string>
-    <string name="lv3text10">Лошадь</string>
-    <string name="lv3text11">Медведь</string>
+    <string name="lv3text10">Овца</string>
+    <string name="lv3text11">Лев</string>
     <string name="lv3text12">Тигр</string>
-    <string name="lv3text13">Лев</string>
-    <string name="lv3text14">Слон</string>
-    <string name="lv3text15">Динозавр</string>
+    <string name="lv3text13">Медведь</string>
+    <string name="lv3text14">Лошадь</string>
+    <string name="lv3text15">Слон</string>
+    <string name="lv3text16">Динозавр</string>
 
     <string name="lv4text1">Колбаса</string>
     <string name="lv4text2">Груша</string>
