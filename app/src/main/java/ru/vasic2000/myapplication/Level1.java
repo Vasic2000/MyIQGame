@@ -37,12 +37,14 @@ public class Level1 extends AppCompatActivity {
 
     public int numLeft;  //Номер левой картинки
     public int numRight; //Номер правой картинки
+
+    public int numLeftOld = -1; //Предыдущий номер левой картинки
+
     ImageView imgLeft;
     ImageView imgRight;
     TextView textLevels;
     TextView left_text;
     TextView right_text;
-
 
     public int count = 0;  //Счётчик правильных ответов
 
@@ -51,9 +53,11 @@ public class Level1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
 
+        Array array = new Array();
+
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
-        initComponents();
+        initComponents(array);
         imgRoundCorners();
         FullScreen();
         previewDialog();
@@ -63,10 +67,10 @@ public class Level1 extends AppCompatActivity {
         dialog.show();
         backFromPreview();
         backFromLevel();
-        makeRndImages();
+        makeRndImages(array);
     }
 
-    private void initComponents() {
+    private void initComponents(final Array array) {
         textLevels = findViewById(R.id.text_levels);
         backGround = findViewById(R.id.main_background);
         imgLeft = findViewById(R.id.imgLeft);
@@ -170,7 +174,7 @@ public class Level1 extends AppCompatActivity {
                         playSoundWin();
                         dialogEnd.show();
                     } else {
-                        makeRndImages();
+                        makeRndImages(array);
                         // Разблокирую правую картинку
                         imgRight.setEnabled(true);
                     }
@@ -237,7 +241,7 @@ public class Level1 extends AppCompatActivity {
                         playSoundWin();
                         dialogEnd.show();
                     } else {
-                        makeRndImages();
+                        makeRndImages(array);
                         // Разблокирую левую картинку
                         imgLeft.setEnabled(true);
                     }
@@ -306,7 +310,7 @@ public class Level1 extends AppCompatActivity {
                         playSoundWin();
                         dialogEnd.show();
                     } else {
-                        makeRndImages();
+                        makeRndImages(array);
                         // Разблокирую правую картинку
                         imgRight.setEnabled(true);
                     }
@@ -374,7 +378,7 @@ public class Level1 extends AppCompatActivity {
                         playSoundWin();
                         dialogEnd.show();
                     } else {
-                        makeRndImages();
+                        makeRndImages(array);
                         // Разблокирую левую картинку
                         imgLeft.setEnabled(true);
                     }
@@ -411,14 +415,14 @@ public class Level1 extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
-    private void makeRndImages() {
-        Array array = new Array();
+    private void makeRndImages(Array array) {
         Random rnd = new Random();
 
         //Анимация
         final Animation an = AnimationUtils.loadAnimation(Level1.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(10);
+        while((numLeft = rnd.nextInt(10)) == numLeftOld) numLeft = rnd.nextInt(10);
+        numLeftOld = numLeft;
         imgLeft.setImageResource(array.images1[numLeft]);
         imgLeft.setAnimation(an);
         left_text.setText(array.text1[numLeft]);
