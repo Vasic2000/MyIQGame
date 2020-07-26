@@ -19,10 +19,7 @@
     <string name="level_13">Уровень: 13</string>
     <string name="level_14">Уровень: 14</string>
     <string name="level_15">Уровень: 15</string>
-    <string name="level_16">Уровень: 16</string>
-    <string name="level_17">Уровень: 17</string>
-    <string name="level_18">Уровень: 18</string>
-    <string name="level_19">Уровень: 19</string>
-    <string name="level_20">Уровень: 20</string>
     <string name="textContinue">Продолжить</string>
+    <string name="Arrow"><![CDATA[<]]></string>
+    <string name="cross_sign">X</string>
 </resources>

@@ -474,7 +474,7 @@ public class Level1 extends AppCompatActivity {
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.levelone);
+        tvDescription.setText(R.string.level1);
 
         textBtnBack();
         buttonContinue();
@@ -525,7 +525,7 @@ public class Level1 extends AppCompatActivity {
 
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
-        tvDescription.setText(R.string.leveloneEnd);
+        tvDescription.setText(R.string.level1End);
 
         textBtnBack2();
         buttonContinue2();

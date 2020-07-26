@@ -94,7 +94,7 @@ public class Level2 extends AppCompatActivity {
         backGround.setImageResource(R.drawable.level_background);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
-        textLevels.setText(R.string.level_1);
+        textLevels.setText(R.string.level_2);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
@@ -469,7 +469,7 @@ public class Level2 extends AppCompatActivity {
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.leveltwo);
+        tvDescription.setText(R.string.level2);
 
         textBtnBack();
 
@@ -517,7 +517,7 @@ public class Level2 extends AppCompatActivity {
 
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
-        tvDescription.setText(R.string.levelTwoEnd);
+        tvDescription.setText(R.string.level2End);
 
         textBtnBack2();
         buttonContinue2();

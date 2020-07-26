@@ -211,7 +211,7 @@
             <LinearLayout
                 android:id="@+id/line3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
@@ -224,7 +224,8 @@
                     android:background="@drawable/style_img_universal"
                     android:scaleType="centerCrop"
                     android:layout_weight="1"
-                    android:src="@drawable/imgtest" />
+                    android:src="@drawable/imgtest"
+                    android:layout_marginEnd="5dp" />
                 <ImageView
                     android:id="@+id/imgRight"
                     android:layout_width="match_parent"
@@ -254,7 +255,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    />
+                    android:layout_marginEnd="5dp" />
                 <TextView
                     android:id="@+id/textRight"
                     android:layout_width="match_parent"
@@ -265,7 +266,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    />
+                    android:layout_marginEnd="5dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -96,7 +96,7 @@ public class Level15 extends AppCompatActivity {
         backGround.setImageResource(R.drawable.level_background);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
-        textLevels.setText(R.string.level_14);
+        textLevels.setText(R.string.level_15);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
@@ -458,7 +458,7 @@ public class Level15 extends AppCompatActivity {
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.level14);
+        tvDescription.setText(R.string.level15);
 
         textBtnBack();
         buttonContinue();
@@ -521,7 +521,7 @@ public class Level15 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level15.this, Level15.class);
+                    Intent intent = new Intent(Level15.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {

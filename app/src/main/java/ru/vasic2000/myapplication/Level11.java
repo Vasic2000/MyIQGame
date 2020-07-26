@@ -70,7 +70,6 @@ public class Level11 extends AppCompatActivity {
 
     private void initComponents() {
         textLevels = findViewById(R.id.text_levels);
-        textLevels.setText(R.string.level_11);
         backGround = findViewById(R.id.main_background);
         imgLeft = findViewById(R.id.imgLeft);
         imgRight = findViewById(R.id.imgRight);
@@ -100,7 +99,7 @@ public class Level11 extends AppCompatActivity {
         backGround.setImageResource(R.drawable.level_background);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
-        textLevels.setText(R.string.level_1);
+        textLevels.setText(R.string.level_11);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));

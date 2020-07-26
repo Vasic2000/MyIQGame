@@ -14,17 +14,26 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="12dp">
 
         <TextView
-            android:id="@+id/btnClose2"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:id="@+id/btnClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="start"
             android:background="@drawable/style_btn_stroke_pressed_white"
             android:gravity="center"
-            android:text="@string/cross_sign"
-            android:textStyle="bold" />
+            android:text="@string/Arrow"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/previewImg"
+            android:layout_marginTop="10dp"
+            android:layout_weight="40"
+            android:src="@drawable/previewimage1" />
 
         <ScrollView
             android:layout_width="wrap_content"
@@ -32,26 +41,28 @@
             android:layout_marginTop="10dp">
 
             <TextView
-                android:id="@+id/textDescriptionEnd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/level1End"
+                android:id="@+id/textDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/level1"
                 android:textColor="@color/colorBlack60"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
         </ScrollView>
 
         <Button
-            android:id="@+id/btnContinue"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
+            android:layout_height="0dp"
+            android:id="@+id/btnContinue"
             android:background="@drawable/style_btn_stroke_pressed_white"
+            android:layout_weight="10"
+            android:text="@string/textContinue"
+            android:textColor="@color/colorBlack60"
+            android:layout_marginTop="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:text="@string/textContinue"
             android:textAllCaps="true"
-            android:textColor="@color/colorBlack60"
-            android:textSize="20sp" />
+            android:layout_gravity="center"
+            android:textSize="16sp"/>
     </LinearLayout>
 </LinearLayout>

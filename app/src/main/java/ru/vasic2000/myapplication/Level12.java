@@ -100,7 +100,7 @@ public class Level12 extends AppCompatActivity {
         backGround.setImageResource(R.drawable.level4);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
-        textLevels.setText(R.string.level_13);
+        textLevels.setText(R.string.level_12);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));

@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="levelone">
+    <string name="level1">
         Choose which numberal is greater?\n
         Questions might repeat until you rich 20 pt.
     </string>
 
-    <string name="leveloneEnd">
-        "Congratulations, the level 1 is completed!\n
-        Do you know that the number 7 is the happiest number?
-There are 7 days in a week, 7 continents, 7 musical notes,
-        7 colors of the rainbow, 7 days of Creation and much more ...\n
-        Also, the number 7 is often the favorite number of people all around the world."
+    <string name="level1End">
+        Congratulations, the level 1 is completed!\n
+        Do you know that the number 7 is the happiest number? There are 7 days in a week, 7 continents, 7 musical notes, 7 colors of the rainbow, 7 days of Creation and much more?\n
+        Also, the number 7 is often the favorite number of people all around the world.
     </string>
 
-    <string name="leveltwo">
+    <string name="level2">
         Choose which Roman digit is greater?\n
         Questions might repeat until you rich 20 pt.
     </string>
 
-    <string name="levelTwoEnd">
-        "Congratulations, the level 2 is completed!\n
-        Do you know that in Roman numerals there is no digit zero?"
+    <string name="level2End">
+        Congratulations, the level 2 is completed!\n
+        Do you know that in Roman numerals there is no digit zero?
     </string>
 
     <string name="level3">
@@ -29,18 +27,18 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level3End">
-        "Congratulations, the level 3 is completed!\n
-        A larger creature is not necessarily a predators, usually they are herbivores.
+        Congratulations, the level 3 is completed!\n
+        Large creature is not necessarily a predators, usually they are herbivores.
     </string>
 
     <string name="level4">
-        Edible / Non Edible\n
+        Choose edible.\n
         Questions might repeat until you rich 20 pt.
     </string>
 
     <string name="level4End">
-        "Congratulations, the level 4 is completed!\n
-        It is known that many crocodiles swallow stones. But isn't because they are edible for them, stones help crocodails to sink into the water quickly and help stay at the bottom.
+        Congratulations, the level 4 is completed!\n
+        It is known that many crocodiles swallow stones. But isn\'t because they are edible for them, stones help crocodiles to sink into the water quickly and help stay at the bottom.
     </string>
 
     <string name="level5">
@@ -49,18 +47,18 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level5End">
-        "Congratulations, the level 5 is completed!\n
+        Congratulations, the level 5 is completed!\n
         Do you know in some card games the strength of the cards is looped and the deuce hits the ace?
     </string>
 
     <string name="level6">
-        Which transport is faster?\n
+        Which vehicle is faster?\n
         Questions might repeat until you rich 20 pt.
     </string>
 
     <string name="level6End">
-        "Congratulations, the level 6 is completed!\n
-        You need learn to drive all of these vehicles and only bycicle and skate you don't need special driven license?
+        Congratulations, the level 6 is completed!\n
+        You need learn to drive all of these vehicles and only bycicle and skate you don\'t need special driven license.
     </string>
 
     <string name="level7">
@@ -69,7 +67,7 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level7End">
-        "Congratulations, the level 7 is completed!\n
+        Congratulations, the level 7 is completed!\n
         Do you the nines planet Pluto has been demoted into the category of planetoids, like Vesta, Cerera, Sedna etc.?
     </string>
 
@@ -79,7 +77,7 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level8End">
-        "Congratulations, the level 8 is completed!\n
+        Congratulations, the level 8 is completed!\n
         Do you know that in vacuum weights and brick will fall with the same acceleration?
     </string>
 
@@ -90,7 +88,7 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level9End">
-        "Congratulations, the level 9 is completed!\n
+        Congratulations, the level 9 is completed!\n
         Do you know that even a broken clock twice a day shows the exact time? :)
     </string>
 
@@ -100,7 +98,7 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level10End">
-        "Congratulations, the level 10 is completed!\n
+        Congratulations, the level 10 is completed!\n
         Do you know that if an egg sinks - it is fresh, if it floats - not?.
     </string>
 
@@ -110,8 +108,8 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level11End">
-        "Congratulations, the level 11 is completed!\n
-        Do you know that Roman numerals isn't in common use? It uses only in the dials of watches and for the designation of centuries.
+        Congratulations, the level 11 is completed!\n
+        Do you know that Roman numerals isn\'t in common use? It uses only on the dials of watches and for the centuries designation.
     </string>
 
     <string name="level12">
@@ -120,8 +118,8 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level12End">
-        "Congratulations, the level 12 is completed!\n
-        Do you know that in spite of banana is called a fruit in supermarkets, it is actually a berry.
+        Congratulations, the level 12 is completed!\n
+        Do you know that a banana is called a fruit in supermarkets, although it is actually a berry.
     </string>
 
     <string name="level13">
@@ -130,7 +128,7 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level13End">
-        "Congratulations, the level 13 is completed!\n
+        Congratulations, the level 13 is completed!\n
         Water bear or tardigrades. A microscopic creature that can survive in the temperature range from +150 degrees Celsius to absolute zero, and is also able to live for more than 10 years without water.
     </string>
 
@@ -140,7 +138,7 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level14End">
-        "Congratulations, the level 14 is completed!\n
+        Congratulations, the level 14 is completed!\n
         If you go away from the noise source two times further, the noise level fall 4 times.
         L ~ 1/R2
     </string>
@@ -151,7 +149,7 @@ There are 7 days in a week, 7 continents, 7 musical notes,
     </string>
 
     <string name="level15End">
-        "Congratulations, the level 14 is completed!\n
+        Congratulations, the level 15 is completed!\n
         Jellyfish Turritopsis dohrnii presumably immortal creatures. Their secret is that when they are threatened with death, they return to their initial stage - polyps - and take off their clones. This process can last an infinite number of times.
     </string>
 

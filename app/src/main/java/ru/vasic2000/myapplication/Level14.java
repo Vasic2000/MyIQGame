@@ -464,7 +464,7 @@ public class Level14 extends AppCompatActivity {
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.level15);
+        tvDescription.setText(R.string.level14);
 
         textBtnBack();
         buttonContinue();

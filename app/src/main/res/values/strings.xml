@@ -19,4 +19,6 @@
     <string name="level_14">Level: 14</string>
     <string name="level_15">Level: 15</string>
     <string name="textContinue">Continue</string>
+    <string name="Arrow"><![CDATA[<]]></string>
+    <string name="cross_sign">X</string>
 </resources>

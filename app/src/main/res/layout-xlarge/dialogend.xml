@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_margin="10dp"
+    android:layout_margin="15dp"
     android:background="@drawable/previewbackgroundone"
     android:orientation="vertical"
     android:scaleType="centerCrop">
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/btnClose2"
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/level1End"
                 android:textColor="@color/colorBlack60"
-                android:textSize="20sp" />
+                android:textSize="30sp" />
         </ScrollView>
 
         <Button
@@ -45,13 +45,13 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/style_btn_stroke_pressed_white"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="@string/textContinue"
             android:textAllCaps="true"
             android:textColor="@color/colorBlack60"
-            android:textSize="20sp" />
+            android:textSize="30sp" />
     </LinearLayout>
 </LinearLayout>
