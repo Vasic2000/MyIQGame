@@ -92,10 +92,10 @@
     <string name="lv7text1">Mercury</string>
     <string name="lv7text2">Venus</string>
     <string name="lv7text3">Earth</string>
-    <string name="lv7text4">Marth</string>
+    <string name="lv7text4">Mars</string>
     <string name="lv7text5">Jupiter</string>
     <string name="lv7text6">Saturn</string>
-    <string name="lv7text7">Uran</string>
+    <string name="lv7text7">Uranus</string>
     <string name="lv7text8">Neptune</string>
 
     <string name="lv8text1">Feather</string>
@@ -103,7 +103,7 @@
     <string name="lv8text3">Lego\nbrick 2</string>
     <string name="lv8text4">Lego\nbrick 4</string>
     <string name="lv8text5">Apple</string>
-    <string name="lv8text6">Buttle</string>
+    <string name="lv8text6">Bottle</string>
     <string name="lv8text7">Brick</string>
     <string name="lv8text8">Dumbbell</string>
     <string name="lv8text9">Radiator</string>
