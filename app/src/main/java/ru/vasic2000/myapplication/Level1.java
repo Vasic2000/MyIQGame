@@ -31,7 +31,7 @@ public class Level1 extends AppCompatActivity {
     ImageView backGround;
 
     SoundPool sounds;
-    int levelWin, start;
+    int levelWin, levelStart;
     int goodAnswer1, goodAnswer2, goodAnswer3, goodAnswer4, goodAnswer5, goodAnswer6, goodAnswer7, goodAnswer8;
     int badAnswer1, badAnswer2, badAnswer3, badAnswer4, badAnswer5, badAnswer6, badAnswer7, badAnswer8;
 
@@ -52,9 +52,7 @@ public class Level1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
-
         Array array = new Array();
-
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         initComponents(array);
@@ -79,7 +77,10 @@ public class Level1 extends AppCompatActivity {
         right_text = findViewById(R.id.textRight);
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+
+        levelStart = sounds.load(this, R.raw.level_start, 0);
         levelWin = sounds.load(this, R.raw.level_win, 0);
+
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);
         goodAnswer3 = sounds.load(this, R.raw.good3, 0);
@@ -572,6 +573,10 @@ public class Level1 extends AppCompatActivity {
 
     private void playSoundWin() {
         sounds.play(levelWin,1,1,0,0,0);
+    }
+
+    private void playSoundStart() {
+        sounds.play(levelStart,1,1,0,0,0);
     }
 
     private void playGoodAnswer() {

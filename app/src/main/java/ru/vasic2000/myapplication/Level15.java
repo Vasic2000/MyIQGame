@@ -27,7 +27,7 @@ public class Level15 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
-
+    Dialog dialogEndEnd;
     ImageView backGround;
 
     SoundPool sounds;
@@ -37,6 +37,7 @@ public class Level15 extends AppCompatActivity {
 
     public int numLeft;  //Номер левой картинки
     public int numRight; //Номер правой картинки
+    public int numLeftOld = -1; //Предыдущий номер левой картинки
     ImageView imgLeft;
     ImageView imgRight;
     TextView textLevels;
@@ -402,14 +403,15 @@ public class Level15 extends AppCompatActivity {
         //Анимация
         final Animation an = AnimationUtils.loadAnimation(Level15.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(14);
+        while((numLeft = rnd.nextInt(14)) == numLeftOld) numLeft = rnd.nextInt(14);
+        numLeftOld = numLeft;
         imgLeft.setImageResource(array.images15[numLeft]);
         imgLeft.setAnimation(an);
         left_text.setText(array.text15[numLeft]);
 
         numRight = rnd.nextInt(14);
         while(numRight == numLeft) {
-            numRight = rnd.nextInt(10);
+            numRight = rnd.nextInt(14);
         }
         imgRight.setImageResource(array.images15[numRight]);
         imgRight.setAnimation(an);
@@ -492,6 +494,7 @@ public class Level15 extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+        playSoundWin();
     }
 
     private void dialogEnd() {
@@ -513,6 +516,10 @@ public class Level15 extends AppCompatActivity {
 
         textBtnBack2();
         buttonContinue2();
+    }
+
+    private void dialogEndEnd() {
+
     }
 
     private void buttonContinue2() {

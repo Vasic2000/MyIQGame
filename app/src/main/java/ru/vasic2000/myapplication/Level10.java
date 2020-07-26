@@ -38,6 +38,7 @@ public class Level10 extends AppCompatActivity {
 
     public int numLeft;  //Номер левой картинки
     public int numRight;  //Номер левой картинки
+    public int numLeftOld = -1; //Предыдущий номер левой картинки
 
     public int numLeftStrong;  //Съедобность левой картинки
     public int numRightStrong; //Съедобность правой картинки
@@ -414,7 +415,8 @@ public class Level10 extends AppCompatActivity {
         //Анимация
         final Animation an = AnimationUtils.loadAnimation(Level10.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(24);
+        while((numLeft = rnd.nextInt(24)) == numLeftOld) numLeft = rnd.nextInt(24);
+        numLeftOld = numLeft;
         imgLeft.setImageResource(array.images10[numLeft]);
         imgLeft.setAnimation(an);
         left_text.setText(array.text10[numLeft]);

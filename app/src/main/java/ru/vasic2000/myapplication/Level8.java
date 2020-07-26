@@ -38,6 +38,7 @@ public class Level8 extends AppCompatActivity {
 
     public int numLeft;  //Номер левой картинки
     public int numRight; //Номер правой картинки
+    public int numLeftOld = -1; //Предыдущий номер левой картинки
     ImageView imgLeft;
     ImageView imgRight;
     TextView textLevels;
@@ -411,7 +412,8 @@ public class Level8 extends AppCompatActivity {
         //Анимация
         final Animation an = AnimationUtils.loadAnimation(Level8.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(14);
+        while((numLeft = rnd.nextInt(14)) == numLeftOld) numLeft = rnd.nextInt(14);
+        numLeftOld = numLeft;
         imgLeft.setImageResource(array.images8[numLeft]);
         imgLeft.setAnimation(an);
         left_text.setText(array.text8[numLeft]);

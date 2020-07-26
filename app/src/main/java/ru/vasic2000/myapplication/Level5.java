@@ -40,6 +40,7 @@ public class Level5 extends AppCompatActivity {
     public int numRight; //Номер правой картинки
     ImageView imgLeft;
     ImageView imgRight;
+    public int numLeftOld = -1; //Предыдущий номер левой картинки
     TextView textLevels;
     TextView left_text;
     TextView right_text;
@@ -417,7 +418,8 @@ public class Level5 extends AppCompatActivity {
         //Анимация
         final Animation an = AnimationUtils.loadAnimation(Level5.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(13);
+        while((numLeft = rnd.nextInt(13)) == numLeftOld) numLeft = rnd.nextInt(13);
+        numLeftOld = numLeft;
         imgLeft.setImageResource(array.images5[numLeft]);
         imgLeft.setAnimation(an);
         left_text.setText(array.text5[numLeft]);

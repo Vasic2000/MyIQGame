@@ -38,6 +38,7 @@ public class Level12 extends AppCompatActivity {
 
     public int numLeft;  //Номер левой картинки
     public int numRight;  //Номер левой картинки
+    public int numLeftOld = -1; //Предыдущий номер левой картинки
 
     public int numLeftStrong;  //Съедобность левой картинки
     public int numRightStrong; //Съедобность правой картинки

@@ -38,6 +38,7 @@ public class Level11 extends AppCompatActivity {
 
     public int numLeft;  //Номер левой картинки
     public int numRight; //Номер правой картинки
+    public int numLeftOld = -1; //Предыдущий номер левой картинки
     ImageView imgLeft;
     ImageView imgRight;
     TextView textLevels;
@@ -411,7 +412,8 @@ public class Level11 extends AppCompatActivity {
         //Анимация
         final Animation an = AnimationUtils.loadAnimation(Level11.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(9);
+        while((numLeft = rnd.nextInt(9)) == numLeftOld) numLeft = rnd.nextInt(9);
+        numLeftOld = numLeft;
         imgLeft.setImageResource(array.images11a[numLeft]);
         imgLeft.setAnimation(an);
         left_text.setText(array.text11a[numLeft]);
