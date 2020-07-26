@@ -27,18 +27,18 @@
     <string name="lv3text1">Ant</string>
     <string name="lv3text2">Snail</string>
     <string name="lv3text3">Mouse</string>
-    <string name="lv3text4">Heatgeon</string>
+    <string name="lv3text4">Hedgehog</string>
     <string name="lv3text5">Cat</string>
     <string name="lv3text6">Here</string>
     <string name="lv3text7">Fox</string>
     <string name="lv3text8">Chimpanzee</string>
-    <string name="lv3text9">Voolf</string>
+    <string name="lv3text9">Wolf</string>
     <string name="lv3text10">Sheep</string>
     <string name="lv3text11">Lion</string>
     <string name="lv3text12">Tiger</string>
     <string name="lv3text13">Beer</string>
     <string name="lv3text14">Horse</string>
-    <string name="lv3text15">Elefant</string>
+    <string name="lv3text15">Elephant</string>
     <string name="lv3text16">Dinosaur</string>
 
     <string name="lv4text1">Sausage</string>
@@ -82,9 +82,9 @@
     <string name="lv6text2">Bicycle</string>
     <string name="lv6text3">Bus</string>
     <string name="lv6text4">Vehicle</string>
-    <string name="lv6text5">Motocycle</string>
+    <string name="lv6text5">Motorcycle</string>
     <string name="lv6text6">Train</string>
-    <string name="lv6text7">Sportcar</string>
+    <string name="lv6text7">Sport Сar</string>
     <string name="lv6text8">Aircraft</string>
     <string name="lv6text9">Concorde</string>
     <string name="lv6text10">Rocket</string>
@@ -174,8 +174,8 @@
     <string name="lv11text8r">VIII</string>
     <string name="lv11text9r">IX</string>
 
-    <string name="lv12text1f">Pinapple</string>
-    <string name="lv12text2f">Limon</string>
+    <string name="lv12text1f">Pineapple</string>
+    <string name="lv12text2f">Lemon</string>
     <string name="lv12text3f">Kiwi</string>
     <string name="lv12text4f">Banana</string>
     <string name="lv12text5f">Apple</string>
@@ -188,7 +188,7 @@
     <string name="lv12text2v">Radish</string>
     <string name="lv12text3v">Ginger</string>
     <string name="lv12text4v">Cabbage</string>
-    <string name="lv12text5v">Сucumber</string>
+    <string name="lv12text5v">Cucumber</string>
     <string name="lv12text6v">Potato</string>
     <string name="lv12text7v">Tomato</string>
     <string name="lv12text8v">Beet</string>
@@ -197,7 +197,7 @@
 
     <string name="lv13text1f">Trilobite</string>
     <string name="lv13text2f">Anomalocaris</string>
-    <string name="lv13text3f">Meganevre</string>
+    <string name="lv13text3f">Meganeva</string>
     <string name="lv13text4f">Ichthyosaur</string>
     <string name="lv13text5f">Scutosaurus</string>
     <string name="lv13text6f">Tyrannosaur</string>
@@ -227,8 +227,7 @@
     <string name="lv14text7">Jackhammer</string>
     <string name="lv14text8">Thunder</string>
     <string name="lv14text9">Jet\naircraft</string>
-    <string name="lv14text10">Howi
-        tzer\nshot</string>
+    <string name="lv14text10">Howitzer\nshot</string>
 
     <string name="lv15text1">Mosquito</string>
     <string name="lv15text2">Fly</string>
