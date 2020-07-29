@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,11 +28,10 @@ public class Level15 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
-    Dialog dialogEndEnd;
     ImageView backGround;
 
     SoundPool sounds;
-    int levelWin, start;
+    int levelWin;
     int goodAnswer1, goodAnswer2, goodAnswer3, goodAnswer4, goodAnswer5, goodAnswer6, goodAnswer7, goodAnswer8;
     int badAnswer1, badAnswer2, badAnswer3, badAnswer4, badAnswer5, badAnswer6, badAnswer7, badAnswer8;
 
@@ -43,6 +43,8 @@ public class Level15 extends AppCompatActivity {
     TextView textLevels;
     TextView left_text;
     TextView right_text;
+
+    MediaPlayer mp;
 
     public int count = 0;  //Счётчик правильных ответов
 
@@ -75,7 +77,10 @@ public class Level15 extends AppCompatActivity {
         right_text = findViewById(R.id.textRight);
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
-        levelWin = sounds.load(this, R.raw.level_win, 0);
+
+        mp = new MediaPlayer();
+
+        levelWin = sounds.load(this, R.raw.terminator, 1);
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);
         goodAnswer3 = sounds.load(this, R.raw.good3, 0);
@@ -494,13 +499,12 @@ public class Level15 extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-        playSoundWin();
     }
 
     private void dialogEnd() {
         dialogEnd = new Dialog(this);
         dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE);  //Скрытие заголовка
-        dialogEnd.setContentView(R.layout.dialogend);
+        dialogEnd.setContentView(R.layout.dialogendend);
         dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //прозрачный фон диалогового окна
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
@@ -508,7 +512,7 @@ public class Level15 extends AppCompatActivity {
 
         //Фон
         LinearLayout dialogFone = dialogEnd.findViewById(R.id.dialogfon);
-        dialogFone.setBackgroundResource(R.drawable.previewbacground4);
+        dialogFone.setBackgroundResource(R.drawable.enddialogbackground);
 
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
@@ -516,10 +520,6 @@ public class Level15 extends AppCompatActivity {
 
         textBtnBack2();
         buttonContinue2();
-    }
-
-    private void dialogEndEnd() {
-
     }
 
     private void buttonContinue2() {
@@ -534,6 +534,7 @@ public class Level15 extends AppCompatActivity {
                 } catch (Exception exc) {
                     //  Здесь кода нет
                 }
+                mp.stop();
                 dialogEnd.dismiss();
             }
         });
@@ -552,13 +553,15 @@ public class Level15 extends AppCompatActivity {
                 } catch (Exception exc) {
                     //  Здесь кода нет
                 }
+                mp.stop();
                 dialogEnd.dismiss();
             }
         });
     }
 
     private void playSoundWin() {
-        sounds.play(levelWin,1,1,0,0,0);
+        mp = MediaPlayer.create(this, R.raw.terminator);
+        mp.start();
     }
 
     private void playGoodAnswer() {
@@ -625,6 +628,7 @@ public class Level15 extends AppCompatActivity {
     public void onBackPressed() {
         try {
             Intent intent = new Intent(Level15.this, GameLevels.class);
+            mp.stop();
             startActivity(intent);
             finish();
         } catch (Exception exc) {
