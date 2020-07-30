@@ -98,8 +98,8 @@ public class Level8 extends AppCompatActivity {
         textLevels.setTextColor(getResources().getColor(R.color.colorWhite));
         textLevels.setText(R.string.level_8);
 
-        left_text.setTextColor(getResources().getColor(R.color.colorWhite));
-        right_text.setTextColor(getResources().getColor(R.color.colorWhite));
+        left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+        right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
 
         //Массив прогресса игры
         final int[] progress = {
