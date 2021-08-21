@@ -561,7 +561,7 @@ public class Level2 extends AppCompatActivity {
     }
 
     private void playSoundWin() {
-        sounds.play(levelWin,1,1,0,0,0);
+        sounds.play(levelWin,1f,1f,0,0,1f);
     }
 
     private void playGoodAnswer() {
@@ -569,28 +569,28 @@ public class Level2 extends AppCompatActivity {
         int soundNum = rnd.nextInt(8);
         switch (soundNum) {
             case 0:
-                sounds.play(goodAnswer1,1,1,0,0,0);
+                sounds.play(goodAnswer1,1f,1f,0,0,1f);
                 break;
             case 1:
-                sounds.play(goodAnswer2,1,1,0,0,0);
+                sounds.play(goodAnswer2,1f,1f,0,0,1f);
                 break;
             case 2:
-                sounds.play(goodAnswer3,1,1,0,0,0);
+                sounds.play(goodAnswer3,1f,1f,0,0,1f);
                 break;
             case 3:
-                sounds.play(goodAnswer4,1,1,0,0,0);
+                sounds.play(goodAnswer4,1f,1f,0,0,1f);
                 break;
             case 4:
-                sounds.play(goodAnswer5,1,1,0,0,0);
+                sounds.play(goodAnswer5,1f,1f,0,0,1f);
                 break;
             case 5:
-                sounds.play(goodAnswer6,1,1,0,0,0);
+                sounds.play(goodAnswer6,1f,1f,0,0,1f);
                 break;
             case 6:
-                sounds.play(goodAnswer7,1,1,0,0,0);
+                sounds.play(goodAnswer7,1f,1f,0,0,1f);
                 break;
             default:
-                sounds.play(goodAnswer8,1,1,0,0,0);
+                sounds.play(goodAnswer8,1f,1f,0,0,1f);
         }
     }
 
@@ -599,28 +599,28 @@ public class Level2 extends AppCompatActivity {
         int soundNum = rnd.nextInt(8);
         switch (soundNum) {
             case 0:
-                sounds.play(badAnswer1,1,1,0,0,0);
+                sounds.play(badAnswer1,1f,1f,0,0,1f);
                 break;
             case 1:
-                sounds.play(badAnswer2,1,1,0,0,0);
+                sounds.play(badAnswer2,1f,1f,0,0,1f);
                 break;
             case 2:
-                sounds.play(badAnswer3,1,1,0,0,0);
+                sounds.play(badAnswer3,1f,1f,0,0,1f);
                 break;
             case 3:
-                sounds.play(badAnswer4,1,1,0,0,0);
+                sounds.play(badAnswer4,1f,1f,0,0,1f);
                 break;
             case 4:
-                sounds.play(badAnswer5,1,1,0,0,0);
+                sounds.play(badAnswer5,1f,1f,0,0,1f);
                 break;
             case 5:
-                sounds.play(badAnswer6,1,1,0,0,0);
+                sounds.play(badAnswer6,1f,1f,0,0,1f);
                 break;
             case 6:
-                sounds.play(badAnswer7,1,1,0,0,0);
+                sounds.play(badAnswer7,1f,1f,0,0,1f);
                 break;
             default:
-                sounds.play(badAnswer8,1,1,0,0,0);
+                sounds.play(badAnswer8,1f,1f,0,0,1f);
         }
     }
 
