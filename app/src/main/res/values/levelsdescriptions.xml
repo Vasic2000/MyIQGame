@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="level1short">
+        Choose which number is greater?
+    </string>
+
     <string name="level1">
         Choose which number is greater?\n
         Questions might repeat until you rich 20 pt.

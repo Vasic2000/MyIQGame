@@ -44,6 +44,7 @@ public class Level3 extends AppCompatActivity {
     TextView textLevels;
     TextView left_text;
     TextView right_text;
+    TextView task_text;
 
     public int count = 0;  //Счётчик правильных ответов
 
@@ -72,8 +73,12 @@ public class Level3 extends AppCompatActivity {
         imgRight = findViewById(R.id.imgRight);
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
+        task_text = findViewById(R.id.textTask);
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+
+        task_text.setText(R.string.level3);
+
         levelWin = sounds.load(this, R.raw.level_win, 0);
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="level1short">
+        Какая цифра больше?
+    </string>
+
     <string name="level1">
         Какая цифра больше?\n
         Игра продолжается, пока вы не наберёте 20 очков (вопросы могут повторяться).

@@ -31,7 +31,7 @@ public class Level2 extends AppCompatActivity {
     ImageView backGround;
 
     SoundPool sounds;
-    int levelWin, start;
+    int levelWin;
     int goodAnswer1, goodAnswer2, goodAnswer3, goodAnswer4, goodAnswer5, goodAnswer6, goodAnswer7, goodAnswer8;
     int badAnswer1, badAnswer2, badAnswer3, badAnswer4, badAnswer5, badAnswer6, badAnswer7, badAnswer8;
 
@@ -43,6 +43,7 @@ public class Level2 extends AppCompatActivity {
     TextView textLevels;
     TextView left_text;
     TextView right_text;
+    TextView task_text;
 
     public int count = 0;  //Счётчик правильных ответов
 
@@ -71,8 +72,12 @@ public class Level2 extends AppCompatActivity {
         imgRight = findViewById(R.id.imgRight);
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
+        task_text = findViewById(R.id.textTask);
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+
+        task_text.setText(R.string.level2);
+
         levelWin = sounds.load(this, R.raw.level_win, 0);
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);

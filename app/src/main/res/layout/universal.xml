@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/level_background"/>
+        app:srcCompat="@drawable/level_background" />
 
     <LinearLayout
         android:id="@+id/container1"
@@ -220,21 +220,22 @@
                     android:id="@+id/imgLeft"
                     android:layout_width="match_parent"
                     android:layout_height="320dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_marginRight="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/style_img_universal"
                     android:scaleType="centerCrop"
-                    android:layout_weight="1"
-                    android:src="@drawable/imgtest"
-                    android:layout_marginEnd="5dp" />
+                    android:src="@drawable/imgtest" />
+
                 <ImageView
                     android:id="@+id/imgRight"
                     android:layout_width="match_parent"
                     android:layout_height="320dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_img_universal"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
-                    android:background="@drawable/style_img_universal"
                     android:scaleType="centerCrop"
-                    android:layout_weight="1"
                     android:src="@drawable/imgtest" />
 
             </LinearLayout>
@@ -245,30 +246,47 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/textLeft"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Text left"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="25sp"
+                    android:layout_marginEnd="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_marginEnd="5dp" />
+                    android:text="Text left"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="25sp" />
+
                 <TextView
                     android:id="@+id/textRight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Text right"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="25sp"
+                    android:layout_marginEnd="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_marginEnd="5dp" />
+                    android:text="Text right"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="25sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Task text"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="25sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
 </RelativeLayout>
