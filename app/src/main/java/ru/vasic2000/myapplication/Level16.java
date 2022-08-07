@@ -413,19 +413,19 @@ public class Level16 extends AppCompatActivity {
         //Анимация
         final Animation an = AnimationUtils.loadAnimation(Level16.this, R.anim.alpha);
 
-        while((numLeft = rnd.nextInt(14)) == numLeftOld) numLeft = rnd.nextInt(14);
+        while((numLeft = rnd.nextInt(12)) == numLeftOld) numLeft = rnd.nextInt(12);
         numLeftOld = numLeft;
-        imgLeft.setImageResource(array.images15[numLeft]);
+        imgLeft.setImageResource(array.images16[numLeft]);
         imgLeft.setAnimation(an);
-        left_text.setText(array.text15[numLeft]);
+        left_text.setText(array.text16[numLeft]);
 
-        numRight = rnd.nextInt(14);
+        numRight = rnd.nextInt(12);
         while(numRight == numLeft) {
-            numRight = rnd.nextInt(14);
+            numRight = rnd.nextInt(12);
         }
-        imgRight.setImageResource(array.images15[numRight]);
+        imgRight.setImageResource(array.images16[numRight]);
         imgRight.setAnimation(an);
-        right_text.setText(array.text15[numRight]);
+        right_text.setText(array.text16[numRight]);
     }
 
     private void backFromLevel() {
@@ -465,14 +465,14 @@ public class Level16 extends AppCompatActivity {
 
         //Замена картинки
         ImageView preview = dialog.findViewById(R.id.previewImg);
-        preview.setImageResource(R.drawable.previewimage15);
+        preview.setImageResource(R.drawable.previewimage16);
         //Фон
         LinearLayout dialogFone = dialog.findViewById(R.id.dialogfon);
         dialogFone.setBackgroundResource(R.drawable.previewbacground4);
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.level15);
+        tvDescription.setText(R.string.level16);
 
         textBtnBack();
         buttonContinue();
@@ -523,7 +523,7 @@ public class Level16 extends AppCompatActivity {
 
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
-        tvDescription.setText(R.string.level15End);
+        tvDescription.setText(R.string.level16End);
 
         textBtnBack2();
         buttonContinue2();

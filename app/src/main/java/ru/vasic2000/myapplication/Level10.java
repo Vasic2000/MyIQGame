@@ -263,14 +263,14 @@ public class Level10 extends AppCompatActivity {
                     imgRight.setEnabled(false); // Блокирую правую картинку
 
                     //  Если левая больше
-                    if(numLeft > numRight) {
+                    if(numLeftStrong > numRightStrong) {
                         imgLeft.setImageResource(R.drawable.img_true);
                     } else {
                         imgLeft.setImageResource(R.drawable.img_false);
                     }
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeft > numRight) && (count < 20)) {
+                    if((numLeftStrong > numRightStrong) && (count < 20)) {
                         if(count < 19) {
                             playGoodAnswer();
                         }
@@ -329,14 +329,14 @@ public class Level10 extends AppCompatActivity {
                     imgLeft.setEnabled(false); // Блокирую левую картинку
 
                     //  Если левая меньше
-                    if(numLeft < numRight) {
+                    if(numLeftStrong < numRightStrong) {
                         imgRight.setImageResource(R.drawable.img_true);
                     } else {
                         imgRight.setImageResource(R.drawable.img_false);
                     }
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeft < numRight) && (count < 20)) {
+                    if((numLeftStrong < numRightStrong) && (count < 20)) {
                         if(count < 19) {
                             playGoodAnswer();
                         }

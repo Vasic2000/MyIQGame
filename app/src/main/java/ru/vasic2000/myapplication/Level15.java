@@ -79,7 +79,7 @@ public class Level15 extends AppCompatActivity {
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
 
-        levelWin = sounds.load(this, R.raw.terminator, 1);
+        levelWin = sounds.load(this, R.raw.level_win, 0);
 
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);
@@ -532,7 +532,7 @@ public class Level15 extends AppCompatActivity {
 
         //Фон
         LinearLayout dialogFone = dialogEnd.findViewById(R.id.dialogfon);
-        dialogFone.setBackgroundResource(R.drawable.enddialogbackground);
+        dialogFone.setBackgroundResource(R.drawable.previewbacground4);
 
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
@@ -548,7 +548,7 @@ public class Level15 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level15.this, GameLevels.class);
+                    Intent intent = new Intent(Level15.this, Level16.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
