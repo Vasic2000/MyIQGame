@@ -442,6 +442,8 @@ public class Level1 extends AppCompatActivity {
 
     private void backFromLevel() {
         Button btn_Back = findViewById(R.id.btnBack);
+        btn_Back.setBackgroundResource(R.drawable.btn_stroke_black95_pressed_white);
+        btn_Back.setTextColor(getResources().getColor(R.color.colorBlack95));
         btn_Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

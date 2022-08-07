@@ -102,15 +102,15 @@ public class Level16 extends AppCompatActivity {
         badAnswer7 = sounds.load(this, R.raw.bad7, 0);
         badAnswer8 = sounds.load(this, R.raw.bad8, 0);
 
-        backGround.setImageResource(R.drawable.level_background);
+        backGround.setImageResource(R.drawable.space);
 
-        textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
-        textLevels.setText(R.string.level_15);
-        task_text.setText(R.string.level15short);
+        textLevels.setTextColor(getResources().getColor(R.color.colorWhite));
+        left_text.setTextColor(getResources().getColor(R.color.colorWhite));
+        right_text.setTextColor(getResources().getColor(R.color.colorWhite));
+        task_text.setTextColor(getResources().getColor(R.color.colorWhite));
 
-        left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
-        right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
-        task_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+        textLevels.setText(R.string.level_16);
+        task_text.setText(R.string.level16short);
 
         //Массив прогресса игры
         final int[] progress = {
@@ -430,6 +430,8 @@ public class Level16 extends AppCompatActivity {
 
     private void backFromLevel() {
         Button btn_Back = findViewById(R.id.btnBack);
+        btn_Back.setBackgroundResource(R.drawable.style_btn_whitex_blue_press);
+        btn_Back.setTextColor(getResources().getColor(R.color.colorWhite));
         btn_Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

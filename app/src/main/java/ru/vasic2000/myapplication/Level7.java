@@ -101,12 +101,12 @@ public class Level7 extends AppCompatActivity {
         backGround.setImageResource(R.drawable.space);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorWhite));
-        textLevels.setText(R.string.level_7);
-        task_text.setText(R.string.level7short);
-
         left_text.setTextColor(getResources().getColor(R.color.colorWhite));
         right_text.setTextColor(getResources().getColor(R.color.colorWhite));
         task_text.setTextColor(getResources().getColor(R.color.colorWhite));
+
+        textLevels.setText(R.string.level_7);
+        task_text.setText(R.string.level7short);
 
         //Массив прогресса игры
         final int[] progress = {

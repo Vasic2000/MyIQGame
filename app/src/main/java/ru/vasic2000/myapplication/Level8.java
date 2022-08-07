@@ -99,13 +99,13 @@ public class Level8 extends AppCompatActivity {
 
         backGround.setImageResource(R.drawable.level_background);
 
-        textLevels.setTextColor(getResources().getColor(R.color.colorWhite));
-        textLevels.setText(R.string.level_8);
-        task_text.setText(R.string.level8short);
-
+        textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         task_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+
+        textLevels.setText(R.string.level_8);
+        task_text.setText(R.string.level8short);
 
         //Массив прогресса игры
         final int[] progress = {
@@ -435,8 +435,8 @@ public class Level8 extends AppCompatActivity {
 
     private void backFromLevel() {
         Button btn_Back = findViewById(R.id.btnBack);
-        btn_Back.setBackgroundResource(R.drawable.style_btn_whitex_blue_press);
-        btn_Back.setTextColor(getResources().getColor(R.color.colorWhite));
+        btn_Back.setBackgroundResource(R.drawable.btn_stroke_black95_pressed_white);
+        btn_Back.setTextColor(getResources().getColor(R.color.colorBlack95));
         btn_Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
