@@ -14,7 +14,8 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +26,8 @@
         <activity
             android:name=".GameLevels"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -34,7 +36,8 @@
         <activity
             android:name=".Level1"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -43,7 +46,8 @@
         <activity
             android:name=".Level2"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -52,7 +56,8 @@
         <activity
             android:name=".Level3"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
             <intent-filter>
                  <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -61,7 +66,8 @@
         <activity
             android:name=".Level4"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -70,7 +76,8 @@
         <activity
             android:name=".Level5"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -79,7 +86,8 @@
         <activity
             android:name=".Level6"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                   <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -88,7 +96,8 @@
         <activity
             android:name=".Level7"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -97,7 +106,8 @@
         <activity
             android:name=".Level8"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -106,7 +116,8 @@
         <activity
             android:name=".Level9"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -115,7 +126,8 @@
         <activity
             android:name=".Level10"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -124,7 +136,8 @@
         <activity
             android:name=".Level11"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -133,7 +146,8 @@
         <activity
             android:name=".Level12"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -142,7 +156,8 @@
         <activity
             android:name=".Level13"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -151,7 +166,8 @@
         <activity
             android:name=".Level14"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -160,7 +176,8 @@
         <activity
             android:name=".Level15"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -169,7 +186,8 @@
         <activity
             android:name=".Level16"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
