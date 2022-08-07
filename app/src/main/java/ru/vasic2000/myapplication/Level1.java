@@ -80,8 +80,6 @@ public class Level1 extends AppCompatActivity {
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
 
-        task_text.setText(R.string.level1short);
-
         levelWin = sounds.load(this, R.raw.level_win, 0);
 
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
@@ -106,6 +104,7 @@ public class Level1 extends AppCompatActivity {
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
         textLevels.setText(R.string.level_1);
+        task_text.setText(R.string.level1short);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));

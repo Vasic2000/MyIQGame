@@ -44,6 +44,7 @@ public class Level14 extends AppCompatActivity {
     TextView textLevels;
     TextView left_text;
     TextView right_text;
+    TextView task_text;
 
     public int count = 0;  //Счётчик правильных ответов
 
@@ -74,9 +75,12 @@ public class Level14 extends AppCompatActivity {
         imgRight = findViewById(R.id.imgRight);
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
+        task_text = findViewById(R.id.textTask);
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+
         levelWin = sounds.load(this, R.raw.level_win, 0);
+
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);
         goodAnswer3 = sounds.load(this, R.raw.good3, 0);
@@ -99,9 +103,11 @@ public class Level14 extends AppCompatActivity {
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
         textLevels.setText(R.string.level_14);
+        task_text.setText(R.string.level14short);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+        task_text.setTextColor(getResources().getColor(R.color.colorBlack95));
 
         //Массив прогресса игры
         final int[] progress = {

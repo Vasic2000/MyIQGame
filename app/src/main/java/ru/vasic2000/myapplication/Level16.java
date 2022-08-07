@@ -2,10 +2,10 @@ package ru.vasic2000.myapplication;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,31 +24,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level12 extends AppCompatActivity {
+public class Level16 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
-
     ImageView backGround;
 
     SoundPool sounds;
-    int levelWin, start;
+    int levelWin;
     int goodAnswer1, goodAnswer2, goodAnswer3, goodAnswer4, goodAnswer5, goodAnswer6, goodAnswer7, goodAnswer8;
     int badAnswer1, badAnswer2, badAnswer3, badAnswer4, badAnswer5, badAnswer6, badAnswer7, badAnswer8;
 
     public int numLeft;  //Номер левой картинки
-    public int numRight;  //Номер левой картинки
+    public int numRight; //Номер правой картинки
     public int numLeftOld = -1; //Предыдущий номер левой картинки
-
-    public int numLeftStrong;  //Съедобность левой картинки
-    public int numRightStrong; //Съедобность правой картинки
-
     ImageView imgLeft;
     ImageView imgRight;
     TextView textLevels;
     TextView left_text;
     TextView right_text;
     TextView task_text;
+
+    MediaPlayer mp;
 
     public int count = 0;  //Счётчик правильных ответов
 
@@ -64,10 +61,12 @@ public class Level12 extends AppCompatActivity {
         FullScreen();
         previewDialog();
         dialogEnd();
+        textBtnBack();
+        buttonContinue();
+        dialog.show();
         backFromPreview();
         backFromLevel();
         makeRndImages();
-
     }
 
     private void initComponents() {
@@ -80,7 +79,11 @@ public class Level12 extends AppCompatActivity {
         task_text = findViewById(R.id.textTask);
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
-        levelWin = sounds.load(this, R.raw.level_win, 0);
+
+        mp = new MediaPlayer();
+
+        levelWin = sounds.load(this, R.raw.terminator, 1);
+
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);
         goodAnswer3 = sounds.load(this, R.raw.good3, 0);
@@ -99,16 +102,16 @@ public class Level12 extends AppCompatActivity {
         badAnswer7 = sounds.load(this, R.raw.bad7, 0);
         badAnswer8 = sounds.load(this, R.raw.bad8, 0);
 
-//        Фон
-        backGround.setImageResource(R.drawable.level4);
+        backGround.setImageResource(R.drawable.level_background);
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
-        textLevels.setText(R.string.level_12);
-        task_text.setText(R.string.level12short);
+        textLevels.setText(R.string.level_15);
+        task_text.setText(R.string.level15short);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         task_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+
         //Массив прогресса игры
         final int[] progress = {
                 R.id.point1, R.id.point2, R.id.point3, R.id.point4, R.id.point5,
@@ -120,146 +123,12 @@ public class Level12 extends AppCompatActivity {
         // Обработка нажатий
         // Левая кнопка
         imgLeft.setOnTouchListener(new View.OnTouchListener() {
-
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 //  Касание картинки
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     imgRight.setEnabled(false); // Блокирую правую картинку
 
-                    //  Если левая больше
-                    if(numLeftStrong > numRightStrong) {
-                        imgLeft.setImageResource(R.drawable.img_true);
-                    } else {
-                        imgLeft.setImageResource(R.drawable.img_false);
-                    }
-                }
-                else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeftStrong > numRightStrong) && (count < 20)) {
-                        if(count < 19) {
-                            playGoodAnswer();
-                        }
-                        count++;
-                        // Закрашиваю прогресс
-                        for(int i=0; i<20; i++) {
-                            TextView tv = findViewById(progress[i]);
-                            tv.setBackgroundResource(R.drawable.style_points);
-                        }
-                        // Закрашиваю выполненный прогресс
-                        for(int i=0; i<count; i++) {
-                            TextView tv = findViewById(progress[i]);
-                            tv.setBackgroundResource(R.drawable.style_points_green);
-                        }
-                    } else {
-                        playBadAnswer();
-                        if(count>0) {
-                            if (count == 1) {
-                                count = 0;
-                            } else {
-                                count -=2;
-                            }
-                        }
-                        // Закрашиваю прогресс
-                        for(int i=0; i<20; i++) {
-                            TextView tv = findViewById(progress[i]);
-                            tv.setBackgroundResource(R.drawable.style_points);
-                        }
-                        // Закрашиваю выполненный прогресс
-                        for(int i=0; i<count; i++) {
-                            TextView tv = findViewById(progress[i]);
-                            tv.setBackgroundResource(R.drawable.style_points_green);
-                        }
-                    }
-                    if(count == 20) {
-                        // ВЫХОД ИЗ УРОВНЯ
-                        SaveResult12();
-                        playSoundWin();
-                        dialogEnd.show();
-                    } else {
-                        makeRndImages();
-                        // Разблокирую правую картинку
-                        imgRight.setEnabled(true);
-                    }
-                }
-                return true;
-            }
-        });
-
-        // Правая кнопка
-        imgRight.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                //  Касание картинки
-                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                    imgLeft.setEnabled(false); // Блокирую левую картинку
-
-                    //  Если левая меньше
-                    if(numLeftStrong < numRightStrong) {
-                        imgRight.setImageResource(R.drawable.img_true);
-                    } else {
-                        imgRight.setImageResource(R.drawable.img_false);
-                    }
-                }
-                else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeftStrong < numRightStrong) && (count < 20)) {
-                        if(count < 19) {
-                            playGoodAnswer();
-                        }
-                        count++;
-                        // Закрашиваю прогресс
-                        for(int i=0; i<20; i++) {
-                            TextView tv = findViewById(progress[i]);
-                            tv.setBackgroundResource(R.drawable.style_points);
-                        }
-                        // Закрашиваю выполненный прогресс
-                        for(int i=0; i<count; i++) {
-                            TextView tv = findViewById(progress[i]);
-                            tv.setBackgroundResource(R.drawable.style_points_green);
-                        }
-                    } else {
-                        playBadAnswer();
-                        if(count>0) {
-                            if (count == 1) {
-                                count = 0;
-                            } else {
-                                count -=2;
-                            }
-                        }
-                        // Закрашиваю прогресс
-                        for(int i=0; i<20; i++) {
-                            TextView tv = findViewById(progress[i]);
-                            tv.setBackgroundResource(R.drawable.style_points);
-                        }
-                        // Закрашиваю выполненный прогресс
-                        for(int i=0; i<count; i++) {
-                            TextView tv = findViewById(progress[i]);
-                            tv.setBackgroundResource(R.drawable.style_points_green);
-                        }
-                    }
-                    if(count == 20) {
-                        // ВЫХОД ИЗ УРОВНЯ
-                        SaveResult12();
-                        playSoundWin();
-                        dialogEnd.show();
-                    } else {
-                        makeRndImages();
-                        // Разблокирую левую картинку
-                        imgLeft.setEnabled(true);
-                    }
-                }
-                return true;
-            }
-        });
-
-
-        // Обработка нажатий на слова
-        // Левая кнопка
-        left_text.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                //  Касание картинки
-                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                    imgRight.setEnabled(false); // Блокирую правую картинку
                     //  Если левая больше
                     if(numLeft > numRight) {
                         imgLeft.setImageResource(R.drawable.img_true);
@@ -283,6 +152,7 @@ public class Level12 extends AppCompatActivity {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_points_green);
                         }
+
                     } else {
                         playBadAnswer();
                         if(count>0) {
@@ -292,6 +162,7 @@ public class Level12 extends AppCompatActivity {
                                 count -=2;
                             }
                         }
+
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -305,7 +176,6 @@ public class Level12 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
-                        SaveResult12();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -319,12 +189,13 @@ public class Level12 extends AppCompatActivity {
         });
 
         // Правая кнопка
-        right_text.setOnTouchListener(new View.OnTouchListener() {
+        imgRight.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 //  Касание картинки
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     imgLeft.setEnabled(false); // Блокирую левую картинку
+
                     //  Если левая меньше
                     if(numLeft < numRight) {
                         imgRight.setImageResource(R.drawable.img_true);
@@ -357,6 +228,7 @@ public class Level12 extends AppCompatActivity {
                                 count -=2;
                             }
                         }
+
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -370,7 +242,6 @@ public class Level12 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
-                        SaveResult12();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -382,18 +253,142 @@ public class Level12 extends AppCompatActivity {
                 return true;
             }
         });
-    }
 
-    private void SaveResult12() {
-        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
-        final int level = save.getInt("Level", 1);
-        if (level > 12) {
 
-        } else {
-            SharedPreferences.Editor editor = save.edit();
-            editor.putInt("Level", 13);
-            editor.apply();
-        }
+        // Обработка нажатий на слова
+        // Левая кнопка
+        left_text.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //  Касание картинки
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    imgRight.setEnabled(false); // Блокирую правую картинку
+
+                    //  Если левая больше
+                    if(numLeft > numRight) {
+                        imgLeft.setImageResource(R.drawable.img_true);
+                    } else {
+                        imgLeft.setImageResource(R.drawable.img_false);
+                    }
+                }
+                else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    if((numLeft > numRight) && (count < 20)) {
+                        if(count < 19) {
+                            playGoodAnswer();
+                        }
+                        count++;
+                        // Закрашиваю прогресс
+                        for(int i=0; i<20; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+                        // Закрашиваю выполненный прогресс
+                        for(int i=0; i<count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+
+                    } else {
+                        playBadAnswer();
+                        if(count>0) {
+                            if (count == 1) {
+                                count = 0;
+                            } else {
+                                count -=2;
+                            }
+                        }
+
+                        // Закрашиваю прогресс
+                        for(int i=0; i<20; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+                        // Закрашиваю выполненный прогресс
+                        for(int i=0; i<count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+                    }
+                    if(count == 20) {
+                        // ВЫХОД ИЗ УРОВНЯ
+                        playSoundWin();
+                        dialogEnd.show();
+                    } else {
+                        makeRndImages();
+                        // Разблокирую правую картинку
+                        imgRight.setEnabled(true);
+                    }
+                }
+                return true;
+            }
+        });
+
+        // Правая кнопка
+        right_text.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //  Касание картинки
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    imgLeft.setEnabled(false); // Блокирую левую картинку
+
+                    //  Если левая меньше
+                    if(numLeft < numRight) {
+                        imgRight.setImageResource(R.drawable.img_true);
+                    } else {
+                        imgRight.setImageResource(R.drawable.img_false);
+                    }
+                }
+                else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    if((numLeft < numRight) && (count < 20)) {
+                        if(count < 19) {
+                            playGoodAnswer();
+                        }
+                        count++;
+                        // Закрашиваю прогресс
+                        for(int i=0; i<20; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+                        // Закрашиваю выполненный прогресс
+                        for(int i=0; i<count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+                    } else {
+                        playBadAnswer();
+                        if(count>0) {
+                            if (count == 1) {
+                                count = 0;
+                            } else {
+                                count -=2;
+                            }
+                        }
+
+                        // Закрашиваю прогресс
+                        for(int i=0; i<20; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+                        // Закрашиваю выполненный прогресс
+                        for(int i=0; i<count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+                    }
+                    if(count == 20) {
+                        // ВЫХОД ИЗ УРОВНЯ
+                        playSoundWin();
+                        dialogEnd.show();
+                    } else {
+                        makeRndImages();
+                        // Разблокирую левую картинку
+                        imgLeft.setEnabled(true);
+                    }
+                }
+                return true;
+            }
+        });
+
     }
 
     private void imgRoundCorners() {
@@ -416,34 +411,30 @@ public class Level12 extends AppCompatActivity {
         Random rnd = new Random();
 
         //Анимация
-        final Animation an = AnimationUtils.loadAnimation(Level12.this, R.anim.alpha);
+        final Animation an = AnimationUtils.loadAnimation(Level16.this, R.anim.alpha);
 
-        numLeft = rnd.nextInt(20);
-        imgLeft.setImageResource(array.images12[numLeft]);
+        while((numLeft = rnd.nextInt(14)) == numLeftOld) numLeft = rnd.nextInt(14);
+        numLeftOld = numLeft;
+        imgLeft.setImageResource(array.images15[numLeft]);
         imgLeft.setAnimation(an);
-        left_text.setText(array.text12[numLeft]);
+        left_text.setText(array.text15[numLeft]);
 
-        numRight = rnd.nextInt(20);
-        while(array.strong12[numLeft] == array.strong12[numRight]) {
-            numRight = rnd.nextInt(20);
+        numRight = rnd.nextInt(14);
+        while(numRight == numLeft) {
+            numRight = rnd.nextInt(14);
         }
-        numLeftStrong = array.strong12[numLeft];
-        numRightStrong = array.strong12[numRight];
-
-        imgRight.setImageResource(array.images12[numRight]);
+        imgRight.setImageResource(array.images15[numRight]);
         imgRight.setAnimation(an);
-        right_text.setText(array.text12[numRight]);
+        right_text.setText(array.text15[numRight]);
     }
 
     private void backFromLevel() {
         Button btn_Back = findViewById(R.id.btnBack);
-        btn_Back.setBackgroundResource(R.drawable.btn_stroke_black95_pressed_white);
-        btn_Back.setTextColor(getResources().getColor(R.color.colorBlack95));
         btn_Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level12.this, GameLevels.class);
+                    Intent intent = new Intent(Level16.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -472,20 +463,37 @@ public class Level12 extends AppCompatActivity {
 
         //Замена картинки
         ImageView preview = dialog.findViewById(R.id.previewImg);
-        preview.setImageResource(R.drawable.previewimage12);
+        preview.setImageResource(R.drawable.previewimage15);
         //Фон
         LinearLayout dialogFone = dialog.findViewById(R.id.dialogfon);
         dialogFone.setBackgroundResource(R.drawable.previewbacground4);
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.level12);
+        tvDescription.setText(R.string.level15);
 
         textBtnBack();
-
         buttonContinue();
 
         dialog.show();
+    }
+
+    private void textBtnBack() {
+        TextView btnClose = dialog.findViewById(R.id.btnClose);
+        btnClose.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Level16.this, GameLevels.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception exc) {
+                    //  Здесь кода нет
+                }
+                dialog.dismiss();
+            }
+        });
     }
 
     private void buttonContinue() {
@@ -498,28 +506,10 @@ public class Level12 extends AppCompatActivity {
         });
     }
 
-    private void textBtnBack() {
-        TextView btnClose = dialog.findViewById(R.id.btnClose);
-        btnClose.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent(Level12.this, GameLevels.class);
-                    startActivity(intent);
-                    finish();
-                } catch (Exception exc) {
-//                Здесь кода нет
-                }
-                dialog.dismiss();
-            }
-        });
-    }
-
     private void dialogEnd() {
         dialogEnd = new Dialog(this);
         dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE);  //Скрытие заголовка
-        dialogEnd.setContentView(R.layout.dialogend);
+        dialogEnd.setContentView(R.layout.dialogendend);
         dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //прозрачный фон диалогового окна
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
@@ -527,54 +517,56 @@ public class Level12 extends AppCompatActivity {
 
         //Фон
         LinearLayout dialogFone = dialogEnd.findViewById(R.id.dialogfon);
-        dialogFone.setBackgroundResource(R.drawable.previewbacground4);
+        dialogFone.setBackgroundResource(R.drawable.enddialogbackground);
 
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
-        tvDescription.setText(R.string.level12End);
+        tvDescription.setText(R.string.level15End);
 
-        textBtnBack3();
-        buttonContinue3();
+        textBtnBack2();
+        buttonContinue2();
     }
 
-    private void buttonContinue3() {
+    private void buttonContinue2() {
         Button btnContinue = dialogEnd.findViewById(R.id.btnContinue);
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level12.this, Level13.class);
+                    Intent intent = new Intent(Level16.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
                     //  Здесь кода нет
                 }
+                mp.stop();
                 dialogEnd.dismiss();
             }
         });
     }
 
-    private void textBtnBack3() {
+    private void textBtnBack2() {
         TextView btnClose = dialogEnd.findViewById(R.id.btnClose2);
         btnClose.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level12.this, GameLevels.class);
+                    Intent intent = new Intent(Level16.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
                     //  Здесь кода нет
                 }
+                mp.stop();
                 dialogEnd.dismiss();
             }
         });
     }
 
-
     private void playSoundWin() {
-        sounds.play(levelWin,1f,1f,0,0,1f);
+        mp = MediaPlayer.create(this, R.raw.terminator);
+        mp.start();
     }
 
     private void playGoodAnswer() {
@@ -640,7 +632,8 @@ public class Level12 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level12.this, GameLevels.class);
+            Intent intent = new Intent(Level16.this, GameLevels.class);
+            mp.stop();
             startActivity(intent);
             finish();
         } catch (Exception exc) {

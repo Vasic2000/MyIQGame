@@ -76,9 +76,8 @@ public class Level2 extends AppCompatActivity {
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
 
-        task_text.setText(R.string.level2);
-
         levelWin = sounds.load(this, R.raw.level_win, 0);
+
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);
         goodAnswer3 = sounds.load(this, R.raw.good3, 0);
@@ -101,9 +100,11 @@ public class Level2 extends AppCompatActivity {
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
         textLevels.setText(R.string.level_2);
+        task_text.setText(R.string.level2short);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+        task_text.setTextColor(getResources().getColor(R.color.colorBlack95));
 
         //Массив прогресса игры
         final int[] progress = {

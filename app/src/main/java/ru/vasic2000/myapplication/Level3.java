@@ -32,7 +32,7 @@ public class Level3 extends AppCompatActivity {
     ImageView backGround;
 
     SoundPool sounds;
-    int levelWin, start;
+    int levelWin;
     int goodAnswer1, goodAnswer2, goodAnswer3, goodAnswer4, goodAnswer5, goodAnswer6, goodAnswer7, goodAnswer8;
     int badAnswer1, badAnswer2, badAnswer3, badAnswer4, badAnswer5, badAnswer6, badAnswer7, badAnswer8;
 
@@ -77,9 +77,8 @@ public class Level3 extends AppCompatActivity {
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
 
-        task_text.setText(R.string.level3);
-
         levelWin = sounds.load(this, R.raw.level_win, 0);
+
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);
         goodAnswer3 = sounds.load(this, R.raw.good3, 0);
@@ -102,9 +101,11 @@ public class Level3 extends AppCompatActivity {
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
         textLevels.setText(R.string.level_3);
+        task_text.setText(R.string.level3short);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+        task_text.setTextColor(getResources().getColor(R.color.colorBlack95));
 
         //Массив прогресса игры
         final int[] progress = {

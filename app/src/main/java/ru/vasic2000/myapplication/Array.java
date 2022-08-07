@@ -573,7 +573,37 @@ public class Array {
             R.string.lv15text11,
             R.string.lv15text12,
             R.string.lv15text13,
-            R.string.lv15text14,
+            R.string.lv15text14
+    };
+
+    //Уровень 16
+    final int[] images16 = {
+            R.drawable.l16_0moon,
+            R.drawable.l16_1mercury,
+            R.drawable.l16_2venus,
+            R.drawable.l16_3earth,
+            R.drawable.l16_4marth,
+            R.drawable.l16_5jupiter,
+            R.drawable.l16_6saturn,
+            R.drawable.l16_7uran,
+            R.drawable.l16_8neptune,
+            R.drawable.l16_9pluto,
+            R.drawable.l16_10sun,
+            R.drawable.l16_11black_hole
+    };
+    final int[] text16 = {
+            R.string.lv16text0,
+            R.string.lv16text1,
+            R.string.lv16text2,
+            R.string.lv16text3,
+            R.string.lv16text4,
+            R.string.lv16text5,
+            R.string.lv16text6,
+            R.string.lv16text7,
+            R.string.lv16text8,
+            R.string.lv16text9,
+            R.string.lv16text10,
+            R.string.lv16text11
     };
 
 }

@@ -2,6 +2,7 @@ package ru.vasic2000.myapplication;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
@@ -43,8 +44,7 @@ public class Level15 extends AppCompatActivity {
     TextView textLevels;
     TextView left_text;
     TextView right_text;
-
-    MediaPlayer mp;
+    TextView task_text;
 
     public int count = 0;  //Счётчик правильных ответов
 
@@ -75,12 +75,12 @@ public class Level15 extends AppCompatActivity {
         imgRight = findViewById(R.id.imgRight);
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
+        task_text = findViewById(R.id.textTask);
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
 
-        mp = new MediaPlayer();
-
         levelWin = sounds.load(this, R.raw.terminator, 1);
+
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);
         goodAnswer3 = sounds.load(this, R.raw.good3, 0);
@@ -103,9 +103,11 @@ public class Level15 extends AppCompatActivity {
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
         textLevels.setText(R.string.level_15);
+        task_text.setText(R.string.level15short);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+        task_text.setTextColor(getResources().getColor(R.color.colorBlack95));
 
         //Массив прогресса игры
         final int[] progress = {
@@ -171,6 +173,7 @@ public class Level15 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult15();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -237,6 +240,7 @@ public class Level15 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult15();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -306,6 +310,7 @@ public class Level15 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult15();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -372,6 +377,7 @@ public class Level15 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
+                        SaveResult15();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -384,6 +390,18 @@ public class Level15 extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void SaveResult15() {
+        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+        final int level = save.getInt("Level", 1);
+        if (level > 15) {
+
+        } else {
+            SharedPreferences.Editor editor = save.edit();
+            editor.putInt("Level", 16);
+            editor.apply();
+        }
     }
 
     private void imgRoundCorners() {
@@ -534,7 +552,6 @@ public class Level15 extends AppCompatActivity {
                 } catch (Exception exc) {
                     //  Здесь кода нет
                 }
-                mp.stop();
                 dialogEnd.dismiss();
             }
         });
@@ -553,15 +570,13 @@ public class Level15 extends AppCompatActivity {
                 } catch (Exception exc) {
                     //  Здесь кода нет
                 }
-                mp.stop();
                 dialogEnd.dismiss();
             }
         });
     }
 
     private void playSoundWin() {
-        mp = MediaPlayer.create(this, R.raw.terminator);
-        mp.start();
+        sounds.play(levelWin,1f,1f,0,0,1f);
     }
 
     private void playGoodAnswer() {
@@ -628,7 +643,6 @@ public class Level15 extends AppCompatActivity {
     public void onBackPressed() {
         try {
             Intent intent = new Intent(Level15.this, GameLevels.class);
-            mp.stop();
             startActivity(intent);
             finish();
         } catch (Exception exc) {
