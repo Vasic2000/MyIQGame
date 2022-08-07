@@ -27,7 +27,7 @@
             android:name=".GameLevels"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -37,7 +37,7 @@
             android:name=".Level1"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -47,7 +47,7 @@
             android:name=".Level2"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -57,7 +57,7 @@
             android:name=".Level3"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                  <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -67,7 +67,7 @@
             android:name=".Level4"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
