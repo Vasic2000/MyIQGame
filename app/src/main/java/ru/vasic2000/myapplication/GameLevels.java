@@ -42,6 +42,7 @@ public class GameLevels extends AppCompatActivity {
         btnTv13();
         btnTv14();
         btnTv15();
+        btnTv16();
     }
 
     private void btnTv1() {
@@ -364,6 +365,28 @@ public class GameLevels extends AppCompatActivity {
                     Intent intent = new Intent(GameLevels.this, Level15.class);
                     startActivity(intent);
                     finish();
+                    } else {
+
+                    }
+                } catch (Exception e) {
+                }
+            }
+        });
+    }
+
+    private void btnTv16() {
+        TextView tv16 = findViewById(R.id.tv16);
+        if(level >= 16)
+            tv16.setText("16");
+            tv16.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                try {
+                    if (level >= 16) {
+                        Intent intent = new Intent(GameLevels.this, Level16.class);
+                        startActivity(intent);
+                        finish();
                     } else {
 
                     }

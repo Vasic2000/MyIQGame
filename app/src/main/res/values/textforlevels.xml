@@ -244,4 +244,17 @@
     <string name="lv15text13">Elephant</string>
     <string name="lv15text14">Sperm\nwhale</string>
 
+    <string name="lv16text0">Moon</string>
+    <string name="lv16text1">Mercury</string>
+    <string name="lv16text2">Venus</string>
+    <string name="lv16text3">Earth</string>
+    <string name="lv16text4">Mars</string>
+    <string name="lv16text5">Jupiter</string>
+    <string name="lv16text6">Saturn</string>
+    <string name="lv16text7">Uranus</string>
+    <string name="lv16text8">Neptune</string>
+    <string name="lv16text9">Pluton</string>
+    <string name="lv16text10">Sun</string>
+    <string name="lv16text11">Black hole Sagittarius A*</string>
+
 </resources>

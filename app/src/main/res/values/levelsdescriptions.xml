@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="level1short">
+        Choose which number is greater?
+    </string>
+
     <string name="level1">
         Choose which number is greater?\n
         Questions might repeat until you rich 20 pt.
@@ -9,6 +14,10 @@
         Congratulations, level 1 is completed!\n
         Do you know that the number 7 is the happiest number? There are 7 days in a week, 7 continents, 7 musical notes, 7 colors of the rainbow, 7 days of Creation and much more?\n
         Also, the number 7 is often the favorite number of people all around the world.
+    </string>
+
+    <string name="level2short">
+        Choose which Roman number is greater?
     </string>
 
     <string name="level2">
@@ -21,6 +30,10 @@
         Do you know that in Roman numbers there is no digit zero?
     </string>
 
+    <string name="level3short">
+        Which animal has more mass?
+    </string>
+
     <string name="level3">
         Which animal has more mass?\n
         Questions might repeat until you rich 20 pt.
@@ -29,6 +42,10 @@
     <string name="level3End">
         Congratulations, the level 3 is completed!\n
         Large creature is not necessarily a predators, usually they are herbivores.
+    </string>
+
+    <string name="level4short">
+        Choose edible.
     </string>
 
     <string name="level4">
@@ -41,6 +58,10 @@
         It is known that many crocodiles swallow stones. But isn\'t because they are edible for them, stones help crocodiles to dive under water quickly and help they stay at the bottom.
     </string>
 
+    <string name="level5short">
+        Which card is higher/stronger?
+    </string>
+
     <string name="level5">
         Which card is higher/stronger?\n
         Questions might repeat until you rich 20 pt.
@@ -49,6 +70,10 @@
     <string name="level5End">
         Congratulations, the level 5 is completed!\n
         Do you know in some card games the strength of the cards is looped and the deuce hits the ace?
+    </string>
+
+    <string name="level6short">
+        What is faster?
     </string>
 
     <string name="level6">
@@ -61,6 +86,10 @@
         You need learn to drive all of these vehicles and only bycicle and skate you don\'t need special driven license.
     </string>
 
+    <string name="level7short">
+        Which planet of Solar system is farther from the Sun?
+    </string>
+
     <string name="level7">
         Which planet of Solar system is farther from the Sun?\n
         Questions might repeat until you rich 20 pt.
@@ -71,14 +100,22 @@
         Do you the nines planet Pluto has been demoted into the category of planetoids, like Vesta, Cerera, Sedna etc.?
     </string>
 
+    <string name="level8short">
+        Which thing has more mass?
+    </string>
+
     <string name="level8">
-        Which thing is havier?\n
+        Which thing has more mass?\n
         Questions might repeat until you rich 20 pt.
     </string>
 
     <string name="level8End">
         Congratulations, the level 8 is completed!\n
         Do you know that in vacuum weights and brick will fall with the same acceleration?
+    </string>
+
+    <string name="level9short">
+        Which clock has more time?
     </string>
 
     <string name="level9">
@@ -92,6 +129,10 @@
         Do you know that even a broken clock twice a day shows the exact time? :)
     </string>
 
+    <string name="level10short">
+        Choose what floats?
+    </string>
+
     <string name="level10">
         Choose what floats?\n
         Questions might repeat until you rich 20 pt.
@@ -100,6 +141,10 @@
     <string name="level10End">
         Congratulations, the level 10 is completed!\n
         Do you know that if an egg sinks - it is fresh, if it floats - not?.
+    </string>
+
+    <string name="level11short">
+        Choose which number is greater?
     </string>
 
     <string name="level11">
@@ -112,6 +157,10 @@
         Do you know that Roman numerals isn\'t in common use? It uses only on the dials of watches and for the centuries designation.
     </string>
 
+    <string name="level12short">
+        Choose fruit?
+    </string>
+
     <string name="level12">
         Choose fruit?\n
         Questions might repeat until you rich 20 pt.
@@ -122,6 +171,10 @@
         Do you know that a banana is called a fruit in supermarkets, although it is actually a berry.
     </string>
 
+    <string name="level13short">
+        Who is exist now?
+    </string>
+
     <string name="level13">
         Choose a creature that currently exists?\n
         Questions might repeat until you rich 20 pt.
@@ -130,6 +183,10 @@
     <string name="level13End">
         Congratulations, the level 13 is completed!\n
         Water bear or tardigrades. A microscopic creature that can survive in the temperature range from +150 degrees Celsius to absolute zero, and is also able to live for more than 10 years without water.
+    </string>
+
+    <string name="level14short">
+        Choose, what is louder?
     </string>
 
     <string name="level14">
@@ -143,14 +200,31 @@
         L ~ 1/R2
     </string>
 
+    <string name="level15short">
+        Who lives longer?\n
+    </string>
+
     <string name="level15">
         Choose, who lives longer?\n
         Questions might repeat until you rich 20 pt.
     </string>
 
     <string name="level15End">Congratulations, level 15 passed!\n
-         You have completed this little game!\n
-         We hope you\'ve discovered something new for yourself, you liked the game and you will wait for the continuation!\n
+        The only creature on Earth that has learned to live forever is the jellyfish Turritopsis dohrnii, which can rejuvenate an unlimited number of times!
+    </string>
+
+    <string name="level16short">
+        What has more mass?\n
+    </string>
+
+    <string name="level16">
+        Choose, the object has more mass?\n
+        Questions might repeat until you rich 20 pt.
+    </string>
+
+    <string name="level16End">Congratulations, level 16 passed!\n
+        You have completed this little game!\n
+        We hope you\'ve discovered something new for yourself, you liked the game and you will wait for the continuation!\n
         Put stars, write reviews :)
     </string>
 

@@ -2,10 +2,10 @@ package ru.vasic2000.myapplication;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,11 +24,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level3 extends AppCompatActivity {
+public class Level16 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
-
     ImageView backGround;
 
     SoundPool sounds;
@@ -38,13 +37,15 @@ public class Level3 extends AppCompatActivity {
 
     public int numLeft;  //Номер левой картинки
     public int numRight; //Номер правой картинки
+    public int numLeftOld = -1; //Предыдущий номер левой картинки
     ImageView imgLeft;
     ImageView imgRight;
-    public int numLeftOld = -1; //Предыдущий номер левой картинки
     TextView textLevels;
     TextView left_text;
     TextView right_text;
     TextView task_text;
+
+    MediaPlayer mp;
 
     public int count = 0;  //Счётчик правильных ответов
 
@@ -60,10 +61,12 @@ public class Level3 extends AppCompatActivity {
         FullScreen();
         previewDialog();
         dialogEnd();
+        textBtnBack();
+        buttonContinue();
+        dialog.show();
         backFromPreview();
         backFromLevel();
         makeRndImages();
-
     }
 
     private void initComponents() {
@@ -77,7 +80,9 @@ public class Level3 extends AppCompatActivity {
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
 
-        levelWin = sounds.load(this, R.raw.level_win, 0);
+        mp = new MediaPlayer();
+
+        levelWin = sounds.load(this, R.raw.terminator, 1);
 
         goodAnswer1 = sounds.load(this, R.raw.good1, 0);
         goodAnswer2 = sounds.load(this, R.raw.good2, 0);
@@ -97,15 +102,15 @@ public class Level3 extends AppCompatActivity {
         badAnswer7 = sounds.load(this, R.raw.bad7, 0);
         badAnswer8 = sounds.load(this, R.raw.bad8, 0);
 
-        backGround.setImageResource(R.drawable.level3);
+        backGround.setImageResource(R.drawable.space);
 
-        textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
-        textLevels.setText(R.string.level_3);
-        task_text.setText(R.string.level3short);
+        textLevels.setTextColor(getResources().getColor(R.color.colorWhite));
+        left_text.setTextColor(getResources().getColor(R.color.colorWhite));
+        right_text.setTextColor(getResources().getColor(R.color.colorWhite));
+        task_text.setTextColor(getResources().getColor(R.color.colorWhite));
 
-        left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
-        right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
-        task_text.setTextColor(getResources().getColor(R.color.colorBlack95));
+        textLevels.setText(R.string.level_16);
+        task_text.setText(R.string.level16short);
 
         //Массив прогресса игры
         final int[] progress = {
@@ -137,7 +142,6 @@ public class Level3 extends AppCompatActivity {
                             playGoodAnswer();
                         }
                         count++;
-
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -172,7 +176,6 @@ public class Level3 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
-                        SaveResult3();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -225,6 +228,7 @@ public class Level3 extends AppCompatActivity {
                                 count -=2;
                             }
                         }
+
                         // Закрашиваю прогресс
                         for(int i=0; i<20; i++) {
                             TextView tv = findViewById(progress[i]);
@@ -238,7 +242,6 @@ public class Level3 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
-                        SaveResult3();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -250,6 +253,7 @@ public class Level3 extends AppCompatActivity {
                 return true;
             }
         });
+
 
         // Обработка нажатий на слова
         // Левая кнопка
@@ -307,7 +311,6 @@ public class Level3 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
-                        SaveResult3();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -374,7 +377,6 @@ public class Level3 extends AppCompatActivity {
                     }
                     if(count == 20) {
                         // ВЫХОД ИЗ УРОВНЯ
-                        SaveResult3();
                         playSoundWin();
                         dialogEnd.show();
                     } else {
@@ -386,18 +388,7 @@ public class Level3 extends AppCompatActivity {
                 return true;
             }
         });
-    }
 
-    private void SaveResult3() {
-        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
-        final int level = save.getInt("Level", 1);
-        if (level > 3) {
-
-        } else {
-            SharedPreferences.Editor editor = save.edit();
-            editor.putInt("Level", 4);
-            editor.apply();
-        }
     }
 
     private void imgRoundCorners() {
@@ -420,32 +411,32 @@ public class Level3 extends AppCompatActivity {
         Random rnd = new Random();
 
         //Анимация
-        final Animation an = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
+        final Animation an = AnimationUtils.loadAnimation(Level16.this, R.anim.alpha);
 
-        while((numLeft = rnd.nextInt(16)) == numLeftOld) numLeft = rnd.nextInt(16);
+        while((numLeft = rnd.nextInt(12)) == numLeftOld) numLeft = rnd.nextInt(12);
         numLeftOld = numLeft;
-        imgLeft.setImageResource(array.images3[numLeft]);
+        imgLeft.setImageResource(array.images16[numLeft]);
         imgLeft.setAnimation(an);
-        left_text.setText(array.text3[numLeft]);
+        left_text.setText(array.text16[numLeft]);
 
-        numRight = rnd.nextInt(16);
+        numRight = rnd.nextInt(12);
         while(numRight == numLeft) {
-            numRight = rnd.nextInt(16);
+            numRight = rnd.nextInt(12);
         }
-        imgRight.setImageResource(array.images3[numRight]);
+        imgRight.setImageResource(array.images16[numRight]);
         imgRight.setAnimation(an);
-        right_text.setText(array.text3[numRight]);
+        right_text.setText(array.text16[numRight]);
     }
 
     private void backFromLevel() {
         Button btn_Back = findViewById(R.id.btnBack);
-        btn_Back.setBackgroundResource(R.drawable.btn_stroke_black95_pressed_white);
-        btn_Back.setTextColor(getResources().getColor(R.color.colorBlack95));
+        btn_Back.setBackgroundResource(R.drawable.style_btn_whitex_blue_press);
+        btn_Back.setTextColor(getResources().getColor(R.color.colorWhite));
         btn_Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level16.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
@@ -474,20 +465,37 @@ public class Level3 extends AppCompatActivity {
 
         //Замена картинки
         ImageView preview = dialog.findViewById(R.id.previewImg);
-        preview.setImageResource(R.drawable.previewimage3);
+        preview.setImageResource(R.drawable.previewimage16);
         //Фон
         LinearLayout dialogFone = dialog.findViewById(R.id.dialogfon);
-        dialogFone.setBackgroundResource(R.drawable.previewbackground3);
+        dialogFone.setBackgroundResource(R.drawable.previewbacground4);
 
         //Замена текста
         TextView tvDescription = dialog.findViewById(R.id.textDescription);
-        tvDescription.setText(R.string.level3);
+        tvDescription.setText(R.string.level16);
 
         textBtnBack();
-
         buttonContinue();
 
         dialog.show();
+    }
+
+    private void textBtnBack() {
+        TextView btnClose = dialog.findViewById(R.id.btnClose);
+        btnClose.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Level16.this, GameLevels.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception exc) {
+                    //  Здесь кода нет
+                }
+                dialog.dismiss();
+            }
+        });
     }
 
     private void buttonContinue() {
@@ -500,28 +508,10 @@ public class Level3 extends AppCompatActivity {
         });
     }
 
-    private void textBtnBack() {
-        TextView btnClose = dialog.findViewById(R.id.btnClose);
-        btnClose.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
-                    startActivity(intent);
-                    finish();
-                } catch (Exception exc) {
-//                Здесь кода нет
-                }
-                dialog.dismiss();
-            }
-        });
-    }
-
     private void dialogEnd() {
         dialogEnd = new Dialog(this);
         dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE);  //Скрытие заголовка
-        dialogEnd.setContentView(R.layout.dialogend);
+        dialogEnd.setContentView(R.layout.dialogendend);
         dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //прозрачный фон диалогового окна
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
@@ -529,53 +519,56 @@ public class Level3 extends AppCompatActivity {
 
         //Фон
         LinearLayout dialogFone = dialogEnd.findViewById(R.id.dialogfon);
-        dialogFone.setBackgroundResource(R.drawable.previewbackground3);
+        dialogFone.setBackgroundResource(R.drawable.enddialogbackground);
 
         //Замена текста
         TextView tvDescription = dialogEnd.findViewById(R.id.textDescriptionEnd);
-        tvDescription.setText(R.string.level3End);
+        tvDescription.setText(R.string.level16End);
 
-        textBtnBack3();
-        buttonContinue3();
+        textBtnBack2();
+        buttonContinue2();
     }
 
-    private void buttonContinue3() {
+    private void buttonContinue2() {
         Button btnContinue = dialogEnd.findViewById(R.id.btnContinue);
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, Level4.class);
+                    Intent intent = new Intent(Level16.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
                     //  Здесь кода нет
                 }
+                mp.stop();
                 dialogEnd.dismiss();
             }
         });
     }
 
-    private void textBtnBack3() {
+    private void textBtnBack2() {
         TextView btnClose = dialogEnd.findViewById(R.id.btnClose2);
         btnClose.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level16.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception exc) {
                     //  Здесь кода нет
                 }
+                mp.stop();
                 dialogEnd.dismiss();
             }
         });
     }
 
     private void playSoundWin() {
-        sounds.play(levelWin,1f,1f,0,0,1f);
+        mp = MediaPlayer.create(this, R.raw.terminator);
+        mp.start();
     }
 
     private void playGoodAnswer() {
@@ -641,7 +634,8 @@ public class Level3 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level3.this, GameLevels.class);
+            Intent intent = new Intent(Level16.this, GameLevels.class);
+            mp.stop();
             startActivity(intent);
             finish();
         } catch (Exception exc) {

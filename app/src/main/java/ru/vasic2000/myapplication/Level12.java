@@ -48,6 +48,7 @@ public class Level12 extends AppCompatActivity {
     TextView textLevels;
     TextView left_text;
     TextView right_text;
+    TextView task_text;
 
     public int count = 0;  //Счётчик правильных ответов
 
@@ -76,6 +77,7 @@ public class Level12 extends AppCompatActivity {
         imgRight = findViewById(R.id.imgRight);
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
+        task_text = findViewById(R.id.textTask);
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
         levelWin = sounds.load(this, R.raw.level_win, 0);
@@ -102,10 +104,11 @@ public class Level12 extends AppCompatActivity {
 
         textLevels.setTextColor(getResources().getColor(R.color.colorBlack95));
         textLevels.setText(R.string.level_12);
+        task_text.setText(R.string.level12short);
 
         left_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         right_text.setTextColor(getResources().getColor(R.color.colorBlack95));
-
+        task_text.setTextColor(getResources().getColor(R.color.colorBlack95));
         //Массив прогресса игры
         final int[] progress = {
                 R.id.point1, R.id.point2, R.id.point3, R.id.point4, R.id.point5,
@@ -258,14 +261,14 @@ public class Level12 extends AppCompatActivity {
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     imgRight.setEnabled(false); // Блокирую правую картинку
                     //  Если левая больше
-                    if(numLeft > numRight) {
+                    if(numLeftStrong > numRightStrong) {
                         imgLeft.setImageResource(R.drawable.img_true);
                     } else {
                         imgLeft.setImageResource(R.drawable.img_false);
                     }
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeft > numRight) && (count < 20)) {
+                    if((numLeftStrong > numRightStrong) && (count < 20)) {
                         if(count < 19) {
                             playGoodAnswer();
                         }
@@ -323,14 +326,14 @@ public class Level12 extends AppCompatActivity {
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     imgLeft.setEnabled(false); // Блокирую левую картинку
                     //  Если левая меньше
-                    if(numLeft < numRight) {
+                    if(numLeftStrong < numRightStrong) {
                         imgRight.setImageResource(R.drawable.img_true);
                     } else {
                         imgRight.setImageResource(R.drawable.img_false);
                     }
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeft < numRight) && (count < 20)) {
+                    if((numLeftStrong < numRightStrong) && (count < 20)) {
                         if(count < 19) {
                             playGoodAnswer();
                         }

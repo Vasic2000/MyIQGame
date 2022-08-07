@@ -244,4 +244,17 @@
     <string name="lv15text13">Слон</string>
     <string name="lv15text14">Кашалот</string>
 
+    <string name="lv16text0">Луна</string>
+    <string name="lv16text1">Меркурий</string>
+    <string name="lv16text2">Венера</string>
+    <string name="lv16text3">Земля</string>
+    <string name="lv16text4">Марс</string>
+    <string name="lv16text5">Юпитер</string>
+    <string name="lv16text6">Сатурн</string>
+    <string name="lv16text7">Уран</string>
+    <string name="lv16text8">Нептун</string>
+    <string name="lv16text9">Плутон</string>
+    <string name="lv16text10">Солнце</string>
+    <string name="lv16text11">Чёрная дыра Стрельца А*</string>
+
 </resources>
