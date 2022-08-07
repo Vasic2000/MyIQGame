@@ -77,6 +77,8 @@ public class Level4 extends AppCompatActivity {
         imgRight = findViewById(R.id.imgRight);
         left_text = findViewById(R.id.textLeft);
         right_text = findViewById(R.id.textRight);
+        task_text = findViewById(R.id.textTask);
+
 
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
 

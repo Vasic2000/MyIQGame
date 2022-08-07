@@ -37,13 +37,13 @@
                     android:id="@+id/button_back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/back"
                     android:background="@drawable/btn_stroke_black95_pressed_white"
-                    android:textSize="75sp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
+                    android:text="@string/back"
+                    android:textAllCaps="false"
                     android:textColor="@color/colorBlack95"
-                    android:textAllCaps="false"/>
+                    android:textSize="75sp" />
             </LinearLayout>
 
             <ScrollView
@@ -55,7 +55,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:id="@+id/line1"
@@ -67,212 +67,234 @@
                             android:id="@+id/tv1"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="1"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="1"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv2"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv3"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv4"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv5"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/line2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="20dp">
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/tv6"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv7"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv8"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv9"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="10dp"
                             android:layout_marginRight="10dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv10"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/line3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="20dp">
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/tv11"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv12"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv13"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv14"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv15"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:text="X"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
                             android:textColor="@color/colorWhite"
                             android:textSize="50sp"
-                            android:textStyle="bold"
-                            android:gravity="center"/>
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv16"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/btn_black95_pressed_black65"
+                            android:gravity="center"
+                            android:text="X"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="50sp"
+                            android:textStyle="bold" />
+
                     </LinearLayout>
                 </LinearLayout>
             </ScrollView>

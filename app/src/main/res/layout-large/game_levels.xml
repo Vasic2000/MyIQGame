@@ -274,6 +274,28 @@
                             android:textStyle="bold"
                             android:gravity="center"/>
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/tv16"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:text="X"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/btn_black95_pressed_black65"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="40sp"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>
