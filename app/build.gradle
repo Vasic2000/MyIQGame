@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
@@ -13,9 +13,9 @@ android {
     defaultConfig {
         applicationId "ru.vasic2000.myapplication"
         minSdkVersion 15
-        targetSdkVersion 33
-        versionCode 4
-        versionName '1.1'
+        targetSdkVersion 34
+        versionCode 5
+        versionName '1.11'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -26,13 +26,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'ru.vasic2000.myapplication'
 
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
 }
