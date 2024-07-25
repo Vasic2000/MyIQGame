@@ -7,7 +7,7 @@
 
     <string name="level1">
         Choose which number is greater?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level1End">
@@ -22,7 +22,7 @@
 
     <string name="level2">
         Choose which Roman number is greater?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level2End">
@@ -36,7 +36,7 @@
 
     <string name="level3">
         Which animal has more mass?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level3End">
@@ -50,7 +50,7 @@
 
     <string name="level4">
         Choose edible.\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level4End">
@@ -64,7 +64,7 @@
 
     <string name="level5">
         Which card is higher/stronger?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level5End">
@@ -78,7 +78,7 @@
 
     <string name="level6">
         Which vehicle is faster?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level6End">
@@ -92,7 +92,7 @@
 
     <string name="level7">
         Which planet of Solar system is farther from the Sun?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level7End">
@@ -106,7 +106,7 @@
 
     <string name="level8">
         Which thing has more mass?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level8End">
@@ -121,7 +121,7 @@
     <string name="level9">
         Which clock has more time?\n
         Consider period 0:00 - 12:00.\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level9End">
@@ -135,7 +135,7 @@
 
     <string name="level10">
         Choose what floats?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level10End">
@@ -149,7 +149,7 @@
 
     <string name="level11">
         Choose which number is greater?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level11End">
@@ -163,7 +163,7 @@
 
     <string name="level12">
         Choose fruit?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level12End">
@@ -177,7 +177,7 @@
 
     <string name="level13">
         Choose a creature that currently exists?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level13End">
@@ -191,7 +191,7 @@
 
     <string name="level14">
         Choose, what is louder?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level14End">
@@ -206,7 +206,7 @@
 
     <string name="level15">
         Choose, who lives longer?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
     <string name="level15End">Congratulations, level 15 passed!\n
@@ -219,10 +219,25 @@
 
     <string name="level16">
         Choose, the object has more mass?\n
-        Questions might repeat until you rich 20 pt.
+        The game continues until you score 20 points. (questions may be repeated).
     </string>
 
-    <string name="level16End">Congratulations, level 16 passed!\n
+    <string name="level16End">
+        Congratulations, level 16 passed!\n
+        Do you know Charon is not a satellite of Pluto. They are a double planet because their common center of gravity is outside the surface of both objects.
+    </string>
+
+    <string name="level17short">
+        Who is the predator?\n
+    </string>
+
+    <string name="level17">
+        Which of these creatures is predatory?\n
+        The game continues until you score 20 points. (questions may be repeated).
+    </string>
+
+    <string name="level17End">
+        Congratulations!\n
         You have completed this little game!\n
         We hope you\'ve discovered something new for yourself, you liked the game and you will wait for the continuation!\n
         Put stars, write reviews :)

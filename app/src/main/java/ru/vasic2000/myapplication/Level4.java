@@ -79,7 +79,6 @@ public class Level4 extends AppCompatActivity {
         right_text = findViewById(R.id.textRight);
         task_text = findViewById(R.id.textTask);
 
-
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
 
         levelWin = sounds.load(this, R.raw.level_win, 0);
@@ -583,7 +582,6 @@ public class Level4 extends AppCompatActivity {
             }
         });
     }
-
 
     private void playSoundWin() {
         sounds.play(levelWin,1f,1f,0,0,1f);
