@@ -391,12 +391,12 @@ public class Level2 extends AppCompatActivity {
 
     private void SaveResult2() {
         SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
-        final int level = save.getInt("Level", 2);
+        final int level = save.getInt("Level", 1);
         if (level > 2) {
 
         } else {
             SharedPreferences.Editor editor = save.edit();
-            editor.putInt("Level", 3);
+            editor.putInt("Level", 2);
             editor.apply();
         }
     }

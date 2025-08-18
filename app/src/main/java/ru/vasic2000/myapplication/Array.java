@@ -599,12 +599,47 @@ public class Array {
             R.string.lv16text4,
             R.string.lv16text2,
             R.string.lv16text3,
-            R.string.lv16text7,
             R.string.lv16text8,
+            R.string.lv16text7,
             R.string.lv16text6,
             R.string.lv16text5,
             R.string.lv16text10,
             R.string.lv16text11
     };
+
+    //Уровень 17
+    final int[] images17 = {
+            R.drawable.l17_1giraffe,
+            R.drawable.l17_2kitten,
+            R.drawable.l16_1mercury,
+            R.drawable.l17_4puppy,
+            R.drawable.l16_2venus,
+            R.drawable.l16_3earth,
+            R.drawable.l16_8neptune,
+            R.drawable.l16_7uran,
+            R.drawable.l16_6saturn,
+            R.drawable.l16_5jupiter,
+            R.drawable.l16_10sun,
+            R.drawable.l16_11black_hole
+    };
+
+    final int[] text17 = {
+            R.string.lv17text1,
+            R.string.lv17text2,
+            R.string.lv17text3,
+            R.string.lv17text4,
+            R.string.lv17text5,
+            R.string.lv17text6,
+            R.string.lv17text7,
+            R.string.lv17text8,
+            R.string.lv17text9,
+            R.string.lv17text10,
+            R.string.lv17text11,
+            R.string.lv17text12,
+            R.string.lv17text13,
+            R.string.lv17text14
+    };
+
+    final int[] strong17 = {0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1};
 
 }

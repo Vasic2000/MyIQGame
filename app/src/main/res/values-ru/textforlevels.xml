@@ -257,4 +257,19 @@
     <string name="lv16text10">Солнце</string>
     <string name="lv16text11">Чёрная дыра Стрельца А*</string>
 
+    <string name="lv17text1">Жираф</string>
+    <string name="lv17text2">Котёнок</string>
+    <string name="lv17text3">Кролик</string>
+    <string name="lv17text4">Щенок</string>
+    <string name="lv17text5">Pigeon</string>
+    <string name="lv17text6">Parrot</string>
+    <string name="lv17text7">Tiger</string>
+    <string name="lv17text8">Cat</string>
+    <string name="lv17text9">Falcon</string>
+    <string name="lv17text10">Panda</string>
+    <string name="lv17text11">Polar\nbear</string>
+    <string name="lv17text12">Rhino</string>
+    <string name="lv17text13">Elephant</string>
+    <string name="lv17text14">Sperm\nwhale</string>
+
 </resources>
