@@ -125,7 +125,7 @@ public class Level17 extends AppCompatActivity {
         };
 
         // Обработка нажатий
-        // Левая кнопка
+        // Левая картинка
         imgLeft.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -201,14 +201,14 @@ public class Level17 extends AppCompatActivity {
                     imgLeft.setEnabled(false); // Блокирую левую картинку
 
                     //  Если левая меньше
-                    if(numLeftStrong > numRightStrong) {
+                    if(numLeftStrong < numRightStrong) {
                         imgRight.setImageResource(R.drawable.img_true);
                     } else {
                         imgRight.setImageResource(R.drawable.img_false);
                     }
                 }
                 else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if((numLeftStrong > numRightStrong) && (count < 20)) {
+                    if((numLeftStrong < numRightStrong) && (count < 20)) {
                         if(count < 19) {
                             playGoodAnswer();
                         }
@@ -260,7 +260,7 @@ public class Level17 extends AppCompatActivity {
 
 
         // Обработка нажатий на слова
-        // Левая кнопка
+        // Левое слово
         left_text.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -268,7 +268,7 @@ public class Level17 extends AppCompatActivity {
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     imgRight.setEnabled(false); // Блокирую правую картинку
 
-                    //  Если левая больше
+                    //  Если левое больше
                     if(numLeftStrong > numRightStrong) {
                         imgLeft.setImageResource(R.drawable.img_true);
                     } else {
@@ -327,7 +327,7 @@ public class Level17 extends AppCompatActivity {
             }
         });
 
-        // Правая кнопка
+        // Правое слово
         right_text.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -335,8 +335,8 @@ public class Level17 extends AppCompatActivity {
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     imgLeft.setEnabled(false); // Блокирую левую картинку
 
-                    //  Если левая меньше
-                    if(numLeftStrong > numRightStrong) {
+                    //  Если левое меньше
+                    if(numLeftStrong < numRightStrong) {
                         imgRight.setImageResource(R.drawable.img_true);
                     } else {
                         imgRight.setImageResource(R.drawable.img_false);
@@ -417,15 +417,14 @@ public class Level17 extends AppCompatActivity {
         //Анимация
         final Animation an = AnimationUtils.loadAnimation(Level17.this, R.anim.alpha);
 
-        while((numLeft = rnd.nextInt(12)) == numLeftOld) numLeft = rnd.nextInt(12);
-        numLeftOld = numLeft;
+        numLeft = rnd.nextInt(16);
         imgLeft.setImageResource(array.images17[numLeft]);
         imgLeft.setAnimation(an);
         left_text.setText(array.text17[numLeft]);
 
-        numRight = rnd.nextInt(12);
-        while(numRight == numLeft) {
-            numRight = rnd.nextInt(12);
+        numRight = rnd.nextInt(16);
+        while(array.strong17[numLeft] == array.strong17[numRight]) {
+            numRight = rnd.nextInt(16);
         }
         numLeftStrong = array.strong17[numLeft];
         numRightStrong = array.strong17[numRight];
@@ -433,6 +432,7 @@ public class Level17 extends AppCompatActivity {
         imgRight.setImageResource(array.images17[numRight]);
         imgRight.setAnimation(an);
         right_text.setText(array.text17[numRight]);
+
     }
 
     private void backFromLevel() {

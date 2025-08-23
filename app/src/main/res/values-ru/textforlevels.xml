@@ -261,15 +261,17 @@
     <string name="lv17text2">Котёнок</string>
     <string name="lv17text3">Кролик</string>
     <string name="lv17text4">Щенок</string>
-    <string name="lv17text5">Pigeon</string>
-    <string name="lv17text6">Parrot</string>
-    <string name="lv17text7">Tiger</string>
-    <string name="lv17text8">Cat</string>
-    <string name="lv17text9">Falcon</string>
-    <string name="lv17text10">Panda</string>
-    <string name="lv17text11">Polar\nbear</string>
-    <string name="lv17text12">Rhino</string>
-    <string name="lv17text13">Elephant</string>
-    <string name="lv17text14">Sperm\nwhale</string>
+    <string name="lv17text5">Зебра</string>
+    <string name="lv17text6">Медведь</string>
+    <string name="lv17text7">Бык></string>
+    <string name="lv17text8">Паук</string>
+    <string name="lv17text9">Верблюд</string>
+    <string name="lv17text10">Пингвин</string>
+    <string name="lv17text11">Конь</string>
+    <string name="lv17text12">Лягушка</string>
+    <string name="lv17text13">Лось</string>
+    <string name="lv17text14">Цапля</string>
+    <string name="lv17text15">Кенгуру</string>
+    <string name="lv17text16">Мышь</string>
 
 </resources>

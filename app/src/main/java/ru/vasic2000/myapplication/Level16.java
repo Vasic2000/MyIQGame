@@ -398,7 +398,7 @@ public class Level16 extends AppCompatActivity {
     private void SaveResult16() {
         SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
         final int level = save.getInt("Level", 1);
-        if (level >= 16) {
+        if (level > 16) {
 
         } else {
             SharedPreferences.Editor editor = save.edit();
