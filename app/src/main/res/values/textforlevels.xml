@@ -261,15 +261,17 @@
     <string name="lv17text2">Kitten</string>
     <string name="lv17text3">Rabbit</string>
     <string name="lv17text4">Puppy</string>
-    <string name="lv17text5">Pigeon</string>
-    <string name="lv17text6">Parrot</string>
-    <string name="lv17text7">Tiger</string>
-    <string name="lv17text8">Cat</string>
-    <string name="lv17text9">Falcon</string>
-    <string name="lv17text10">Panda</string>
-    <string name="lv17text11">Polar\nbear</string>
-    <string name="lv17text12">Rhino</string>
-    <string name="lv17text13">Elephant</string>
-    <string name="lv17text14">Sperm\nwhale</string>
+    <string name="lv17text5">Zebra</string>
+    <string name="lv17text6">Bear</string>
+    <string name="lv17text7">Bool</string>
+    <string name="lv17text8">Spidert</string>
+    <string name="lv17text9">Camel</string>
+    <string name="lv17text10">Pigeon</string>
+    <string name="lv17text11">Horse</string>
+    <string name="lv17text12">Frog</string>
+    <string name="lv17text13">Elk</string>
+    <string name="lv17text14">Tsalya</string>
+    <string name="lv17text15">Kangaroo</string>
+    <string name="lv17text16">Mouse</string>
 
 </resources>

@@ -1,0 +1,83 @@
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'com.android.application'\r\n}\r\n\r\nandroid {\r\n    compileSdkVersion 34\r\n\r\n    compileOptions {\r\n        sourceCompatibility JavaVersion.VERSION_11\r\n        targetCompatibility JavaVersion.VERSION_11\r\n    }\r\n\r\n    defaultConfig {\r\n        applicationId \"ru.vasic2000.myapplication\"\r\n        minSdkVersion 15\r\n        targetSdkVersion 34\r\n        versionCode 5\r\n        versionName '1.11'\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    namespace 'ru.vasic2000.myapplication'\r\n\r\n}\r\n\r\ndependencies {\r\n    implementation fileTree(dir: 'libs', include: ['*.jar'])\r\n\r\n    implementation 'androidx.appcompat:appcompat:1.6.1'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'\r\n    testImplementation 'junit:junit:4.13.2'\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision 5eb2e5a453569f0039daae25168cdff8c0bf53e8)
++++ b/app/build.gradle	(date 1755540726518)
+@@ -6,8 +6,8 @@
+     compileSdkVersion 34
+ 
+     compileOptions {
+-        sourceCompatibility JavaVersion.VERSION_11
+-        targetCompatibility JavaVersion.VERSION_11
++        sourceCompatibility JavaVersion.VERSION_17
++        targetCompatibility JavaVersion.VERSION_17
+     }
+ 
+     defaultConfig {
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"GRADLE\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"11\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 5eb2e5a453569f0039daae25168cdff8c0bf53e8)
++++ b/.idea/gradle.xml	(date 1755540529236)
+@@ -4,10 +4,9 @@
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+-        <option name="testRunner" value="GRADLE" />
+-        <option name="distributionType" value="DEFAULT_WRAPPED" />
++        <option name="testRunner" value="CHOOSE_PER_TEST" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleJvm" value="11" />
++        <option name="gradleJvm" value="jbr-17 (3)" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <bytecodeTargetLevel>\r\n      <module name=\"IQ_Game.app\" target=\"17\" />\r\n    </bytecodeTargetLevel>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 5eb2e5a453569f0039daae25168cdff8c0bf53e8)
++++ b/.idea/compiler.xml	(date 1755540614070)
+@@ -1,8 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="CompilerConfiguration">
+-    <bytecodeTargetLevel>
+-      <module name="IQ_Game.app" target="17" />
+-    </bytecodeTargetLevel>
++    <bytecodeTargetLevel target="17" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/drawable/btn_black95_pressed_black65.xml\" value=\"0.13796296296296295\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/drawable/btn_stroke_black95_pressed_white.xml\" value=\"0.13796296296296295\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/drawable/button_game_levels.xml\" value=\"0.13796296296296295\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/drawable/button_stroke_white_press_blue.xml\" value=\"0.13796296296296295\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/drawable/ic_launcher_foreground.xml\" value=\"0.13796296296296295\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/drawable/style_btn_black95.xml\" value=\"0.13796296296296295\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/drawable/style_btn_stroke_black95.xml\" value=\"0.12239583333333333\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/drawable/style_btn_whitex_blue_press.xml\" value=\"0.107\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout-large/game_levels.xml\" value=\"0.17279411764705882\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout-large/universal.xml\" value=\"0.3546875\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout-normal/game_levels.xml\" value=\"0.19157608695652173\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout-normal/universal.xml\" value=\"0.3546875\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout-small/game_levels.xml\" value=\"0.8011363636363636\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout-small/universal.xml\" value=\"0.8218029350104822\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout-xlarge/game_levels.xml\" value=\"0.19921875\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout-xlarge/universal.xml\" value=\"0.27421875\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout/activity_main.xml\" value=\"0.11666666666666667\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout/game_levels.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout/previewdialog.xml\" value=\"0.3546875\" />\r\n        <entry key=\"..\\:/Android/MyIQGame/app/src/main/res/layout/universal.xml\" value=\"0.33\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"jbr-17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 5eb2e5a453569f0039daae25168cdff8c0bf53e8)
++++ b/.idea/misc.xml	(date 1755540614058)
+@@ -26,6 +26,7 @@
+       </map>
+     </option>
+   </component>
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
