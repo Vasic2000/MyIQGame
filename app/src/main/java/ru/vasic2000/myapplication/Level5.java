@@ -403,12 +403,8 @@ public class Level5 extends AppCompatActivity {
     }
 
     private void imgRoundCorners() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            imgLeft.setClipToOutline(true);
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            imgRight.setClipToOutline(true);
-        }
+        imgLeft.setClipToOutline(true);
+        imgRight.setClipToOutline(true);
     }
 
     private void FullScreen() {

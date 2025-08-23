@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    compileSdk 35compileSdk 35
+    compileSdk 35
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "ru.vasic2000.myapplication"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 35
         versionCode 6
         versionName '1.2'
