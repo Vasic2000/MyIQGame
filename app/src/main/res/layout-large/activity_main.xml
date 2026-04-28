@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,34 +17,47 @@
 
     <ImageView
         android:id="@+id/main_img_boy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="200dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintWidth_percent="0.95"
+
         app:srcCompat="@drawable/main_img_boy" />
 
     <LinearLayout
         android:id="@+id/startLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintWidth_percent="0.5"
+
+        android:padding="10dp">
 
         <Button
             android:id="@+id/buttonStart"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_stroke_black95_pressed_white"
             android:layout_weight="1"
-            android:text="@string/start"
+            android:background="@drawable/btn_stroke_black95_pressed_white"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:text="@string/start"
+
             android:textColor="@color/colorBlack95"
-            android:textSize="24sp"/>
+            android:textSize="40sp" />
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
