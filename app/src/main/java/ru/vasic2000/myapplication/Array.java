@@ -611,35 +611,41 @@ public class Array {
     final int[] images17 = {
             R.drawable.l17_1giraffe,
             R.drawable.l17_2kitten,
-            R.drawable.l16_1mercury,
+            R.drawable.l17_3rabbit,
             R.drawable.l17_4puppy,
-            R.drawable.l16_2venus,
-            R.drawable.l16_3earth,
-            R.drawable.l16_8neptune,
-            R.drawable.l16_7uran,
-            R.drawable.l16_6saturn,
-            R.drawable.l16_5jupiter,
-            R.drawable.l16_10sun,
-            R.drawable.l16_11black_hole
+            R.drawable.l17_5zebra,
+            R.drawable.l17_6grizzly,
+            R.drawable.l17_7bool,
+            R.drawable.l17_8spider,
+            R.drawable.l17_9camel,
+            R.drawable.l17_10pigeon,
+            R.drawable.l17_11horse,
+            R.drawable.l17_12frog,
+            R.drawable.l17_13elk,
+            R.drawable.l17_14tsalya,
+            R.drawable.l17_15kangaroo,
+            R.drawable.l17_16mouse
     };
 
     final int[] text17 = {
-            R.string.lv17text1,
-            R.string.lv17text2,
-            R.string.lv17text3,
-            R.string.lv17text4,
-            R.string.lv17text5,
-            R.string.lv17text6,
-            R.string.lv17text7,
-            R.string.lv17text8,
-            R.string.lv17text9,
-            R.string.lv17text10,
-            R.string.lv17text11,
-            R.string.lv17text12,
-            R.string.lv17text13,
-            R.string.lv17text14
+            R.string.lv17text1,   //0
+            R.string.lv17text2,   //1
+            R.string.lv17text3,   //0
+            R.string.lv17text4,   //1
+            R.string.lv17text5,   //0
+            R.string.lv17text6,   //1
+            R.string.lv17text7,   //0
+            R.string.lv17text8,   //1
+            R.string.lv17text9,   //0
+            R.string.lv17text10,  //1
+            R.string.lv17text11,  //0
+            R.string.lv17text12,  //1
+            R.string.lv17text13,  //0
+            R.string.lv17text14,  //1
+            R.string.lv17text15,  //0
+            R.string.lv17text16   //1
     };
 
-    final int[] strong17 = {0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1};
+    final int[] strong17 = {0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1};
 
 }

@@ -398,7 +398,7 @@ public class Level16 extends AppCompatActivity {
     private void SaveResult16() {
         SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
         final int level = save.getInt("Level", 1);
-        if (level >= 16) {
+        if (level > 16) {
 
         } else {
             SharedPreferences.Editor editor = save.edit();
@@ -408,12 +408,8 @@ public class Level16 extends AppCompatActivity {
     }
 
     private void imgRoundCorners() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            imgLeft.setClipToOutline(true);
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            imgRight.setClipToOutline(true);
-        }
+        imgLeft.setClipToOutline(true);
+        imgRight.setClipToOutline(true);
     }
 
     private void FullScreen() {
